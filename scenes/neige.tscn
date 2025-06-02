@@ -1,0 +1,101 @@
+[gd_scene load_steps=14 format=3 uid="uid://dbdj3ygm4wr0i"]
+
+[ext_resource type="Script" path="res://scripts/neige.gd" id="1_3fd2d"]
+[ext_resource type="Texture2D" uid="uid://fxrpatq24aw0" path="res://td images/tours/griffes/poser pas possible.svg" id="2_sj58l"]
+[ext_resource type="Texture2D" uid="uid://ccv6as3w8pugq" path="res://td images/tours/griffes/poser possible.svg" id="3_nge8l"]
+[ext_resource type="Texture2D" uid="uid://dc1vkqs28tygd" path="res://td images/tours/neige/1.svg" id="4_mfgu1"]
+[ext_resource type="Texture2D" uid="uid://5dphehj2qge2" path="res://td images/tours/neige/2.svg" id="5_kx1x7"]
+[ext_resource type="Texture2D" uid="uid://be3ixey54d12k" path="res://td images/tours/neige/3.svg" id="6_x5yc3"]
+[ext_resource type="Texture2D" uid="uid://dl5w4pxin0fbh" path="res://td images/tours/neige/4.svg" id="7_6cpwv"]
+[ext_resource type="Texture2D" uid="uid://c43lartxr661c" path="res://td images/tours/neige/5.svg" id="8_jlwj3"]
+[ext_resource type="Texture2D" uid="uid://cfwl32eherg3r" path="res://td images/tours/neige/6.svg" id="9_jk0j0"]
+[ext_resource type="Texture2D" uid="uid://ccrm15yr5v1qr" path="res://td images/tours/neige/7.svg" id="10_kxcwr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_psxtc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sj58l")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nge8l")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mfgu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kx1x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x5yc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6cpwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jlwj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jk0j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kxcwr")
+}],
+"loop": true,
+"name": &"tour",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_30ull"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t8o5w"]
+radius = 131.46
+
+[node name="neige" type="Node2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_3fd2d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.85714, 2.85714)
+scale = Vector2(1.33, 1.33)
+sprite_frames = SubResource("SpriteFrames_psxtc")
+animation = &"tour"
+frame_progress = 0.890339
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.52588e-05, 1.19209e-06)
+shape = SubResource("CircleShape2D_30ull")
+
+[node name="détect" type="Area2D" parent="." groups=["neige"]]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="détect" groups=["neige"]]
+position = Vector2(2.85714, 2.85714)
+shape = SubResource("CircleShape2D_t8o5w")
+
+[node name="détect2" type="Area2D" parent="." groups=["neige"]]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="détect2" groups=["neige"]]
+position = Vector2(2.85714, 2.85714)
+shape = SubResource("CircleShape2D_t8o5w")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]

@@ -1,0 +1,154 @@
+[gd_scene load_steps=23 format=3 uid="uid://c7yv465d5ysq7"]
+
+[ext_resource type="Script" path="res://scripts/pierre.gd" id="1_4kbes"]
+[ext_resource type="Texture2D" uid="uid://buhrqg480xt51" path="res://td images/tours/Pierre/r11.svg" id="1_d1yeg"]
+[ext_resource type="Texture2D" uid="uid://dpi5cfbbvs6xi" path="res://td images/tours/Lazer 1/poser pas possible.svg" id="2_bylrn"]
+[ext_resource type="Texture2D" uid="uid://isgicg6iq8dt" path="res://td images/tours/Lazer 1/poser possible.svg" id="3_k4wgg"]
+[ext_resource type="Texture2D" uid="uid://px550bbe3jov" path="res://td images/tours/Pierre/r1.svg" id="4_2l8xw"]
+[ext_resource type="Texture2D" uid="uid://bd4qn5whk0er8" path="res://td images/tours/Pierre/r2.svg" id="5_dxe31"]
+[ext_resource type="Texture2D" uid="uid://8s5qqceemfon" path="res://td images/tours/Pierre/r3.svg" id="6_6fr5h"]
+[ext_resource type="Texture2D" uid="uid://c80xfitqsi228" path="res://td images/tours/Pierre/r4.svg" id="7_v7jnj"]
+[ext_resource type="Texture2D" uid="uid://byu5oiosgvcg5" path="res://td images/tours/Pierre/r5.svg" id="8_wa7va"]
+[ext_resource type="Texture2D" uid="uid://nm06gvp7ugws" path="res://td images/tours/Pierre/r6.svg" id="9_vt3dx"]
+[ext_resource type="Texture2D" uid="uid://d13hi48ovmi2k" path="res://td images/tours/Pierre/r7.svg" id="10_y2oya"]
+[ext_resource type="Texture2D" uid="uid://biccc1y240imp" path="res://td images/tours/Pierre/r8.svg" id="11_4okjc"]
+[ext_resource type="Texture2D" uid="uid://dv0g15vya74d2" path="res://td images/tours/Pierre/r9.svg" id="12_lfp66"]
+[ext_resource type="Texture2D" uid="uid://egaw2a2xkhq" path="res://td images/tours/Pierre/r10.svg" id="13_7pf27"]
+[ext_resource type="Texture2D" uid="uid://0imntvfanw6y" path="res://td images/tours/Pierre/2.svg" id="15_bnmxo"]
+[ext_resource type="Texture2D" uid="uid://77h5xld6bt5j" path="res://td images/tours/Pierre/3.svg" id="16_2s304"]
+[ext_resource type="Texture2D" uid="uid://bxtbti27wai5d" path="res://td images/tours/Pierre/4.svg" id="17_ip5qa"]
+[ext_resource type="Texture2D" uid="uid://8s7qeo72xbsu" path="res://td images/tours/Pierre/5.svg" id="18_iatak"]
+[ext_resource type="Texture2D" uid="uid://difexydam8cmt" path="res://td images/tours/Pierre/6.svg" id="19_gv7wi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_exudq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_d1yeg")
+}],
+"loop": true,
+"name": &"chargée",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bylrn")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_k4wgg")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2l8xw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dxe31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6fr5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v7jnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wa7va")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vt3dx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_y2oya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4okjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lfp66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7pf27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_d1yeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_d1yeg")
+}],
+"loop": true,
+"name": &"rechargement",
+"speed": 2.4
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_bnmxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2s304")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ip5qa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_iatak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gv7wi")
+}],
+"loop": true,
+"name": &"tir",
+"speed": 1.25
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_18r35"]
+radius = 70.0286
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3sth"]
+
+[node name="pierre" type="Node2D"]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_4kbes")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-58, -61)
+sprite_frames = SubResource("SpriteFrames_exudq")
+animation = &"tir"
+centered = false
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_18r35")
+
+[node name="lazer" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lazer"]
+position = Vector2(29995.5, -3.63636)
+scale = Vector2(3000, 3)
+shape = SubResource("RectangleShape2D_p3sth")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = 6.28319
+scale = Vector2(20, 50)
+target_position = Vector2(504.7, 0)
+collision_mask = 2
+
+[connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]

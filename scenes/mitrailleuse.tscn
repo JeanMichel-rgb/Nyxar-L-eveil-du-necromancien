@@ -1,0 +1,183 @@
+[gd_scene load_steps=19 format=3 uid="uid://cdb8k6fsu5pho"]
+
+[ext_resource type="Script" path="res://scripts/mitrailleuse.gd" id="1_4lley"]
+[ext_resource type="Texture2D" uid="uid://cpub8gkoq50ao" path="res://td images/tours/mitraillette/poser pas possible.svg" id="2_4h2dh"]
+[ext_resource type="Texture2D" uid="uid://b3frii658ipl6" path="res://td images/tours/mitraillette/poser possible.svg" id="3_n5lu5"]
+[ext_resource type="Texture2D" uid="uid://cgmrqy1qdq6wh" path="res://td images/tours/mitraillette/1.svg" id="4_haprr"]
+[ext_resource type="Texture2D" uid="uid://dugfxsm1ygfl2" path="res://td images/tours/mitraillette/2.svg" id="5_ipst0"]
+[ext_resource type="Texture2D" uid="uid://b4fihfc0qkjqb" path="res://td images/tours/mitraillette/3.svg" id="6_r4iay"]
+[ext_resource type="Texture2D" uid="uid://s887ajmdmn4a" path="res://td images/tours/chepa/mitraillette lazer tir 1.svg" id="7_27swm"]
+[ext_resource type="Texture2D" uid="uid://s3d0vjinfqbm" path="res://td images/tours/chepa/mitraillette lazer tir 2.svg" id="8_s2hfs"]
+[ext_resource type="Texture2D" uid="uid://1lywanjc2kih" path="res://td images/tours/chepa/mitraillette lazer tir 3.svg" id="9_ep5ud"]
+[ext_resource type="Texture2D" uid="uid://bcp0tnt5kunvf" path="res://td images/tours/chepa/mitraillette triple lazer tir 1.svg" id="10_q764g"]
+[ext_resource type="Texture2D" uid="uid://byvap4bdvps4x" path="res://td images/tours/chepa/mitraillette triple lazer tir 2.svg" id="11_alrno"]
+[ext_resource type="Texture2D" uid="uid://d3cc06lbvgmml" path="res://td images/tours/chepa/mitraillette triple lazer tir 3.svg" id="12_k6v4r"]
+[ext_resource type="Texture2D" uid="uid://bxy0voqrn4ul2" path="res://td images/tours/chepa/mitraillette lazer 1.svg" id="13_fovdu"]
+[ext_resource type="Texture2D" uid="uid://besc232m1uw7f" path="res://td images/tours/chepa/mitraillette triple.svg" id="14_mk637"]
+[ext_resource type="Texture2D" uid="uid://ch14mhkktpbxi" path="res://td images/tours/chepa/mitraillette triple lazer 1.svg" id="15_3d83d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b5b07"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4h2dh")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_n5lu5")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_haprr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ipst0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_r4iay")
+}],
+"loop": true,
+"name": &"tir",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_27swm")
+}],
+"loop": true,
+"name": &"tir_lazer_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_s2hfs")
+}],
+"loop": true,
+"name": &"tir_lazer_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ep5ud")
+}],
+"loop": true,
+"name": &"tir_lazer_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_q764g")
+}],
+"loop": true,
+"name": &"tir_triple_lazer_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_alrno")
+}],
+"loop": true,
+"name": &"tir_triple_lazer_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_k6v4r")
+}],
+"loop": true,
+"name": &"tir_triple_lazer_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_haprr")
+}],
+"loop": true,
+"name": &"tour_base",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_fovdu")
+}],
+"loop": true,
+"name": &"tour_lazer",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_mk637")
+}],
+"loop": true,
+"name": &"tour_triple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_3d83d")
+}],
+"loop": true,
+"name": &"tour_triple_lazer",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q34bu"]
+radius = 97.5819
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogdmj"]
+size = Vector2(16206.7, 46.6667)
+
+[node name="mitrailleuse" type="Node2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_4lley")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-85, -73)
+sprite_frames = SubResource("SpriteFrames_b5b07")
+animation = &"tir_triple_lazer_2"
+centered = false
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = 6.28319
+scale = Vector2(20, 50)
+target_position = Vector2(504.7, 0)
+collision_mask = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_q34bu")
+
+[node name="lazer" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lazer"]
+position = Vector2(8196.67, -3.33333)
+shape = SubResource("RectangleShape2D_ogdmj")
+
+[node name="lazer_triple" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lazer_triple"]
+position = Vector2(8196.67, -8.33333)
+shape = SubResource("RectangleShape2D_ogdmj")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]

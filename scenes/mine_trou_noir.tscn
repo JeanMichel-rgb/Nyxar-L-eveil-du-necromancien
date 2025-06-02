@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=3 uid="uid://bxcf520j05hug"]
+
+[ext_resource type="Script" path="res://scripts/mine_trou_noir.gd" id="1_am58o"]
+[ext_resource type="Texture2D" uid="uid://16owmluvmkhc" path="res://td images/tours/mine/mine trou noir 1 etage.svg" id="2_ed071"]
+[ext_resource type="Texture2D" uid="uid://bn8dydcp14pe" path="res://td images/tours/mine/poser pas possible.svg" id="4_ruguo"]
+[ext_resource type="Texture2D" uid="uid://b7dpdlsn5bs8y" path="res://td images/tours/mine/poser possible.svg" id="5_5v5fh"]
+[ext_resource type="Texture2D" uid="uid://cynepjjxq07bk" path="res://td images/tours/mine/mine trou noir 1 etage 2.svg" id="5_ebssa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ljnr"]
+radius = 34.2053
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0dpjj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ed071")
+}],
+"loop": true,
+"name": &"mine",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ruguo")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5v5fh")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tqynp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ebssa")
+}],
+"loop": true,
+"name": &"mine",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ruguo")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5v5fh")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}]
+
+[node name="mine_trou_noir" type="Node2D"]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_am58o")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5ljnr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_0dpjj")
+animation = &"mine"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_tqynp")
+animation = &"mine"
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("CircleShape2D_5ljnr")

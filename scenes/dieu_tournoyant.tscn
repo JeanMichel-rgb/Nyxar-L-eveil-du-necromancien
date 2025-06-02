@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://bfkvv8updnw2u"]
+
+[ext_resource type="Script" path="res://scripts/dieu_tournoyant.gd" id="1_ok23t"]
+[ext_resource type="Texture2D" uid="uid://bqhqcoqljemm2" path="res://td images/tours/dieu tournoyant/poser pas possible.svg" id="2_3hm37"]
+[ext_resource type="Texture2D" uid="uid://5akctk5ookd6" path="res://td images/tours/dieu tournoyant/poser possible.svg" id="3_s644y"]
+[ext_resource type="Texture2D" uid="uid://ctjlloct0dmkj" path="res://td images/tours/dieu tournoyant/dieu tournoyant.svg" id="4_kl7go"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5143j"]
+size = Vector2(57.8155, 59.0001)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0y2xa"]
+size = Vector2(85.4762, 19.2857)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s3uym"]
+radius = 20.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_txtfx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3hm37")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_s644y")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kl7go")
+}],
+"loop": true,
+"name": &"tir",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kl7go")
+}],
+"loop": true,
+"name": &"tour",
+"speed": 5.0
+}]
+
+[node name="dieu_tournoyant" type="Node2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_ok23t")
+
+[node name="dégats" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dégats"]
+position = Vector2(85.0923, 0.5)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_5143j")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="dégats"]
+position = Vector2(54.1666, -1.07143)
+shape = SubResource("RectangleShape2D_0y2xa")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_s3uym")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(137, -27)
+rotation = 2.02109
+scale = Vector2(0.315789, 0.331126)
+sprite_frames = SubResource("SpriteFrames_txtfx")
+animation = &"tour"
+centered = false
+
+[connection signal="body_entered" from="dégats" to="." method="damages"]
+[connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]

@@ -1,0 +1,153 @@
+[gd_scene load_steps=31 format=3 uid="uid://b7vtohs6t4jsj"]
+
+[ext_resource type="Script" path="res://scripts/explosif_lazer.gd" id="1_j7jxt"]
+[ext_resource type="Texture2D" uid="uid://exhuorexot0k" path="res://td images/tours/mine/mine 1.svg" id="2_0ft3n"]
+[ext_resource type="Texture2D" uid="uid://bjbepl3av7isl" path="res://td images/tours/mine/mine 2.svg" id="3_fgc8k"]
+[ext_resource type="Texture2D" uid="uid://dg6grk3q1imt4" path="res://td images/tours/explosion/explosion2.png" id="4_qw74u"]
+[ext_resource type="Texture2D" uid="uid://c8sem0cd3rtkq" path="res://td images/tours/explosion/explosion3.png" id="5_77svd"]
+[ext_resource type="Texture2D" uid="uid://dd5uli56retto" path="res://td images/tours/explosion/explosion4.png" id="6_vonjj"]
+[ext_resource type="Texture2D" uid="uid://dtk8ejjyn12y1" path="res://td images/tours/explosion/explosion5.png" id="7_hpce2"]
+[ext_resource type="Texture2D" uid="uid://bvq1iaqh8aoew" path="res://td images/tours/explosion/explosion6.png" id="8_tmuss"]
+[ext_resource type="Texture2D" uid="uid://dmsxb0wfnyrpi" path="res://td images/tours/explosion/explosion7.png" id="9_weboh"]
+[ext_resource type="Texture2D" uid="uid://bf5suvag1lyry" path="res://td images/tours/explosion/explosion8.png" id="10_1fhwt"]
+[ext_resource type="Texture2D" uid="uid://dqyplqudwfii1" path="res://td images/tours/explosion/explosion9.png" id="11_lq3y0"]
+[ext_resource type="Texture2D" uid="uid://jyaafogl62cr" path="res://td images/tours/explosion/explosion10.png" id="12_e68ld"]
+[ext_resource type="Texture2D" uid="uid://cdcsjvoxospnd" path="res://td images/tours/explosion/explosion11.png" id="13_v4gxu"]
+[ext_resource type="Texture2D" uid="uid://cuvsrl40ljom7" path="res://td images/tours/explosion/explosion12.png" id="14_v6cej"]
+[ext_resource type="Texture2D" uid="uid://dr7dwhaw13774" path="res://td images/tours/explosion/explosion13.png" id="15_8idtc"]
+[ext_resource type="Texture2D" uid="uid://bml3lh6fyx5kf" path="res://td images/tours/explosion/explosion14.png" id="16_3hes2"]
+[ext_resource type="Texture2D" uid="uid://ctboxaq85nkb8" path="res://td images/tours/explosion/explosion15.png" id="17_8c0xh"]
+[ext_resource type="Texture2D" uid="uid://ch0baqmfbxypn" path="res://td images/tours/explosion/explosion16.png" id="18_trqjr"]
+[ext_resource type="Texture2D" uid="uid://c1vb2jmpodh3p" path="res://td images/tours/explosion/explosion17.png" id="19_2pci2"]
+[ext_resource type="Texture2D" uid="uid://b2bj80q3tl55u" path="res://td images/tours/explosion/explosion18.png" id="20_c5l0m"]
+[ext_resource type="Texture2D" uid="uid://b8km3103yc6i8" path="res://td images/tours/explosion/explosion19.png" id="21_5665m"]
+[ext_resource type="Texture2D" uid="uid://ds0fpq5xwbome" path="res://td images/tours/explosion/explosion20.png" id="22_57bx0"]
+[ext_resource type="Texture2D" uid="uid://cgs71axy681yy" path="res://td images/tours/explosion/explosion21.png" id="23_ro04v"]
+[ext_resource type="Texture2D" uid="uid://jbm18mcrorjf" path="res://td images/tours/explosion/explosion22.png" id="24_r4arl"]
+[ext_resource type="Texture2D" uid="uid://cwaimuqyfm5uv" path="res://td images/tours/explosion/explosion23.png" id="25_40af0"]
+[ext_resource type="Texture2D" uid="uid://b1ku3d8w1brxf" path="res://td images/tours/explosion/explosion24.png" id="26_1qgc3"]
+[ext_resource type="Texture2D" uid="uid://d1010h5fut1lg" path="res://td images/tours/explosion/explosion(2).png" id="27_6vho4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_185ci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0ft3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fgc8k")
+}],
+"loop": true,
+"name": &"mine",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jtlrg"]
+radius = 74.6726
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5e11d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qw74u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_77svd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vonjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hpce2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tmuss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_weboh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1fhwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lq3y0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_e68ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_v4gxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_v6cej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8idtc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3hes2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8c0xh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_trqjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2pci2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_c5l0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_5665m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_57bx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ro04v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_r4arl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_40af0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_1qgc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_6vho4")
+}],
+"loop": true,
+"name": &"explosion",
+"speed": 30.0
+}]
+
+[node name="explosif_lazer" type="Node2D" groups=["explosif"]]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_j7jxt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_185ci")
+animation = &"mine"
+
+[node name="Area2D" type="Area2D" parent="." groups=["explosif"]]
+scale = Vector2(2.5, 2.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("CircleShape2D_jtlrg")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_5e11d")
+animation = &"explosion"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

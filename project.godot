@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Tower Defense 2D"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://Icons/FAV-icon2.ico"
+config/icon="res://FAV icons/FAV icon11.svg"
+config/macos_native_icon="res://FAV icons/FAV icon7.svg"
+config/windows_native_icon="res://Icons/FAV icon11.ico"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
+
+[global_group]
+
+neige=""
+"vulnérable"=""
+
+[input]
+
+"clique gauche"={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(66, 17),"global_position":Vector2(73, 53),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+
+[layer_names]
+
+2d_physics/layer_1="menus"
+2d_physics/layer_2="monstres/tirs"
+2d_physics/layer_3="tours(détection)"
+2d_physics/layer_4="mines"
+2d_physics/layer_8="tombes"

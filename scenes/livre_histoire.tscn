@@ -1,0 +1,215 @@
+[gd_scene load_steps=20 format=3 uid="uid://d135lilmffjac"]
+
+[ext_resource type="Script" path="res://scripts/livre.gd" id="1_5hdgm"]
+[ext_resource type="Texture2D" uid="uid://duyiica5n1auu" path="res://TEXTURES/bois.jpg" id="2_lodw0"]
+[ext_resource type="Texture2D" uid="uid://bcwr5mhxvn6ts" path="res://td images/livre/notif.png" id="3_lf6mk"]
+[ext_resource type="Texture2D" uid="uid://c6u5nkxvwkcyu" path="res://td images/livre/4e_couverture.png" id="4_q0d5e"]
+[ext_resource type="Texture2D" uid="uid://b7iar2didmydd" path="res://td images/livre/couverture.png" id="5_hfodg"]
+[ext_resource type="Texture2D" uid="uid://b5p05uyrg72yt" path="res://td images/livre/livre_ouvert.png" id="6_hvv70"]
+[ext_resource type="Texture2D" uid="uid://dsa1xwtdq7ui7" path="res://td images/livre/pages.png" id="7_5b3ho"]
+[ext_resource type="Texture2D" uid="uid://bwo3ipyewv4et" path="res://td images/livre/marque_journal.png" id="8_astn6"]
+
+[sub_resource type="Curve2D" id="Curve2D_oc1y6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -315, 324, 0, 0, 0, 0, 350, 324)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_cvnxe"]
+size = Vector3(20, 20, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4ku3x"]
+size = Vector3(20, 20, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_m4pey"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5y6j5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_q0d5e")
+}],
+"loop": true,
+"name": &"4e_couverture",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_hfodg")
+}],
+"loop": true,
+"name": &"couverture",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hvv70")
+}],
+"loop": true,
+"name": &"livre_ouvert",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tatcq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_5b3ho")
+}],
+"loop": true,
+"name": &"double_page",
+"speed": 5.0
+}]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ogj8w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a55ax"]
+size = Vector2(381.936, 460.645)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwu4a"]
+size = Vector2(380.645, 460.645)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn42m"]
+size = Vector2(741, 431)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl1bq"]
+size = Vector2(51, 97)
+
+[node name="livre_histoire" type="Node2D"]
+z_index = 5
+script = ExtResource("1_5hdgm")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_oc1y6")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-315, 324)
+loop = false
+
+[node name="menu" type="Node2D" parent="Path2D/PathFollow2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Path2D/PathFollow2D/menu"]
+modulate = Color(0.992157, 0.443137, 0, 1)
+z_index = 1
+scale = Vector2(36.7597, 21.3026)
+mesh = SubResource("BoxMesh_cvnxe")
+texture = ExtResource("2_lodw0")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Path2D/PathFollow2D/menu"]
+modulate = Color(0.992157, 0.443137, 0, 1)
+position = Vector2(209, -167.328)
+scale = Vector2(20.1978, 4.56862)
+mesh = SubResource("BoxMesh_4ku3x")
+texture = ExtResource("2_lodw0")
+
+[node name="livre" type="Node2D" parent="Path2D/PathFollow2D"]
+z_index = 1
+scale = Vector2(0.775, 0.775)
+
+[node name="notification" type="MeshInstance2D" parent="Path2D/PathFollow2D/livre"]
+z_index = 1
+position = Vector2(468.387, -219.355)
+scale = Vector2(50, -50)
+mesh = SubResource("QuadMesh_m4pey")
+texture = ExtResource("3_lf6mk")
+
+[node name="couverture" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre"]
+position = Vector2(0, 5)
+sprite_frames = SubResource("SpriteFrames_5y6j5")
+animation = &"livre_ouvert"
+
+[node name="pages" type="Node2D" parent="Path2D/PathFollow2D/livre"]
+
+[node name="pages" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/pages"]
+position = Vector2(0, -23.3871)
+sprite_frames = SubResource("SpriteFrames_tatcq")
+animation = &"double_page"
+
+[node name="date" type="Label" parent="Path2D/PathFollow2D/livre/pages"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -331.613
+offset_top = -232.258
+offset_right = -148.613
+offset_bottom = -186.258
+theme_override_font_sizes/font_size = 33
+text = "9 Avril 2484"
+
+[node name="left" type="Label" parent="Path2D/PathFollow2D/livre/pages"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -346.0
+offset_top = -182.0
+offset_right = -12.0
+offset_bottom = 170.0
+theme_override_font_sizes/font_size = 20
+text = "Le 3 Juin 2484 restera dans les
+mémoires comme étant le jour
+de la première victoire
+humaine ! Le Nécromancien
+nous à bien fait peur avec son
+entrée fracassante ! La nuit
+est devenue si noir qu'on ne
+voyait que lui ! lorsqu'il passait
+sur une tombe, il réssuscitait
+le monstre mort à cet endroit.
+Cependant, malgré tout, notre"
+horizontal_alignment = 1
+
+[node name="right" type="Label" parent="Path2D/PathFollow2D/livre/pages"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 18.0
+offset_top = -182.0
+offset_right = 346.0
+offset_bottom = 172.0
+theme_override_font_sizes/font_size = 19
+text = "puissance de feu l'a fait fuir
+dans un portail qu'il à créé.
+On aurait aimé en finir avec
+lui, mais au moins l'espoir renaît !
+On sait maintenant qu'il n'est
+pas invincible, et qu'on peut le
+vaincre ! Peut être alors
+que l'humanité à une chance !"
+horizontal_alignment = 1
+
+[node name="marque_étrange" type="MeshInstance2D" parent="Path2D/PathFollow2D/livre/pages"]
+visible = false
+position = Vector2(-175.484, 46.4516)
+rotation = 0.673697
+scale = Vector2(150, -150)
+mesh = SubResource("QuadMesh_ogj8w")
+texture = ExtResource("8_astn6")
+
+[node name="touch_mouse_p_l" type="Area2D" parent="Path2D/PathFollow2D/livre"]
+position = Vector2(-320, -171.613)
+
+[node name="Collision" type="CollisionShape2D" parent="Path2D/PathFollow2D/livre/touch_mouse_p_l"]
+z_index = 2
+position = Vector2(129.032, 147.742)
+shape = SubResource("RectangleShape2D_a55ax")
+
+[node name="touch_mouse_p_r" type="Area2D" parent="Path2D/PathFollow2D/livre"]
+position = Vector2(45.1614, -171.613)
+
+[node name="Collision" type="CollisionShape2D" parent="Path2D/PathFollow2D/livre/touch_mouse_p_r"]
+z_index = 2
+position = Vector2(145.339, 147.742)
+shape = SubResource("RectangleShape2D_dwu4a")
+
+[node name="touch_mouse" type="Area2D" parent="Path2D/PathFollow2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/touch_mouse"]
+z_index = 2
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_fn42m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Path2D/PathFollow2D/touch_mouse"]
+z_index = 2
+position = Vector2(389.5, -166.5)
+shape = SubResource("RectangleShape2D_sl1bq")
+
+[connection signal="mouse_entered" from="Path2D/PathFollow2D/livre/touch_mouse_p_l" to="." method="mouse_entered_p_l"]
+[connection signal="mouse_exited" from="Path2D/PathFollow2D/livre/touch_mouse_p_l" to="." method="mouse_exited_p_l"]
+[connection signal="mouse_entered" from="Path2D/PathFollow2D/livre/touch_mouse_p_r" to="." method="mouse_entered_p_r"]
+[connection signal="mouse_exited" from="Path2D/PathFollow2D/livre/touch_mouse_p_r" to="." method="mouse_exited_p_r"]
+[connection signal="mouse_entered" from="Path2D/PathFollow2D/touch_mouse" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Path2D/PathFollow2D/touch_mouse" to="." method="mouse_exited"]

@@ -1,0 +1,101 @@
+[gd_scene load_steps=11 format=3 uid="uid://cv6q7gqb4cda2"]
+
+[ext_resource type="Script" path="res://scripts/lazer_progressif.gd" id="1_rep8y"]
+[ext_resource type="Texture2D" uid="uid://cjvey5ueh1v16" path="res://td images/tours/new/base tour.svg" id="2_84v1s"]
+[ext_resource type="Texture2D" uid="uid://b8qmq8wms6xoj" path="res://td images/tours/new/pose tour non.svg" id="3_jhf0v"]
+[ext_resource type="Texture2D" uid="uid://1yunuf01jwrf" path="res://td images/tours/new/pose tour oui.svg" id="4_cqvqd"]
+[ext_resource type="Texture2D" uid="uid://bcmbqvchuv1iu" path="res://td images/tours/new/tourelle.svg" id="5_i0jn2"]
+[ext_resource type="Texture2D" uid="uid://dhy6kybq3jo6v" path="res://td images/tours/lazer progressif/lazer progressif.svg" id="6_21nfm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3urnb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_84v1s")
+}],
+"loop": true,
+"name": &"chargée",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jhf0v")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_cqvqd")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jrh6b"]
+radius = 70.0286
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ggy5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_i0jn2")
+}],
+"loop": true,
+"name": &"tourelle",
+"speed": 5.0
+}]
+
+[sub_resource type="QuadMesh" id="QuadMesh_34786"]
+size = Vector2(1, 50)
+
+[node name="lazer_constant" type="Node2D"]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_rep8y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-77.5, -77.5)
+sprite_frames = SubResource("SpriteFrames_3urnb")
+animation = &"chargée"
+centered = false
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_jrh6b")
+
+[node name="tourelle" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tourelle"]
+position = Vector2(40, -2.5)
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_8ggy5")
+animation = &"tourelle"
+
+[node name="lazer_mesh" type="MeshInstance2D" parent="tourelle"]
+position = Vector2(90, -2.23)
+scale = Vector2(1, 0.636)
+mesh = SubResource("QuadMesh_34786")
+texture = ExtResource("6_21nfm")
+
+[node name="RayCast2D" type="RayCast2D" parent="tourelle"]
+scale = Vector2(20, 50)
+target_position = Vector2(504.7, 0)
+collision_mask = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

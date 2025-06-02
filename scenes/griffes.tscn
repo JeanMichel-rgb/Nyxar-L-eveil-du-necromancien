@@ -1,0 +1,131 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmurfbs1dv8xo"]
+
+[ext_resource type="Script" path="res://scripts/griffes.gd" id="1_3t571"]
+[ext_resource type="Texture2D" uid="uid://fxrpatq24aw0" path="res://td images/tours/griffes/poser pas possible.svg" id="2_yigol"]
+[ext_resource type="Texture2D" uid="uid://ccv6as3w8pugq" path="res://td images/tours/griffes/poser possible.svg" id="3_1jaw3"]
+[ext_resource type="Texture2D" uid="uid://da0lpdkci1onf" path="res://td images/tours/griffes/griffes.svg" id="4_boxbv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwo7t"]
+size = Vector2(56.2191, 12.5161)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t8o5w"]
+radius = 14.3569
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_psxtc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yigol")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1jaw3")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_boxbv")
+}],
+"loop": true,
+"name": &"tir",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_boxbv")
+}],
+"loop": true,
+"name": &"tour",
+"speed": 5.0
+}]
+
+[node name="griffes" type="Node2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_3t571")
+
+[node name="dégats" type="Node2D" parent="."]
+
+[node name="dégat_1" type="Area2D" parent="dégats"]
+collision_layer = 0
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="dégats/dégat_1"]
+position = Vector2(-14, -44.1429)
+rotation = -1.65981
+shape = SubResource("RectangleShape2D_bwo7t")
+
+[node name="dégat_2" type="Area2D" parent="dégats"]
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="dégats/dégat_2"]
+position = Vector2(50, 27.1429)
+rotation = 0.710349
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_bwo7t")
+
+[node name="dégat_3" type="Area2D" parent="dégats"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="dégats/dégat_3"]
+position = Vector2(-23.5714, 44.2857)
+rotation = 2.30034
+shape = SubResource("RectangleShape2D_bwo7t")
+
+[node name="dégat_4" type="Area2D" parent="dégats"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="dégats/dégat_4"]
+position = Vector2(15.7143, 47.1429)
+rotation = -1.65981
+shape = SubResource("RectangleShape2D_bwo7t")
+
+[node name="dégat_5" type="Area2D" parent="dégats"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="dégats/dégat_5"]
+position = Vector2(-49.4604, -23.7863)
+rotation = 0.488692
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_bwo7t")
+
+[node name="dégat_6" type="Area2D" parent="dégats"]
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="dégats/dégat_6"]
+position = Vector2(19, -42)
+rotation = 2.01586
+shape = SubResource("RectangleShape2D_bwo7t")
+
+[node name="dégat_7" type="Area2D" parent="dégats"]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="dégats/dégat_7"]
+position = Vector2(-45.2857, 12.7143)
+rotation = -0.118682
+shape = SubResource("RectangleShape2D_bwo7t")
+
+[node name="dégat_8" type="Area2D" parent="dégats"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="dégats/dégat_8"]
+position = Vector2(49.869, -15.8214)
+rotation = -0.118682
+shape = SubResource("RectangleShape2D_bwo7t")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.52588e-05, 1.19209e-06)
+shape = SubResource("CircleShape2D_t8o5w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.125394, 0.123735)
+sprite_frames = SubResource("SpriteFrames_psxtc")
+animation = &"tour"
+
+[connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]

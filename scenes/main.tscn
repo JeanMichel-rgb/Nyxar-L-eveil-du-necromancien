@@ -1,0 +1,2625 @@
+[gd_scene load_steps=111 format=3 uid="uid://df54dgn8y3xj5"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_4h6pl"]
+[ext_resource type="Texture2D" uid="uid://duyiica5n1auu" path="res://TEXTURES/bois.jpg" id="2_r6xbc"]
+[ext_resource type="Texture2D" uid="uid://dlw8vmx5dgm82" path="res://td images/map/map.svg" id="3_2ev3h"]
+[ext_resource type="Texture2D" uid="uid://dpqff8xea2odm" path="res://td images/tours/boulet/1.svg" id="3_5i3c8"]
+[ext_resource type="Texture2D" uid="uid://df61ok57ggjjt" path="res://td images/map/facile.png" id="3_5svfc"]
+[ext_resource type="Texture2D" uid="uid://qhg48ihhbqur" path="res://td images/map/facile2.png" id="4_8npuk"]
+[ext_resource type="Texture2D" uid="uid://dvgnoclsbbwex" path="res://td images/map/expert.png" id="4_idbwh"]
+[ext_resource type="Texture2D" uid="uid://bltnit2bgswen" path="res://td images/map/normale.png" id="4_peken"]
+[ext_resource type="Texture2D" uid="uid://byl2xpmg4jr18" path="res://td images/tours/boulets_explosifs/1.svg" id="4_upt5b"]
+[ext_resource type="Texture2D" uid="uid://cxoweuioqkyuf" path="res://td images/map/facile3.png" id="5_gktdd"]
+[ext_resource type="Texture2D" uid="uid://c2g47145sbv04" path="res://td images/map/impossible.png" id="5_v72hg"]
+[ext_resource type="Texture2D" uid="uid://cgmrqy1qdq6wh" path="res://td images/tours/mitraillette/1.svg" id="5_w1iwq"]
+[ext_resource type="Texture2D" uid="uid://crmlewq8a5mrd" path="res://td images/tours/Lazer 1/5.svg" id="6_5e1ax"]
+[ext_resource type="Texture2D" uid="uid://pbrk8n3akks2" path="res://td images/map/demon.png" id="6_lj0aa"]
+[ext_resource type="Texture2D" uid="uid://dm00qxlueqgpr" path="res://progress_wave.png" id="6_mhoyh"]
+[ext_resource type="Texture2D" uid="uid://ddmm6ywoqhitf" path="res://td images/map/demon2.png" id="6_vxeyv"]
+[ext_resource type="Texture2D" uid="uid://c7g7mfvrxxxcm" path="res://td images/map/impossible2.png" id="7_em5x6"]
+[ext_resource type="Texture2D" uid="uid://b8eumisrnshry" path="res://td images/tours/Lazer 2/5.svg" id="7_jnj24"]
+[ext_resource type="Texture2D" uid="uid://cvd3dpe8dxkkd" path="res://td images/tours/Lazer 3/5.svg" id="8_0jwrt"]
+[ext_resource type="Texture2D" uid="uid://uml3unka2o6g" path="res://td images/map/impossible3.png" id="8_fv803"]
+[ext_resource type="Texture2D" uid="uid://ci138xlgsuooh" path="res://td images/tours/hache/hache 1.svg" id="9_2lac6"]
+[ext_resource type="Texture2D" uid="uid://c6ilse5ooi3ss" path="res://td images/tours/Pierre/7.svg" id="9_64qm6"]
+[ext_resource type="Texture2D" uid="uid://da0lpdkci1onf" path="res://td images/tours/griffes/griffes.svg" id="10_kiw07"]
+[ext_resource type="Texture2D" uid="uid://bmihmuja7i0pt" path="res://td images/map/expert2.png" id="11_10k2p"]
+[ext_resource type="Texture2D" uid="uid://ctjlloct0dmkj" path="res://td images/tours/dieu tournoyant/dieu tournoyant.svg" id="11_qtnsi"]
+[ext_resource type="Texture2D" uid="uid://exhuorexot0k" path="res://td images/tours/mine/mine 1.svg" id="12_inaqy"]
+[ext_resource type="Texture2D" uid="uid://dc1vkqs28tygd" path="res://td images/tours/neige/1.svg" id="14_uj6xh"]
+[ext_resource type="Texture2D" uid="uid://bv05brn437fb0" path="res://td images/tours/ecrabouillator/ecrabouillator.svg" id="15_l6ggj"]
+[ext_resource type="Texture2D" uid="uid://dw8i50ju7o45o" path="res://td images/tours/flammes/flamme.svg" id="18_mo8j6"]
+[ext_resource type="Texture2D" uid="uid://mb6fnc8kujtc" path="res://td images/tours/new/tour complete.svg" id="19_0y057"]
+[ext_resource type="PackedScene" uid="uid://bldmrn6hnybqp" path="res://scenes/explosion.tscn" id="20_r0jsv"]
+[ext_resource type="Texture2D" uid="uid://l4r8k3o5ycp7" path="res://TEXTURES/metal.jpg" id="24_8jsme"]
+[ext_resource type="PackedScene" uid="uid://d135lilmffjac" path="res://scenes/livre_histoire.tscn" id="24_po348"]
+[ext_resource type="Texture2D" uid="uid://6dm8d25wh3hk" path="res://td images/images_menu/bouton_éteint.png" id="24_ss3r3"]
+[ext_resource type="Texture2D" uid="uid://bu0l0l8gucb43" path="res://td images/tours/mine/mine trou noir.svg" id="26_qokg4"]
+[ext_resource type="Texture2D" uid="uid://03te8uitsd4w" path="res://td images/images_menu/poubelle.svg" id="32_dvqal"]
+[ext_resource type="Texture2D" uid="uid://4cvr1v42x7xp" path="res://td images/images_menu/parametre/parametre.svg" id="33_1ta83"]
+[ext_resource type="Texture2D" uid="uid://r77ehqlaq7p2" path="res://td images/images_menu/parametre/son.svg" id="36_yopcb"]
+[ext_resource type="AudioStream" uid="uid://d1wehjj6jojxa" path="res://assets/sounds/patriotic-history-orchestral-loop-313127.mp3" id="37_wp5g0"]
+[ext_resource type="Texture2D" uid="uid://d0v5rubp5a347" path="res://assets/logo/logo final.jpg" id="38_0eav2"]
+[ext_resource type="AudioStream" uid="uid://nv0osqpq55av" path="res://assets/sounds/troumif-sound.mp3" id="39_qi4sg"]
+[ext_resource type="Texture2D" uid="uid://cvl8wtpwx2fy5" path="res://td images/image jeu.svg" id="42_jh22v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5jdt5"]
+font_size = 60
+outline_size = 8
+outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xuo1a"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_7bxi5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a5f1n"]
+radius = 0.02
+
+[sub_resource type="LabelSettings" id="LabelSettings_mfaus"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_s8iqd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 10, 83, -80.9086, -62.9289, 80.9086, 62.9289, 251, 111, -85.4035, -25.4712, 85.4035, 25.4712, 339, 409, -46.4475, 37.4577, 46.4475, -37.4577, 515, 394, -62.9289, 43.4509, 62.9289, -43.4509, 561, 96, -2.99661, -53.9391, 2.99661, 53.9391, 765, 124, -62.9289, -32.9628, 62.9289, 32.9628, 822, 416, -14.9831, 53.9391, 14.9831, -53.9391, 1052, 367, 0, 0, 224.506, 0, 1054, -8)
+}
+point_count = 9
+
+[sub_resource type="QuadMesh" id="QuadMesh_qnoqn"]
+lightmap_size_hint = Vector2i(7, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2krps"]
+size = Vector2(334.5, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_im3xn"]
+size = Vector2(350, 77.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndvj1"]
+size = Vector2(363, 69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvtta"]
+size = Vector2(383, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2km3d"]
+size = Vector2(111, 406.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtb7a"]
+size = Vector2(111, 460.25)
+
+[sub_resource type="Curve2D" id="Curve2D_wkss1"]
+_data = {
+"points": PackedVector2Array(-9.43874, -1.88775, 9.43874, 1.88775, 14, 439, -63.6781, 4.49492, 63.6781, -4.49492, 259, 445, -101.562, 34.745, 101.562, -34.745, 424, 405, 0, 48.9994, 0, -48.9994, 568, 272, 32.0724, 29.3997, -32.0724, -29.3997, 510, 153, 141.653, 10.6908, -141.653, -10.6908, 287, 64, 0.396847, -26.589, -0.396847, 26.589, 140, 208, -34.1291, -7.937, 34.1291, 7.937, 202, 264, -31.748, -3.9685, 31.748, 3.9685, 314, 286, -153.978, 3.1748, 153.978, -3.1748, 588, 293, -69.8456, 17.4614, 69.8456, -17.4614, 895, 262, 3.1748, 45.2409, -3.1748, -45.2409, 1021, 175, 153.978, 0, -153.978, 0, 815, 62, -4.7622, -69.8456, 4.7622, 69.8456, 582, 195, -12.6992, -23.0173, 12.6992, 23.0173, 598, 303, -43.8406, -31.1127, 43.8406, 31.1127, 663, 369, -74.1662, -10.4882, 74.1662, 10.4882, 908, 459, -44.9492, -2.99661, 44.9492, 2.99661, 1041, 473, 0, 0, 14.9831, -53.9391, 1171, 462)
+}
+point_count = 19
+
+[sub_resource type="QuadMesh" id="QuadMesh_mqs5a"]
+
+[sub_resource type="Curve2D" id="Curve2D_alonj"]
+_data = {
+"points": PackedVector2Array(-13.3484, 11.3461, 13.3484, -11.3461, 16, 424, -138.823, 66.742, 138.823, -66.742, 332, 197, -73.4162, 0.66742, 73.4162, -0.66742, 600, 130, 13.3484, -91.4365, -13.3484, 91.4365, 869, 269, 47.3868, 32.7036, -47.3868, -32.7036, 652, 325, 118.133, 8.00904, -118.133, -8.00904, 486, 273, -3.3371, -51.3913, 3.3371, 51.3913, 351, 385, -78.7555, -7.34162, 78.7555, 7.34162, 499, 481, -63.4049, 11.3461, 63.4049, -11.3461, 688, 473, -57.3981, 28.6991, 57.3981, -28.6991, 932, 403, 1.33484, 73.4162, -1.33484, -73.4162, 1076, 239, 44.0226, 22.2302, -44.0226, -22.2302, 935, 85, 165.81, 1.99924, -165.81, -1.99924, 629, 47, 357.07, -66.0746, -357.07, 66.0746, 17, 115)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_hpk0m"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 176, -14, 53.3448, -1.91837, -53.3448, 1.91837, 139, 387, -59.3493, -1.55007, 59.3493, 1.55007, 171, 503, -53.1039, 53.7539, 53.1039, -53.7539, 339, 453, 3.36359, 37.8403, -3.36359, -37.8403, 372, 302, -40.7496, 38.0269, 40.7496, -38.0269, 400, 76, -49.6129, 4.20448, 49.6129, -4.20448, 519, 35, -81.0718, -6.23629, 81.0718, 6.23629, 807, 29, -1.7818, -49.8903, 1.7818, 49.8903, 945, 112, 76.6173, -8.01809, -76.6173, 8.01809, 835, 196, 38.3086, -47.2176, -38.3086, 47.2176, 568, 266, -6.23629, -44.5449, 6.23629, 44.5449, 533, 360, -49.8903, -25.8361, 49.8903, 25.8361, 620, 456, -102.453, 6.23629, 102.453, -6.23629, 966, 512, 5.34539, 103.344, -5.34539, -103.344, 1098, 385, -7.12719, 313.596, 7.12719, -313.596, 1068, -17)
+}
+point_count = 16
+
+[sub_resource type="Curve2D" id="Curve2D_074cj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 10, 481, -241.285, 30.1606, 241.285, -30.1606, 720, 472, -3.1748, 60.3212, 3.1748, -60.3212, 1065, 320, 43.1335, 17.6777, -43.1335, -17.6777, 934, 226, 104.652, 7.07107, -104.652, -7.07107, 761, 197, 70.7107, -50.9117, -70.7107, 50.9117, 561.417, 258.859, 138.593, -1.41421, -138.593, 1.41421, 346, 333, -8.48528, 76.3675, 8.48528, -76.3675, 134, 229, -189.505, 29.6985, 189.505, -29.6985, 333, 60, 0, 0, 14.9831, -53.9391, 1170, 44)
+}
+point_count = 10
+
+[sub_resource type="Curve2D" id="Curve2D_g8oun"]
+_data = {
+"points": PackedVector2Array(-9.43874, -1.88775, 9.43874, 1.88775, 16, 457, -52.857, 28.3162, 52.857, -28.3162, 154, 445, -109.407, 17.8381, 109.407, -17.8381, 346, 172, 0, 0, 0, 0, 484, 253, -102.589, -3.36359, 102.589, 3.36359, 603, 308, 0, 0, 0, 0, 726, 261, -110.598, -50.3006, 110.598, 50.3006, 889, 177, 0, 0, 0, 0, 965, 357, -47.0902, -43.7266, 47.0902, 43.7266, 1012, 448, 0, 0, 14.9831, -53.9391, 1175, 456)
+}
+point_count = 10
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_arki1"]
+load_path = "res://.godot/imported/expert.png-c5aec57c99bba3539f6ab6b11f329b8e.ctex"
+
+[sub_resource type="Curve2D" id="Curve2D_6frqb"]
+_data = {
+"points": PackedVector2Array(-9.43874, -1.88775, 9.43874, 1.88775, 17, 349, -97.2193, 0, 97.2193, 0, 875, 343, 87.7806, 8.49489, -87.7806, -8.49489, 881, 274, 64.1836, 1.88775, -64.1836, -1.88775, 275, 276, -75.5102, 1.88776, 75.5102, -1.88776, 276, 209, 0, 0, 14.9831, -53.9391, 1170, 210)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_xh7a1"]
+_data = {
+"points": PackedVector2Array(-9.43874, -1.88775, 9.43874, 1.88775, 16, 457, -65.0834, 15.874, 65.0834, -15.874, 123, 432, -90.4816, 33.3354, 90.4816, -33.3354, 277, 169, -3.1748, -3.1748, 3.1748, 3.1748, 420, 203, -19.0488, -31.748, 19.0488, 31.748, 470, 289, -49.2094, -36.5102, 49.2094, 36.5102, 561, 401, -77.7826, 36.5102, 77.7826, -36.5102, 815, 360, -50.7968, 39.685, 50.7968, -39.685, 997, 177, 0, 0, 0, 0, 1064, 114, 0, 0, 14.9831, -53.9391, 1161, 79)
+}
+point_count = 10
+
+[sub_resource type="Curve2D" id="Curve2D_5j40k"]
+_data = {
+"points": PackedVector2Array(-9.43874, -1.88775, 9.43874, 1.88775, 14, 442, -94.3933, 2.99661, 94.3933, -2.99661, 222, 443, -86.9018, 24.7221, 86.9018, -24.7221, 601, 399, -2.99661, 74.9153, 2.99661, -74.9153, 865, 193, 43.4509, -0.749153, -43.4509, 0.749153, 589, 125, 4.49492, -71.1696, -4.49492, 71.1696, 314, 192, -70.4204, -26.9695, 70.4204, 26.9695, 589, 399, -44.9492, -1.49831, 44.9492, 1.49831, 906, 447, 0, 0, 14.9831, -53.9391, 1171, 432)
+}
+point_count = 9
+
+[sub_resource type="Curve2D" id="Curve2D_1gpdo"]
+_data = {
+"points": PackedVector2Array(-9.43874, -1.88775, 9.43874, 1.88775, 14, 443, -24, 38, 24, -38, 210, 419, -178, 62, 178, -62, 478, 129, -138, -118, 138, 118, 1070, 193, 50, 2, -50, -2, 501, 546)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_0ij6e"]
+_data = {
+"points": PackedVector2Array(-9.43874, -1.88775, 9.43874, 1.88775, 12, 88, -82.0244, -43.1335, 82.0244, 43.1335, 248, 124, -13.4848, -47.9458, 13.4848, 47.9458, 372, 334, -147.9, -7.53358, 147.9, 7.53358, 588, 498, -23.2238, 41.2034, 23.2238, -41.2034, 830, 324, -62.2254, 52.3259, 62.2254, -52.3259, 980, 131, 50, 2, 138, 118, 1172, 96)
+}
+point_count = 7
+
+[sub_resource type="Curve2D" id="Curve2D_l5ny3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 120, -9, -48.7216, -15.3507, 48.7216, 15.3507, 152, 61, -110.792, 22.6923, 110.792, -22.6923, 363, 48, 7.34162, -36.7081, -7.34162, 36.7081, 525, 158, 46.7194, -42.7149, -46.7194, 42.7149, 458, 261, -67.4094, -36.0407, 67.4094, 36.0407, 469, 393, -69.4117, -18.6878, 69.4117, 18.6878, 634, 459, -66.742, -8.91317, 66.742, 8.91317, 842, 497, 0, 0, 138, 118, 1173, 513)
+}
+point_count = 9
+
+[sub_resource type="SphereMesh" id="SphereMesh_wxkjk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dw8p"]
+size = Vector2(1158.5, 128)
+
+[sub_resource type="Curve2D" id="Curve2D_wgv4w"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1808.44, 250, 0, 0, 0, 0, 1134.55, 250)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_qc3i8"]
+size = Vector3(20, 20, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcnb4"]
+size = Vector2(22.189, 21.0293)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10tmr"]
+size = Vector2(292, 92)
+
+[sub_resource type="SystemFont" id="SystemFont_6104r"]
+font_names = PackedStringArray("Sitka Subheading")
+font_weight = 999
+font_stretch = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_tdhqb"]
+line_spacing = 3.33
+font = SubResource("SystemFont_6104r")
+font_size = 26
+font_color = Color(0.122252, 0.122252, 0.122252, 1)
+outline_size = 2
+outline_color = Color(0.980392, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_3awuv"]
+font_names = PackedStringArray("Sitka Subheading")
+
+[sub_resource type="LabelSettings" id="LabelSettings_csji8"]
+line_spacing = 3.33
+font = SubResource("SystemFont_3awuv")
+font_size = 26
+font_color = Color(0.122252, 0.122252, 0.122252, 1)
+outline_size = 2
+outline_color = Color(0, 1, 0.937255, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jeqis"]
+line_spacing = 3.33
+font = SubResource("SystemFont_3awuv")
+font_size = 26
+font_color = Color(0.122252, 0.122252, 0.122252, 1)
+outline_size = 2
+outline_color = Color(0.627597, 0.308001, 1.92523e-07, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3n2os"]
+line_spacing = 3.33
+font = SubResource("SystemFont_3awuv")
+font_size = 26
+font_color = Color(0.122252, 0.122252, 0.122252, 1)
+outline_size = 2
+outline_color = Color(0.627451, 0.309804, 1, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_17led"]
+line_spacing = 3.33
+font = SubResource("SystemFont_3awuv")
+font_size = 26
+font_color = Color(0.122252, 0.122252, 0.122252, 1)
+outline_size = 2
+outline_color = Color(0.627451, 1, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_q6l3b"]
+font_names = PackedStringArray("Bookman Old Style")
+font_weight = 475
+font_stretch = 50
+hinting = 2
+subpixel_positioning = 0
+msdf_pixel_range = 611
+msdf_size = -872
+
+[sub_resource type="LabelSettings" id="LabelSettings_4c36g"]
+font = SubResource("SystemFont_q6l3b")
+font_size = 30
+font_color = Color(0.674815, 0.674815, 0.674815, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0.0313726, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_avuna"]
+line_spacing = 0.4
+font_size = 14
+font_color = Color(0.941959, 0.961603, 1, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b87nx"]
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3pbo2"]
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.6093, 0, 0.0956014, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mq8qp"]
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7r4uv"]
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_22moe"]
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ir8p"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ly3ef"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fj0b4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fy5f6"]
+size = Vector3(0.75, 1, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_gngpf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lhkyg"]
+font_size = 35
+outline_size = 8
+outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_mxret"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_nkvcu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5gmgf"]
+font_size = 50
+
+[sub_resource type="QuadMesh" id="QuadMesh_0vqya"]
+size = Vector2(2073.6, 1166.4)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5gxjq"]
+viewport_path = NodePath("camera")
+
+[sub_resource type="BoxMesh" id="BoxMesh_c2qtb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jp64h"]
+font_size = 56
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.6093, 0, 0.0956014, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jd4yl"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fn7qt"]
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ixd5n"]
+size = Vector2(860, -860)
+
+[sub_resource type="Animation" id="Animation_5ioua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fond:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("image_jeu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("image_jeu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7bml8"]
+resource_name = "logo"
+length = 6.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("39_qi4sg")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.6, 2.3, 4),
+"transitions": PackedFloat32Array(2.82843, 1.10957, 1.1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fond:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.6, 2.3, 4),
+"transitions": PackedFloat32Array(1.1, 1.1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("image_jeu:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("image_jeu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3eacd"]
+_data = {
+"RESET": SubResource("Animation_5ioua"),
+"logo": SubResource("Animation_7bml8")
+}
+
+[sub_resource type="QuadMesh" id="QuadMesh_7v7tx"]
+size = Vector2(1500, 1000)
+
+[sub_resource type="QuadMesh" id="QuadMesh_6l6qn"]
+size = Vector2(1152, 648)
+
+[node name="main" type="Node"]
+script = ExtResource("1_4h6pl")
+metadata/_edit_vertical_guides_ = [936.0, 138.0, 232.0]
+
+[node name="camera" type="SubViewport" parent="."]
+size = Vector2i(1151, 649)
+
+[node name="menu" type="Node2D" parent="."]
+
+[node name="histoire" type="Button" parent="menu"]
+offset_left = 827.0
+offset_top = -1009.0
+offset_right = 1267.0
+offset_bottom = -889.0
+theme_override_font_sizes/font_size = 50
+text = "Mode Histoire"
+metadata/_edit_use_anchors_ = true
+
+[node name="evolution" type="Button" parent="menu"]
+offset_left = 1313.0
+offset_top = -992.0
+offset_right = 1753.0
+offset_bottom = -872.0
+theme_override_font_sizes/font_size = 50
+text = "Vagues infinies"
+metadata/_edit_use_anchors_ = true
+
+[node name="load" type="Node2D" parent="menu"]
+
+[node name="1" type="Button" parent="menu/load"]
+offset_left = 29.0
+offset_top = 440.0
+offset_right = 379.0
+offset_bottom = 530.0
+theme_override_font_sizes/font_size = 26
+text = "vide"
+autowrap_mode = 3
+clip_text = true
+
+[node name="2" type="Button" parent="menu/load"]
+offset_left = 400.0
+offset_top = 440.0
+offset_right = 750.0
+offset_bottom = 530.0
+theme_override_font_sizes/font_size = 26
+text = "vide
+"
+autowrap_mode = 3
+clip_text = true
+
+[node name="3" type="Button" parent="menu/load"]
+offset_left = 781.0
+offset_top = 440.0
+offset_right = 1131.0
+offset_bottom = 530.0
+theme_override_font_sizes/font_size = 26
+text = "vide
+"
+autowrap_mode = 3
+clip_text = true
+
+[node name="Label" type="Label" parent="menu/load"]
+offset_left = 325.0
+offset_top = 326.0
+offset_right = 745.0
+offset_bottom = 409.0
+text = "SAUVEGARDES
+"
+label_settings = SubResource("LabelSettings_5jdt5")
+horizontal_alignment = 1
+
+[node name="map" type="Node2D" parent="menu"]
+
+[node name="suivant" type="Button" parent="menu/map"]
+offset_right = 40.0
+offset_bottom = 31.0
+text = ">"
+metadata/_edit_use_anchors_ = true
+
+[node name="précédent" type="Button" parent="menu/map"]
+offset_right = 40.0
+offset_bottom = 31.0
+text = "<"
+metadata/_edit_use_anchors_ = true
+
+[node name="map_level" type="Node2D" parent="menu/map"]
+
+[node name="facile" type="Node2D" parent="menu/map/map_level"]
+
+[node name="m1" type="Button" parent="menu/map/map_level/facile"]
+offset_left = 182.0
+offset_top = 403.0
+offset_right = 454.0
+offset_bottom = 603.0
+icon = ExtResource("4_peken")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m2" type="Button" parent="menu/map/map_level/facile"]
+offset_left = 640.0
+offset_top = 174.0
+offset_right = 912.0
+offset_bottom = 374.0
+icon = ExtResource("3_5svfc")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m3" type="Button" parent="menu/map/map_level/facile"]
+offset_left = 176.0
+offset_top = 164.0
+offset_right = 448.0
+offset_bottom = 364.0
+icon = ExtResource("4_8npuk")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m4" type="Button" parent="menu/map/map_level/facile"]
+offset_left = 638.0
+offset_top = 402.0
+offset_right = 910.0
+offset_bottom = 602.0
+icon = ExtResource("5_gktdd")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="normal" type="Node2D" parent="menu/map/map_level"]
+
+[node name="m1" type="Button" parent="menu/map/map_level/normal"]
+offset_left = 182.0
+offset_top = 403.0
+offset_right = 454.0
+offset_bottom = 603.0
+icon = ExtResource("3_2ev3h")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m2" type="Button" parent="menu/map/map_level/normal"]
+offset_left = 640.0
+offset_top = 174.0
+offset_right = 912.0
+offset_bottom = 374.0
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m3" type="Button" parent="menu/map/map_level/normal"]
+offset_left = 176.0
+offset_top = 164.0
+offset_right = 448.0
+offset_bottom = 364.0
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m4" type="Button" parent="menu/map/map_level/normal"]
+offset_left = 638.0
+offset_top = 402.0
+offset_right = 910.0
+offset_bottom = 602.0
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="expert" type="Node2D" parent="menu/map/map_level"]
+
+[node name="m1" type="Button" parent="menu/map/map_level/expert"]
+offset_left = 182.0
+offset_top = 403.0
+offset_right = 454.0
+offset_bottom = 603.0
+icon = ExtResource("4_idbwh")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m2" type="Button" parent="menu/map/map_level/expert"]
+offset_left = 640.0
+offset_top = 174.0
+offset_right = 912.0
+offset_bottom = 374.0
+icon = ExtResource("11_10k2p")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m3" type="Button" parent="menu/map/map_level/expert"]
+offset_left = 176.0
+offset_top = 164.0
+offset_right = 448.0
+offset_bottom = 364.0
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m4" type="Button" parent="menu/map/map_level/expert"]
+offset_left = 638.0
+offset_top = 402.0
+offset_right = 910.0
+offset_bottom = 602.0
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="demon" type="Node2D" parent="menu/map/map_level"]
+
+[node name="m1" type="Button" parent="menu/map/map_level/demon"]
+offset_left = 182.0
+offset_top = 403.0
+offset_right = 454.0
+offset_bottom = 603.0
+icon = ExtResource("6_lj0aa")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m2" type="Button" parent="menu/map/map_level/demon"]
+offset_left = 640.0
+offset_top = 174.0
+offset_right = 912.0
+offset_bottom = 374.0
+icon = ExtResource("6_vxeyv")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m3" type="Button" parent="menu/map/map_level/demon"]
+offset_left = 176.0
+offset_top = 164.0
+offset_right = 448.0
+offset_bottom = 364.0
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m4" type="Button" parent="menu/map/map_level/demon"]
+offset_left = 638.0
+offset_top = 402.0
+offset_right = 910.0
+offset_bottom = 602.0
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="impossible" type="Node2D" parent="menu/map/map_level"]
+
+[node name="m1" type="Button" parent="menu/map/map_level/impossible"]
+offset_left = 182.0
+offset_top = 403.0
+offset_right = 454.0
+offset_bottom = 603.0
+icon = ExtResource("5_v72hg")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m2" type="Button" parent="menu/map/map_level/impossible"]
+offset_left = 640.0
+offset_top = 174.0
+offset_right = 912.0
+offset_bottom = 374.0
+icon = ExtResource("7_em5x6")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m3" type="Button" parent="menu/map/map_level/impossible"]
+offset_left = 176.0
+offset_top = 192.0
+offset_right = 448.0
+offset_bottom = 364.0
+icon = ExtResource("8_fv803")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="m4" type="Button" parent="menu/map/map_level/impossible"]
+offset_left = 638.0
+offset_top = 402.0
+offset_right = 910.0
+offset_bottom = 602.0
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="levels" type="Node2D" parent="menu"]
+
+[node name="facile" type="Button" parent="menu/levels"]
+modulate = Color(0, 1, 0, 1)
+offset_left = 325.0
+offset_top = 59.0
+offset_right = 375.0
+offset_bottom = 90.0
+text = "facile"
+metadata/_edit_use_anchors_ = true
+
+[node name="normal" type="Button" parent="menu/levels"]
+modulate = Color(1, 1, 0.113725, 1)
+offset_left = 232.0
+offset_top = 55.0
+offset_right = 296.0
+offset_bottom = 86.0
+text = "normal"
+metadata/_edit_use_anchors_ = true
+
+[node name="expert" type="Button" parent="menu/levels"]
+modulate = Color(1, 0.576471, 0.054902, 1)
+offset_left = 108.0
+offset_top = 61.0
+offset_right = 167.0
+offset_bottom = 92.0
+text = "expert"
+metadata/_edit_use_anchors_ = true
+
+[node name="demon" type="Button" parent="menu/levels"]
+modulate = Color(1, 0.235294, 0, 1)
+offset_left = 99.0
+offset_top = 99.0
+offset_right = 162.0
+offset_bottom = 130.0
+text = "demon"
+metadata/_edit_use_anchors_ = true
+
+[node name="impossible" type="Button" parent="menu/levels"]
+modulate = Color(1, 0.00392157, 0.00392157, 1)
+offset_left = 63.0
+offset_top = 195.0
+offset_right = 155.0
+offset_bottom = 226.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "impossible"
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="MeshInstance2D" parent="menu"]
+modulate = Color(1, 0.45098, 0.286275, 1)
+z_index = -1
+position = Vector2(-626, -350)
+scale = Vector2(1251.5, 699.5)
+mesh = SubResource("BoxMesh_xuo1a")
+texture = ExtResource("2_r6xbc")
+
+[node name="scene" type="Node2D" parent="."]
+visible = false
+
+[node name="map" type="Node2D" parent="scene"]
+
+[node name="trash" type="Node2D" parent="scene/map"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="scene/map/trash"]
+modulate = Color(1, 0, 0, 0.498039)
+z_index = 2
+position = Vector2(-0.491505, -0.529497)
+scale = Vector2(25.0113, 25.059)
+mesh = SubResource("SphereMesh_7bxi5")
+
+[node name="trash2" type="Area2D" parent="scene/map/trash"]
+scale = Vector2(50, 50)
+collision_layer = 0
+collision_mask = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scene/map/trash/trash2"]
+z_index = 2
+position = Vector2(0, 2.23517e-08)
+shape = SubResource("CircleShape2D_a5f1n")
+
+[node name="prix vente" type="Label" parent="scene/map/trash"]
+z_index = 4
+offset_left = 37.0
+offset_top = 25.0
+offset_right = 221.0
+offset_bottom = 93.0
+text = "vente : 130 métaux"
+label_settings = SubResource("LabelSettings_mfaus")
+metadata/_edit_use_anchors_ = true
+
+[node name="tower name" type="Label" parent="scene/map/trash"]
+z_index = 4
+offset_left = 37.0
+offset_top = -3.0
+offset_right = 221.0
+offset_bottom = 65.0
+text = "dieu_tournoyant"
+label_settings = SubResource("LabelSettings_mfaus")
+metadata/_edit_use_anchors_ = true
+
+[node name="Towers" type="Node2D" parent="scene/map"]
+z_index = 1
+
+[node name="facile" type="Node2D" parent="scene/map"]
+
+[node name="m1" type="Node2D" parent="scene/map/facile"]
+position = Vector2(-2, 0)
+
+[node name="Path2D" type="Path2D" parent="scene/map/facile/m1"]
+position = Vector2(-10, 2)
+curve = SubResource("Curve2D_s8iqd")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/facile/m1"]
+z_index = -10
+position = Vector2(579, 273)
+scale = Vector2(1156.75, 548.25)
+mesh = SubResource("QuadMesh_qnoqn")
+texture = ExtResource("4_peken")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/facile/m1"]
+position = Vector2(-16, 4)
+collision_layer = 12
+collision_mask = 0
+angular_damp = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scene/map/facile/m1/path_collisions"]
+position = Vector2(185.75, 88)
+shape = SubResource("RectangleShape2D_2krps")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="scene/map/facile/m1/path_collisions"]
+position = Vector2(418, 421.875)
+shape = SubResource("RectangleShape2D_im3xn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="scene/map/facile/m1/path_collisions"]
+position = Vector2(660.5, 74.5)
+shape = SubResource("RectangleShape2D_ndvj1")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="scene/map/facile/m1/path_collisions"]
+position = Vector2(922.5, 429)
+shape = SubResource("RectangleShape2D_kvtta")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="scene/map/facile/m1/path_collisions"]
+position = Vector2(294.5, 255.25)
+shape = SubResource("RectangleShape2D_2km3d")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="scene/map/facile/m1/path_collisions"]
+position = Vector2(538, 246)
+shape = SubResource("RectangleShape2D_2km3d")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="scene/map/facile/m1/path_collisions"]
+position = Vector2(785.5, 252.25)
+shape = SubResource("RectangleShape2D_2km3d")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="scene/map/facile/m1/path_collisions"]
+position = Vector2(1057, 221.875)
+shape = SubResource("RectangleShape2D_rtb7a")
+
+[node name="m2" type="Node2D" parent="scene/map/facile"]
+position = Vector2(-3, 0)
+
+[node name="Path2D" type="Path2D" parent="scene/map/facile/m2"]
+position = Vector2(-13, 4)
+curve = SubResource("Curve2D_wkss1")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/facile/m2"]
+z_index = -10
+position = Vector2(579, 266)
+rotation = 3.14159
+scale = Vector2(-1156.75, 548.25)
+mesh = SubResource("QuadMesh_mqs5a")
+texture = ExtResource("3_5svfc")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/facile/m2"]
+collision_layer = 12
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/facile/m2/path_collisions"]
+polygon = PackedVector2Array(503, 325, 481, 342, 441, 364, 373, 390, 323, 403, 293, 409, 247, 414, 210, 417, 152, 418, 69, 415, 1, 409, 2, 473, 100, 477, 192, 478, 258, 475, 329, 467, 396, 449, 433, 437, 495, 413, 544, 388, 577, 365, 622, 398, 685, 430, 801, 477, 873, 492, 963, 504, 1037, 507, 1099, 505, 1157, 496, 1158, 429, 1114, 441, 1075, 446, 1038, 447, 978, 444, 890, 432, 850, 423, 731, 375, 688, 354, 647, 321, 642, 259, 504, 265)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="scene/map/facile/m2/path_collisions"]
+polygon = PackedVector2Array(506, 326, 511, 265, 428, 266, 340, 264, 255, 250, 225, 242, 204, 235, 184, 225, 173, 215, 170, 207, 168, 201, 168, 189, 171, 176, 180, 159, 191, 142, 200, 130, 211, 118, 224, 109, 236, 103, 258, 99, 285, 98, 328, 107, 375, 127, 429, 159, 459, 183, 487, 212, 507, 239, 519, 265, 567, 263, 541, 131, 532, 143, 509, 125, 481, 105, 453, 89, 427, 76, 393, 61, 354, 49, 318, 41, 272, 37, 251, 38, 229, 40, 197, 48, 172, 57, 147, 72, 129, 86, 111, 107, 94, 131, 81, 154, 73, 176, 70, 198, 74, 219, 81, 234, 91, 248, 111, 265, 139, 281, 167, 292, 202, 302, 254, 313, 332, 324, 430, 327)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="scene/map/facile/m2/path_collisions"]
+polygon = PackedVector2Array(559, 265, 525, 138, 532, 143, 548, 120, 569, 99, 604, 77, 635, 65, 659, 57, 700, 48, 743, 42, 778, 40, 813, 40, 845, 42, 867, 45, 901, 51, 932, 60, 963, 73, 983, 84, 1002, 96, 1018, 110, 1032, 125, 1044, 143, 1052, 164, 1054, 174, 1054, 192, 1048, 214, 1042, 225, 1032, 237, 1021, 248, 1005, 259, 979, 272, 942, 284, 886, 296, 830, 304, 764, 311, 646, 320, 639, 259, 722, 254, 799, 246, 849, 239, 907, 228, 927, 221, 939, 214, 948, 207, 953, 201, 956, 194, 959, 183, 956, 167, 950, 155, 938, 143, 924, 132, 905, 121, 886, 113, 863, 107, 832, 102, 794, 100, 745, 104, 707, 110, 665, 125, 649, 134, 635, 146, 626, 159, 619, 171, 614, 196, 613, 223, 619, 263)
+
+[node name="m3" type="Node2D" parent="scene/map/facile"]
+position = Vector2(-3, 0)
+
+[node name="Path2D" type="Path2D" parent="scene/map/facile/m3"]
+position = Vector2(-13, 4)
+curve = SubResource("Curve2D_alonj")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/facile/m3"]
+z_index = -10
+position = Vector2(579, 266)
+rotation = 3.14159
+scale = Vector2(-1156.75, 548.25)
+mesh = SubResource("QuadMesh_mqs5a")
+texture = ExtResource("4_8npuk")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/facile/m3"]
+collision_layer = 12
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/facile/m3/path_collisions"]
+polygon = PackedVector2Array(0, 477, 17, 470, 80, 410, 154, 349, 223, 297, 286, 259, 359, 221, 439, 191, 523, 172, 578, 168, 630, 170, 680, 180, 732, 198, 760, 215, 776, 226, 793, 244, 802, 259, 805, 270, 804, 282, 788, 293, 762, 313, 746, 318, 735, 320, 722, 319, 699, 315, 675, 307, 656.396, 298.075, 620, 280, 584, 266, 553, 257, 504, 248, 461, 247, 416, 253, 390, 259, 368, 267, 354, 274, 340, 282, 322, 295, 310, 306, 299, 320, 289, 339, 284, 359, 284, 376, 286, 390, 294, 410, 303, 424, 315, 439, 329, 452, 341, 462, 355, 471, 381, 484, 410, 496, 457, 508, 519, 515, 574, 517, 654, 512, 715, 504, 763, 494, 829, 477, 897, 453, 957, 427, 998, 405, 1036, 378, 1067, 349, 1092, 316, 1106, 279, 1107, 247, 1103, 218, 1094, 191, 1081, 165, 1059, 139, 1042, 122, 1021, 105, 998, 91, 973, 79, 926, 61, 875, 47, 814, 35, 748, 28, 681, 23, 595, 22, 514, 24, 431, 29, 366, 34, 245, 49, 181, 57, 92, 71, 0, 88, 0, 152, 79, 137, 145, 125, 216, 114, 300, 103, 410, 92, 478, 87, 597, 82, 642, 82, 710, 85, 779, 92, 815, 97, 849, 105, 910, 125, 945, 144, 960, 155, 976, 169, 987, 181, 997, 197, 1004, 216, 1009, 233, 1011, 243, 1012, 260, 1011, 274, 1007, 283, 1000, 297, 990, 312, 980, 324, 967, 334, 952, 348, 895, 381, 868, 393, 818, 413, 777, 425, 721, 439, 669, 449, 625, 453, 604, 454, 579, 457, 532, 455, 501, 452, 469, 446, 445, 439, 425, 429, 412, 421, 403, 414, 392, 402, 384, 390, 380, 373, 381, 356, 387, 345, 393, 337, 407, 324, 419, 318, 431, 314, 443, 311, 459, 309, 490, 309, 512, 311, 537, 318, 566, 330, 605, 349, 637, 362, 673, 373, 707, 379, 748, 380, 777, 376, 799, 369, 826, 357, 845, 344, 858, 335, 879, 319, 893, 305, 902, 283, 901, 262, 893, 238, 875, 215, 854, 194, 825, 171, 779, 146, 728, 127, 660, 112, 589, 107, 531, 109, 488, 115, 454, 122, 399, 136, 348, 154, 269, 189, 195, 230, 129, 273, 78, 310, 29, 350, 0, 377)
+
+[node name="m4" type="Node2D" parent="scene/map/facile"]
+position = Vector2(-3, -5)
+
+[node name="Path2D" type="Path2D" parent="scene/map/facile/m4"]
+position = Vector2(-13, 4)
+curve = SubResource("Curve2D_hpk0m")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/facile/m4"]
+z_index = -10
+position = Vector2(579, 266)
+rotation = 3.14159
+scale = Vector2(-1156.75, 548.25)
+mesh = SubResource("QuadMesh_mqs5a")
+texture = ExtResource("5_gktdd")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/facile/m4"]
+collision_layer = 12
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/facile/m4/path_collisions"]
+polygon = PackedVector2Array(116, -9, 121, 343, 74, 381, 62, 397, 52, 425, 53, 454, 62, 483, 72, 506, 102, 524, 141, 539, 249, 540, 281, 532, 314, 516, 343, 497, 368, 477, 390, 452, 405, 426, 409, 408, 407, 380, 402, 358, 405, 337, 405, 233, 406, 154, 413, 119, 422, 96, 432, 85, 449, 80, 493, 77, 595, 70, 648, 64, 717, 60, 749, 60, 793, 66, 823, 73, 860, 87, 877, 100, 888, 115, 889, 132, 882, 147, 864, 158, 845, 165, 823, 170, 780, 174, 732, 177, 709, 180, 675, 187, 643, 196, 611, 206, 586, 217, 557, 232, 530, 250, 511, 266, 493, 286, 483, 304, 475, 325, 471, 347, 473, 368, 481, 398, 493, 416, 514, 438, 540, 459, 580, 481, 649, 506, 728, 525, 772, 532, 842, 540, 1022, 540, 1043, 534, 1065, 525, 1091, 512, 1113, 495, 1124, 482, 1133, 466, 1136, 451, 1137, 431, 1132, 406, 1125, 376, 1120, 342, 1113, 284, 1104, 186, 1097, 51, 1096, -8, 1000, -8, 1004, 109, 1012, 229, 1024, 342, 1031, 389, 1038, 418, 1041, 440, 1039, 452, 1030, 463, 1015, 474, 994, 482, 961, 484, 915, 483, 864, 480, 809, 475, 742, 465, 680, 449, 651, 438, 623, 425, 601, 412, 583, 395, 571, 376, 567, 358, 567, 338, 575, 320, 586, 305, 597, 295, 615, 281, 638, 268, 665, 256, 692, 248, 726, 240, 757, 236, 800, 234, 836, 230, 868, 225, 894, 218, 922, 206, 951, 190, 970, 173, 981, 154, 986, 133, 983, 104, 968, 77, 942, 53, 916, 38, 877, 22, 832, 10, 769, 0, 729, -1, 690, 1, 630, 5, 530, 14, 446, 18, 411, 23, 388, 29, 367, 39, 347, 55, 333, 74, 322, 94, 312, 138, 308, 197, 309, 271, 309, 342, 308, 372, 313, 396, 311, 415, 298, 434, 282, 448, 259, 467, 232, 479, 213, 483, 186, 484, 171, 480, 157, 474, 150, 458, 147, 429, 154, 414, 176, 397, 196, 382, 209, 367, 216, 351, 217, 328, 217, 224, 214, -10)
+
+[node name="normal" type="Node2D" parent="scene/map"]
+
+[node name="m1" type="Node2D" parent="scene/map/normal"]
+modulate = Color(0.202723, 0.202723, 0.202723, 1)
+position = Vector2(-5, 0)
+
+[node name="Path2D" type="Path2D" parent="scene/map/normal/m1"]
+position = Vector2(-13, 2)
+curve = SubResource("Curve2D_074cj")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/normal/m1"]
+z_index = -10
+position = Vector2(581, 268)
+scale = Vector2(1156.75, 548.25)
+mesh = SubResource("QuadMesh_qnoqn")
+texture = ExtResource("3_2ev3h")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/normal/m1"]
+position = Vector2(-16, 4)
+collision_layer = 12
+collision_mask = 0
+angular_damp = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/normal/m1/path_collisions"]
+polygon = PackedVector2Array(1174, 21, 851, 12, 591, 14, 379, 32, 294, 45, 227, 60, 165, 91, 118, 130, 93, 172, 87, 220, 91, 251, 101, 276, 121, 299, 151, 325, 188, 343, 232, 358, 286, 365, 347, 367, 434, 359, 503, 344, 547, 324, 575, 301, 615, 255, 646, 232, 684, 224, 730, 222, 788, 224, 835, 230, 962, 263, 1023, 292, 1038, 306, 1043, 322, 1039, 336, 1029, 348, 998, 367, 949, 391, 866, 414, 806, 427, 716, 442, 658, 450, 581, 455, 482, 461, 310, 462, 177, 461, 20, 454, 19, 505, 176, 512, 312, 514, 450, 513, 583, 507, 705, 496, 837, 477, 907, 461, 989, 436, 1072, 396, 1108, 368, 1123, 346, 1127, 325, 1124, 303, 1110, 278, 1064, 246, 1008, 219, 930, 195, 845, 178, 752, 170, 666, 173, 602, 188, 573, 204, 548, 225, 523, 257, 486, 289, 425, 307, 354, 313, 309, 314, 271, 311, 237, 300, 207, 286, 187, 269, 173, 250, 168, 207, 183, 162, 220, 127, 287, 101, 405, 82, 589, 67, 853, 64, 1176, 74)
+
+[node name="expert" type="Node2D" parent="scene/map"]
+
+[node name="m1" type="Node2D" parent="scene/map/expert"]
+position = Vector2(-3, 0)
+
+[node name="Path2D" type="Path2D" parent="scene/map/expert/m1"]
+position = Vector2(-13, 4)
+curve = SubResource("Curve2D_g8oun")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/expert/m1"]
+z_index = -10
+position = Vector2(579, 266)
+rotation = 3.14159
+scale = Vector2(-1156.75, 548.25)
+mesh = SubResource("QuadMesh_mqs5a")
+texture = SubResource("CompressedTexture2D_arki1")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/expert/m1"]
+collision_layer = 12
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/expert/m1/path_collisions"]
+polygon = PackedVector2Array(-1, 439, 57, 443, 98, 436, 125.828, 384.156, 169, 264, 193, 212, 220, 182, 244, 164, 303, 142, 364, 140, 432, 148, 462, 160, 486, 176, 496, 187, 505, 202, 511, 216, 520, 258, 527, 275, 545, 282, 574, 282, 608, 279, 638, 269, 666, 248, 691.072, 212.645, 712, 185, 735, 166, 774, 147, 814, 141, 854, 141, 886, 144, 916, 152, 948, 168, 964, 182, 978, 199, 988, 214, 1000, 262, 999.677, 374.05, 1003, 408, 1011, 435, 1032, 440, 1060, 442, 1156, 432, 1157, 492, 1099, 500, 1041, 502, 1004, 498, 969, 490, 941, 479, 922, 458, 909, 425, 904, 386, 903, 259, 897, 233, 885, 215, 866, 203, 843, 202, 812, 204, 792, 220, 741.924, 285.819, 720, 304, 667, 330, 600, 342, 557, 343, 510, 338, 481, 330, 460, 318, 443, 305, 429, 280, 413, 218, 406, 210, 382, 201, 349, 200, 323, 202, 300, 215, 275, 248, 212, 415, 184, 465, 153, 486, 114, 498, 57, 503, 1, 499)
+
+[node name="m2" type="Node2D" parent="scene/map/expert"]
+position = Vector2(-3, 0)
+
+[node name="Path2D" type="Path2D" parent="scene/map/expert/m2"]
+position = Vector2(-13, 4)
+curve = SubResource("Curve2D_6frqb")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/expert/m2"]
+z_index = -10
+position = Vector2(579, 266)
+rotation = 3.14159
+scale = Vector2(-1156.75, 548.25)
+mesh = SubResource("QuadMesh_mqs5a")
+texture = ExtResource("11_10k2p")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/expert/m2"]
+collision_layer = 12
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/expert/m2/path_collisions"]
+polygon = PackedVector2Array(1, 321, 173, 321, 174, 184, 1159, 183, 1158, 245, 966, 243, 964, 379, 1, 382)
+
+[node name="demon" type="Node2D" parent="scene/map"]
+
+[node name="m1" type="Node2D" parent="scene/map/demon"]
+visible = false
+
+[node name="Path2D" type="Path2D" parent="scene/map/demon/m1"]
+position = Vector2(-16, -2)
+curve = SubResource("Curve2D_xh7a1")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/demon/m1"]
+z_index = -10
+position = Vector2(574, 255)
+rotation = 3.14159
+scale = Vector2(-1156.75, 548.25)
+mesh = SubResource("QuadMesh_mqs5a")
+texture = ExtResource("6_lj0aa")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/demon/m1"]
+collision_layer = 12
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/demon/m1/path_collisions"]
+polygon = PackedVector2Array(-5, 423, 52, 414, 85, 401, 97, 383, 113, 346, 140, 248, 152, 219, 166, 195, 187, 171, 211, 155, 254, 137, 307, 133, 370, 142, 421, 162, 449, 182, 470, 206, 490, 252, 507.258, 312.559, 516, 334, 531, 354, 547, 364, 573, 373, 654, 372, 736, 354, 800, 315, 855, 264, 969, 128, 1011, 87, 1055, 66, 1097, 55, 1153, 47, 1153, 108, 1111, 115, 1080, 130, 1029, 182, 914, 318, 852, 369, 777, 408, 723, 423, 657, 433, 582, 434, 535, 427, 498, 416, 470, 402, 441, 377, 422, 348, 393.233, 259.108, 385, 234, 369, 214, 345, 200, 320, 196, 293, 194, 280, 197, 270, 202, 253, 221, 238, 251, 223.299, 289.697, 200, 378, 189, 405, 170, 430, 151, 445, 126, 459, 71, 475, -4, 483)
+
+[node name="m2" type="Node2D" parent="scene/map/demon"]
+
+[node name="Path2D" type="Path2D" parent="scene/map/demon/m2"]
+position = Vector2(-16, -2)
+curve = SubResource("Curve2D_5j40k")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/demon/m2"]
+z_index = -10
+position = Vector2(574, 255)
+rotation = 3.14159
+scale = Vector2(-1156.75, 548.25)
+mesh = SubResource("QuadMesh_mqs5a")
+texture = ExtResource("6_vxeyv")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/demon/m2"]
+collision_layer = 12
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/demon/m2/path_collisions"]
+polygon = PackedVector2Array(-6, 407, 103, 408, 228, 406, 376, 398, 472, 387, 511, 329, 580, 361, 642, 331, 675, 392, 725, 401, 780, 406, 878, 410, 970, 409, 1074, 403, 1153, 395, 1152, 456, 1023, 467, 916, 471, 811, 469, 700, 460, 627, 446, 577, 430, 523, 441, 449, 451, 326, 461, 213, 467, 117, 468, -6, 469)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="scene/map/demon/m2/path_collisions"]
+polygon = PackedVector2Array(639, 333, 675, 392, 749, 353, 789, 329, 828, 302, 851, 283, 868, 268, 882, 251, 891, 238, 899, 223, 903, 209, 903, 195, 898, 176, 888, 161, 866, 143, 850, 134, 833, 127, 807, 118, 782, 112, 734, 104, 665, 97, 592, 94, 512, 94, 452, 96, 422, 98, 391, 102, 361, 107, 327, 116, 298, 128, 275, 141, 265, 150, 259, 158, 253, 167, 249, 180, 247, 194, 249, 208, 254, 221, 262, 236, 280, 258, 305, 282, 344, 311, 385, 337, 420, 358, 472, 386, 514, 330, 452, 295, 397, 258, 371, 236, 351, 213, 345, 200, 343, 189, 348, 180, 360, 174, 390, 165, 430, 159, 485, 154, 590, 154, 651, 157, 715, 162, 777, 175, 797, 185, 804, 191, 806, 198, 807, 206, 799, 221, 785, 237, 765, 256, 714, 291)
+
+[node name="impossible" type="Node2D" parent="scene/map"]
+
+[node name="m1" type="Node2D" parent="scene/map/impossible"]
+position = Vector2(-4, 0)
+
+[node name="Path2D" type="Path2D" parent="scene/map/impossible/m1"]
+position = Vector2(-13, 2)
+curve = SubResource("Curve2D_1gpdo")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/impossible/m1"]
+z_index = -10
+position = Vector2(581, 268)
+rotation = 3.14159
+scale = Vector2(-1156.75, 548.25)
+mesh = SubResource("QuadMesh_mqs5a")
+texture = ExtResource("5_v72hg")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/impossible/m1"]
+position = Vector2(-16, 4)
+collision_layer = 12
+collision_mask = 0
+angular_damp = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/impossible/m1/path_collisions"]
+polygon = PackedVector2Array(17, 405, 159, 404, 189, 329, 222, 280, 251, 243, 301, 194, 349, 159, 405, 128, 457, 106, 544, 80, 646, 66, 781, 64, 908, 78, 973, 92, 1040, 114, 1075, 132, 1099, 150, 1121, 174, 1130, 204, 1131, 230, 1123, 254, 1100, 290, 1067, 325, 1037, 352, 982, 392, 919, 427, 832, 466, 742, 499, 621, 539, 340, 539, 470, 509, 596, 474, 746, 424, 825, 392, 873, 367, 918, 341, 979, 294, 1007, 265, 1020, 247, 1027, 231, 1029, 208, 1023, 196, 1017, 189, 1002, 178, 973, 164, 924, 149, 867, 139, 795, 130, 709, 127, 632, 132, 564, 144, 492, 167, 444, 191, 392, 225, 356, 258, 326, 292, 303, 324, 271, 384, 256, 426, 247, 469, 18, 470)
+
+[node name="m2" type="Node2D" parent="scene/map/impossible"]
+position = Vector2(-3, 0)
+
+[node name="Path2D" type="Path2D" parent="scene/map/impossible/m2"]
+position = Vector2(-13, 2)
+curve = SubResource("Curve2D_0ij6e")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/impossible/m2"]
+z_index = -10
+position = Vector2(581, 268)
+rotation = 3.14159
+scale = Vector2(-1156.75, 548.25)
+mesh = SubResource("QuadMesh_mqs5a")
+texture = ExtResource("7_em5x6")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/impossible/m2"]
+position = Vector2(-16, 4)
+collision_layer = 12
+collision_mask = 0
+angular_damp = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/impossible/m2/path_collisions"]
+polygon = PackedVector2Array(19, 61, 82, 60, 145, 63, 204, 72, 257, 88, 292, 106, 314, 124, 332, 143, 349.656, 165.331, 370, 199, 387, 233, 420.589, 307.883, 451, 369, 467, 393, 485, 416, 511, 437, 539, 452, 571, 459, 603, 459, 640, 455, 669, 448, 689, 438, 711, 422, 733, 401, 751, 376, 780, 327, 820.068, 254.707, 844, 218, 870.654, 181.371, 893, 155, 925, 125, 945, 110, 966, 98, 1009, 84, 1040, 77, 1071, 73, 1115, 70, 1176, 69, 1175, 130, 1118, 130, 1081, 133, 1050, 138, 1024, 147, 1007, 157, 982, 179, 946, 221, 926, 251, 847, 388, 824, 421, 801, 447, 770, 473, 716, 501, 667, 514, 604, 520, 550, 518, 527, 514, 496, 506, 469, 494, 443, 480, 403, 448, 382, 421, 364, 394, 345, 360, 307.674, 276.476, 290, 238, 271, 204, 251, 175, 241, 164, 228, 153, 214, 143, 194, 135, 173, 130, 148, 126, 90, 121, 62, 120, 20, 121)
+
+[node name="m3" type="Node2D" parent="scene/map/impossible"]
+position = Vector2(-3, 0)
+
+[node name="Path2D" type="Path2D" parent="scene/map/impossible/m3"]
+position = Vector2(-13, 2)
+curve = SubResource("Curve2D_l5ny3")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/impossible/m3"]
+z_index = -10
+position = Vector2(581, 268)
+rotation = 3.14159
+scale = Vector2(-1156.75, 548.25)
+mesh = SubResource("QuadMesh_mqs5a")
+texture = ExtResource("8_fv803")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/impossible/m3"]
+position = Vector2(-16, 4)
+collision_layer = 12
+collision_mask = 0
+angular_damp = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/impossible/m3/path_collisions"]
+polygon = PackedVector2Array(175, -11, 171, 3, 170, 19, 174, 29, 181, 35, 197, 39, 217, 39, 249, 36, 286.111, 27.9245, 334, 18, 373, 14, 417, 15, 458, 24, 481, 33, 498, 42, 517, 52, 536, 66, 556, 83, 569, 99, 578, 115, 584, 138, 584, 160, 577, 184, 560, 212, 536.08, 240.217, 502, 277, 483, 300, 474, 315, 470, 331, 478, 348, 503, 367, 556, 392, 606, 411, 664, 428, 709, 439, 799, 455, 935, 470, 1031, 477, 1176, 480, 1175, 538, 1028, 538, 913, 530, 818, 519, 716, 502, 658, 492, 594, 475, 496, 440, 465, 425, 420, 401, 396, 378, 383, 363, 376, 345, 375, 320, 380, 303, 391, 280, 433.348, 231.455, 471, 189, 480, 174, 486, 161, 489, 147, 482, 125, 467, 108, 436, 87, 399, 74, 349, 78, 303.496, 88.1891, 266, 95, 224, 100, 194, 99, 164, 96, 140, 91, 117, 81, 96, 67, 80, 43, 74, 20, 75, 4, 79, -11)
+
+[node name="zone_tour" type="MeshInstance2D" parent="scene/map"]
+modulate = Color(1, 0, 0.101961, 0.219608)
+position = Vector2(-4, 19)
+mesh = SubResource("SphereMesh_wxkjk")
+
+[node name="collision_en_bas" type="CollisionShape2D" parent="scene/map"]
+position = Vector2(573.75, 596)
+shape = SubResource("RectangleShape2D_7dw8p")
+
+[node name="menus" type="Node2D" parent="scene"]
+
+[node name="new_wave" type="Button" parent="scene/menus"]
+z_index = 2048
+offset_left = 1061.0
+offset_top = -0.999999
+offset_right = 1185.0
+offset_bottom = 125.0
+scale = Vector2(0.7, 0.7)
+icon = ExtResource("6_mhoyh")
+flat = true
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="menu_tour_Path" type="Path2D" parent="scene/menus"]
+position = Vector2(4.56, 0)
+curve = SubResource("Curve2D_wgv4w")
+
+[node name="PathFollow" type="PathFollow2D" parent="scene/menus/menu_tour_Path"]
+position = Vector2(1808.44, 250)
+rotation = 3.14159
+loop = false
+
+[node name="menu_tour" type="Node2D" parent="scene/menus/menu_tour_Path/PathFollow"]
+z_index = 10
+position = Vector2(1813, 250)
+rotation = 3.14159
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour"]
+modulate = Color(0.992157, 0.443137, 0, 1)
+z_index = 1
+position = Vector2(1454.49, 300)
+scale = Vector2(36.7597, 21.3026)
+mesh = SubResource("BoxMesh_qc3i8")
+texture = ExtResource("2_r6xbc")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour"]
+modulate = Color(0.992157, 0.443137, 0, 1)
+position = Vector2(1228, 133)
+scale = Vector2(20.1978, 4.56862)
+mesh = SubResource("BoxMesh_qc3i8")
+texture = ExtResource("2_r6xbc")
+
+[node name="Area2D" type="Area2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour"]
+z_index = 10
+position = Vector2(1450, 300)
+scale = Vector2(33.44, 20.305)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Area2D"]
+z_index = 31
+position = Vector2(0.206038, -0.0246248)
+shape = SubResource("RectangleShape2D_wcnb4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Area2D"]
+z_index = 31
+position = Vector2(-8.3134, -8.22458)
+scale = Vector2(0.0299043, 0.049249)
+shape = SubResource("RectangleShape2D_10tmr")
+
+[node name="label" type="Node2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour"]
+z_index = 11
+
+[node name="Label" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/label"]
+offset_left = 1098.0
+offset_top = 98.0
+offset_right = 1306.0
+offset_bottom = 132.0
+scale = Vector2(1.2, 0.8)
+text = "TOURS BOULETS"
+label_settings = SubResource("LabelSettings_tdhqb")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/label"]
+offset_left = 1102.89
+offset_top = 200.003
+offset_right = 1280.89
+offset_bottom = 227.003
+scale = Vector2(1.2, 0.8)
+text = "TOURS LAZERS"
+label_settings = SubResource("LabelSettings_csji8")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/label"]
+offset_left = 1099.89
+offset_top = 303.003
+offset_right = 1286.89
+offset_bottom = 330.003
+scale = Vector2(1.2, 0.8)
+text = "TOURS HACHES"
+label_settings = SubResource("LabelSettings_jeqis")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/label"]
+offset_left = 1467.89
+offset_top = 407.004
+offset_right = 1695.89
+offset_bottom = 434.004
+scale = Vector2(1.2, 0.8)
+text = "TOURS SPECIALES"
+label_settings = SubResource("LabelSettings_3n2os")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/label"]
+offset_left = 1106.89
+offset_top = 413.003
+offset_right = 1303.89
+offset_bottom = 440.003
+scale = Vector2(1.2, 0.8)
+text = "MINES"
+label_settings = SubResource("LabelSettings_17led")
+metadata/_edit_use_anchors_ = true
+
+[node name="boutons" type="Node2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour"]
+
+[node name="tours_boulets" type="Node2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons"]
+z_index = 11
+
+[node name="boulet" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_boulets"]
+z_index = 2
+offset_left = 1094.0
+offset_top = 119.0
+offset_right = 1344.0
+offset_bottom = 319.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("3_5i3c8")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="boulets_explosifs" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_boulets"]
+offset_left = 1185.0
+offset_top = 119.0
+offset_right = 1435.0
+offset_bottom = 319.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("4_upt5b")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="mitrailleuse" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_boulets"]
+offset_left = 1276.0
+offset_top = 119.0
+offset_right = 1526.0
+offset_bottom = 319.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("5_w1iwq")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="tours_lazers" type="Node2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons"]
+z_index = 11
+
+[node name="lazer_1" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_lazers"]
+z_index = 2
+offset_left = 1094.0
+offset_top = 224.0
+offset_right = 1344.0
+offset_bottom = 424.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("6_5e1ax")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="lazer_2" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_lazers"]
+offset_left = 1185.0
+offset_top = 224.003
+offset_right = 1435.0
+offset_bottom = 424.003
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("7_jnj24")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="lazer_3" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_lazers"]
+offset_left = 1276.0
+offset_top = 224.0
+offset_right = 1526.0
+offset_bottom = 424.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("8_0jwrt")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="tours_haches" type="Node2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons"]
+z_index = 11
+position = Vector2(0, 1)
+
+[node name="hache" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_haches"]
+z_index = 2
+offset_left = 1094.0
+offset_top = 330.0
+offset_right = 1344.0
+offset_bottom = 530.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("9_2lac6")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="griffes" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_haches"]
+offset_left = 1185.0
+offset_top = 330.003
+offset_right = 1435.0
+offset_bottom = 530.003
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("10_kiw07")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="dieu_tournoyant" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_haches"]
+offset_left = 1276.0
+offset_top = 330.0
+offset_right = 1526.0
+offset_bottom = 530.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("11_qtnsi")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="mines" type="Node2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons"]
+z_index = 11
+position = Vector2(0, 1)
+
+[node name="mine_explosive" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/mines"]
+offset_left = 1094.0
+offset_top = 435.0
+offset_right = 1344.0
+offset_bottom = 635.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("12_inaqy")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="mine_trou_noir" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/mines"]
+z_index = 2
+offset_left = 1185.0
+offset_top = 435.0
+offset_right = 1435.0
+offset_bottom = 635.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("26_qokg4")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="tours_spéciales" type="Node2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons"]
+z_index = 11
+position = Vector2(0, 1)
+
+[node name="neige" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_spéciales"]
+z_index = 2
+offset_left = 1549.0
+offset_top = 435.0
+offset_right = 1799.0
+offset_bottom = 635.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("14_uj6xh")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ecrabouillator" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_spéciales"]
+offset_left = 1640.0
+offset_top = 435.0
+offset_right = 1890.0
+offset_bottom = 635.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("15_l6ggj")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="pierre" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_spéciales"]
+z_index = 2
+offset_left = 1367.0
+offset_top = 435.0
+offset_right = 1617.0
+offset_bottom = 635.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("9_64qm6")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="flammes" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_spéciales"]
+offset_left = 1731.0
+offset_top = 435.0
+offset_right = 1981.0
+offset_bottom = 635.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("18_mo8j6")
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="lazer_constant" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_spéciales"]
+offset_left = 1458.0
+offset_top = 434.999
+offset_right = 1708.0
+offset_bottom = 634.999
+scale = Vector2(0.35, 0.35)
+mouse_filter = 1
+icon = ExtResource("19_0y057")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Statistiques" type="Node2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour"]
+z_index = 30
+
+[node name="zone" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques"]
+offset_left = 1527.89
+offset_top = 240.004
+offset_right = 1567.89
+offset_bottom = 263.004
+text = "zone
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="puissance" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques"]
+offset_left = 1525.0
+offset_top = 136.0
+offset_right = 1611.0
+offset_bottom = 159.0
+text = "Puissance 
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="vitesse" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques"]
+offset_left = 1524.89
+offset_top = 189.004
+offset_right = 1583.89
+offset_bottom = 212.004
+text = "Vitesse "
+metadata/_edit_use_anchors_ = true
+
+[node name="bar" type="ProgressBar" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1515.0
+offset_top = 160.004
+offset_right = 1767.0
+offset_bottom = 187.004
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bar2" type="ProgressBar" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1515.0
+offset_top = 212.004
+offset_right = 1767.0
+offset_bottom = 239.004
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bar3" type="ProgressBar" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1515.0
+offset_top = 263.004
+offset_right = 1767.0
+offset_bottom = 290.004
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bar4" type="ProgressBar" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1515.0
+offset_top = 160.004
+offset_right = 1767.0
+offset_bottom = 187.004
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bar5" type="ProgressBar" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1515.0
+offset_top = 212.004
+offset_right = 1767.0
+offset_bottom = 239.004
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bar6" type="ProgressBar" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1515.0
+offset_top = 263.004
+offset_right = 1767.0
+offset_bottom = 290.004
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bars_texts" type="Node2D" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques"]
+z_index = 10
+
+[node name="Tower_name" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques/bars_texts"]
+offset_left = 1485.0
+offset_top = 94.0
+offset_right = 1806.0
+offset_bottom = 130.0
+text = "Boulet
+"
+label_settings = SubResource("LabelSettings_4c36g")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="descriptions" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques/bars_texts"]
+offset_left = 1398.89
+offset_top = 318.004
+offset_right = 1622.89
+offset_bottom = 367.004
+text = "Génère un lazer qui cible un ennemi jusqu'à la mort.
+Ses dégats sont exponnentiels, et le temps de recharge est
+en fonction d'eux"
+label_settings = SubResource("LabelSettings_avuna")
+metadata/_edit_use_anchors_ = true
+
+[node name="puissance" type="ProgressBar" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques/bars_texts"]
+modulate = Color(0, 1, 1, 1)
+offset_left = 1515.0
+offset_top = 160.004
+offset_right = 1767.0
+offset_bottom = 187.004
+mouse_filter = 2
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="vitesse" type="ProgressBar" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques/bars_texts"]
+modulate = Color(0, 1, 1, 1)
+offset_left = 1515.0
+offset_top = 212.004
+offset_right = 1767.0
+offset_bottom = 239.004
+mouse_filter = 2
+max_value = 10.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="zone" type="ProgressBar" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques/bars_texts"]
+modulate = Color(0, 1, 1, 1)
+offset_left = 1515.0
+offset_top = 263.004
+offset_right = 1767.0
+offset_bottom = 290.004
+mouse_filter = 2
+max_value = 7.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="image_tour" type="Button" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques/bars_texts"]
+offset_left = 1382.0
+offset_top = 171.0
+offset_right = 1718.0
+offset_bottom = 510.0
+scale = Vector2(0.35, 0.35)
+mouse_filter = 2
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="prix_text" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques/bars_texts"]
+offset_left = 1526.89
+offset_top = 292.004
+offset_right = 1611.89
+offset_bottom = 341.004
+text = "prix :"
+label_settings = SubResource("LabelSettings_b87nx")
+metadata/_edit_use_anchors_ = true
+
+[node name="prix" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques/bars_texts"]
+offset_left = 1596.89
+offset_top = 295.004
+offset_right = 1636.89
+offset_bottom = 327.004
+text = "400"
+label_settings = SubResource("LabelSettings_b87nx")
+metadata/_edit_use_anchors_ = true
+
+[node name="insuffisants" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour"]
+visible = false
+z_index = 1000
+offset_left = 1400.89
+offset_top = 136.004
+offset_right = 1901.89
+offset_bottom = 219.004
+rotation = 0.261799
+size_flags_stretch_ratio = 6.2
+text = "ressources insuffisantes
+"
+label_settings = SubResource("LabelSettings_3pbo2")
+visible_characters_behavior = 3
+
+[node name="bande" type="Node2D" parent="scene/menus"]
+position = Vector2(0, -2)
+
+[node name="argent_" type="Label" parent="scene/menus/bande"]
+z_index = 6
+offset_left = 806.0
+offset_top = 579.0
+offset_right = 936.0
+offset_bottom = 628.0
+text = "argent : 
+"
+label_settings = SubResource("LabelSettings_b87nx")
+metadata/_edit_use_anchors_ = true
+
+[node name="pv_" type="Label" parent="scene/menus/bande"]
+z_index = 6
+offset_left = 639.0
+offset_top = 578.0
+offset_right = 698.0
+offset_bottom = 627.0
+text = "pv :
+"
+label_settings = SubResource("LabelSettings_mq8qp")
+metadata/_edit_use_anchors_ = true
+
+[node name="argent" type="Label" parent="scene/menus/bande"]
+z_index = 6
+offset_left = 915.0
+offset_top = 576.0
+offset_right = 1020.0
+offset_bottom = 625.0
+text = "120
+"
+label_settings = SubResource("LabelSettings_7r4uv")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="pv" type="Label" parent="scene/menus/bande"]
+z_index = 6
+offset_left = 691.0
+offset_top = 574.0
+offset_right = 781.0
+offset_bottom = 623.0
+text = "60
+"
+label_settings = SubResource("LabelSettings_22moe")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="date" type="Label" parent="scene/menus/bande"]
+z_index = 6
+offset_left = 313.0
+offset_top = 579.0
+offset_right = 590.0
+offset_bottom = 642.0
+text = "31 Septembre 2484
+"
+label_settings = SubResource("LabelSettings_8ir8p")
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="bouton_poubelle" type="Node2D" parent="scene/menus/bande"]
+position = Vector2(1028, 567)
+
+[node name="Button" type="Button" parent="scene/menus/bande/bouton_poubelle"]
+z_index = 6
+offset_left = 21.0
+offset_top = -19.0
+offset_right = 81.0
+offset_bottom = 41.0
+scale = Vector2(1.52, 1.52)
+icon = ExtResource("32_dvqal")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="bande" type="MeshInstance2D" parent="scene/menus/bande"]
+modulate = Color(0.992157, 0.443137, 0, 1)
+z_index = 5
+position = Vector2(576, 595)
+scale = Vector2(1155.75, 125.75)
+mesh = SubResource("BoxMesh_ly3ef")
+texture = ExtResource("2_r6xbc")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="scene/menus/bande"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(823, 639)
+rotation = -3.14159
+scale = Vector2(422.864, -11.3705)
+mesh = SubResource("BoxMesh_fj0b4")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="scene/menus/bande"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(818.709, 556.523)
+scale = Vector2(-428.513, 11.3705)
+mesh = SubResource("BoxMesh_fj0b4")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="scene/menus/bande"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(1034.61, 597.64)
+scale = Vector2(-11.4076, 93.9148)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="scene/menus/bande"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(792.613, 598.283)
+scale = Vector2(-11.4076, 93.8493)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="scene/menus/bande"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(610.613, 598.283)
+scale = Vector2(-11.4076, 93.8494)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="livre_histoire" parent="scene/menus" instance=ExtResource("24_po348")]
+z_index = 31
+position = Vector2(0, -38)
+
+[node name="hide_button" type="Node2D" parent="scene"]
+position = Vector2(10, -120)
+
+[node name="hide_button" type="Button" parent="scene/hide_button"]
+z_index = 6
+offset_left = 31.0
+offset_top = 688.0
+offset_right = 138.0
+offset_bottom = 748.0
+icon = ExtResource("24_ss3r3")
+flat = true
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="button_parametre" type="Button" parent="scene"]
+z_index = 50
+offset_left = 190.0
+offset_top = 558.0
+offset_right = 251.0
+offset_bottom = 619.0
+scale = Vector2(1.245, 1.245)
+icon = ExtResource("33_1ta83")
+flat = true
+
+[node name="parametre" type="Node2D" parent="scene"]
+z_index = 50
+position = Vector2(0, -2)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="scene/parametre"]
+modulate = Color(0.167789, 0.0612173, 0.0211125, 1)
+position = Vector2(388, 314.278)
+scale = Vector2(-378.403, 420.816)
+mesh = SubResource("QuadMesh_gngpf")
+texture = ExtResource("2_r6xbc")
+
+[node name="load" type="Button" parent="scene/parametre"]
+offset_left = 220.0
+offset_top = 297.0
+offset_right = 546.0
+offset_bottom = 364.0
+theme_override_font_sizes/font_size = 31
+text = "charger une partie"
+
+[node name="save" type="Button" parent="scene/parametre"]
+offset_left = 221.0
+offset_top = 211.0
+offset_right = 547.0
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 31
+text = "sauvegarder la partie"
+
+[node name="Label" type="Label" parent="scene/parametre"]
+offset_left = 271.0
+offset_top = 134.0
+offset_right = 494.0
+offset_bottom = 183.0
+text = "PARAMETRES"
+label_settings = SubResource("LabelSettings_lhkyg")
+
+[node name="restart" type="Button" parent="scene/parametre"]
+offset_left = 215.0
+offset_top = 374.0
+offset_right = 564.0
+offset_bottom = 441.0
+theme_override_font_sizes/font_size = 31
+text = "recommencer la partie"
+
+[node name="quitter_parametres" type="Button" parent="scene/parametre"]
+modulate = Color(100, 1, 1, 1)
+offset_left = 526.0
+offset_top = 112.0
+offset_right = 571.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 25
+text = "X"
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="scene/parametre"]
+modulate = Color(0.167789, 0.0612173, 0.0211125, 1)
+position = Vector2(784, 288)
+scale = Vector2(-378.403, 363.88)
+mesh = SubResource("QuadMesh_gngpf")
+texture = ExtResource("2_r6xbc")
+
+[node name="nom" type="Label" parent="scene/parametre"]
+offset_left = 604.0
+offset_top = 115.0
+offset_right = 960.0
+offset_bottom = 164.0
+text = "SAUVEGARDER"
+label_settings = SubResource("LabelSettings_lhkyg")
+horizontal_alignment = 1
+
+[node name="emplacements" type="Node2D" parent="scene/parametre"]
+
+[node name="1" type="Button" parent="scene/parametre/emplacements"]
+offset_left = 610.0
+offset_top = 172.0
+offset_right = 960.0
+offset_bottom = 262.0
+theme_override_font_sizes/font_size = 26
+text = "vide"
+text_overrun_behavior = 4
+autowrap_mode = 3
+text_direction = 1
+
+[node name="2" type="Button" parent="scene/parametre/emplacements"]
+offset_left = 610.0
+offset_top = 269.0
+offset_right = 960.0
+offset_bottom = 359.0
+theme_override_font_sizes/font_size = 26
+text = "vide
+"
+autowrap_mode = 3
+clip_text = true
+
+[node name="3" type="Button" parent="scene/parametre/emplacements"]
+offset_left = 610.0
+offset_top = 367.0
+offset_right = 960.0
+offset_bottom = 457.0
+theme_override_font_sizes/font_size = 26
+text = "vide
+"
+autowrap_mode = 3
+clip_text = true
+
+[node name="son" type="Node2D" parent="scene/parametre"]
+
+[node name="HScrollBar" type="HScrollBar" parent="scene/parametre/son"]
+z_index = 2
+offset_left = 291.0
+offset_top = 478.0
+offset_right = 565.0
+offset_bottom = 505.0
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.0
+localize_numeral_system = false
+max_value = 70.0
+value = 50.0
+
+[node name="barre_son" type="ProgressBar" parent="scene/parametre/son"]
+offset_left = 293.0
+offset_top = 478.0
+offset_right = 567.0
+offset_bottom = 505.0
+mouse_filter = 2
+max_value = 70.0
+value = 50.0
+show_percentage = false
+
+[node name="son" type="MeshInstance2D" parent="scene/parametre/son"]
+position = Vector2(250, 488)
+scale = Vector2(35, 50)
+mesh = SubResource("QuadMesh_mxret")
+texture = ExtResource("36_yopcb")
+
+[node name="musique" type="AudioStreamPlayer2D" parent="scene/parametre/son"]
+stream = ExtResource("37_wp5g0")
+max_distance = 1300.0
+max_polyphony = 2
+parameters/looping = true
+
+[node name="ecran noir pour titre s" type="Node2D" parent="scene/parametre"]
+visible = false
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="scene/parametre/ecran noir pour titre s"]
+modulate = Color(0, 0, 0, 0.778)
+position = Vector2(570, 281)
+scale = Vector2(1338, 1014)
+mesh = SubResource("QuadMesh_nkvcu")
+
+[node name="Label" type="Label" parent="scene/parametre/ecran noir pour titre s"]
+offset_left = -118.0
+offset_top = -8.0
+offset_right = 1348.0
+offset_bottom = 749.0
+mouse_filter = 1
+text = "rentrer le nom de la sauvegarde
+et appuyer sur \"entrée\" pour le valider"
+label_settings = SubResource("LabelSettings_5gmgf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="save_name" type="LineEdit" parent="scene/parametre/ecran noir pour titre s"]
+modulate = Color(100, 100, 100, 0.595)
+z_index = 2
+offset_left = 297.0
+offset_top = 489.0
+offset_right = 862.0
+offset_bottom = 537.0
+theme_override_font_sizes/font_size = 27
+alignment = 1
+max_length = 32
+
+[node name="tombe" type="Node2D" parent="scene"]
+
+[node name="bande" type="MeshInstance2D" parent="scene"]
+modulate = Color(0.992157, 0.443137, 0, 1)
+z_index = 4
+position = Vector2(576, 593)
+scale = Vector2(1155.75, 125.75)
+mesh = SubResource("BoxMesh_ly3ef")
+texture = ExtResource("2_r6xbc")
+
+[node name="menu_amélio" type="Node2D" parent="."]
+visible = false
+
+[node name="close2" type="Button" parent="menu_amélio"]
+modulate = Color(100, 1, 1, 1)
+offset_left = 1085.0
+offset_top = 16.0
+offset_right = 1141.0
+offset_bottom = 57.0
+text = "X"
+metadata/_edit_use_anchors_ = true
+
+[node name="close" type="Button" parent="menu_amélio"]
+modulate = Color(100, 1, 1, 1)
+offset_left = 1085.0
+offset_top = 16.0
+offset_right = 1141.0
+offset_bottom = 57.0
+text = "X"
+metadata/_edit_use_anchors_ = true
+
+[node name="écran" type="MeshInstance2D" parent="menu_amélio"]
+z_index = 1
+position = Vector2(320, 186)
+scale = Vector2(0.3, -0.3)
+mesh = SubResource("QuadMesh_0vqya")
+texture = SubResource("ViewportTexture_5gxjq")
+
+[node name="Background" type="MeshInstance2D" parent="menu_amélio"]
+z_index = -1
+position = Vector2(576, 324)
+scale = Vector2(1155, 651)
+mesh = SubResource("BoxMesh_xuo1a")
+texture = ExtResource("24_8jsme")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="menu_amélio"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(644, 321.5)
+scale = Vector2(6.5, 675)
+mesh = SubResource("BoxMesh_c2qtb")
+
+[node name="Statistiques" type="Node2D" parent="menu_amélio"]
+z_index = 30
+position = Vector2(-1357, 326)
+
+[node name="zone" type="Label" parent="menu_amélio/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1404.89
+offset_top = 240.004
+offset_right = 1444.89
+offset_bottom = 263.004
+text = "zone
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="puissance" type="Label" parent="menu_amélio/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1402.0
+offset_top = 136.0
+offset_right = 1488.0
+offset_bottom = 159.0
+text = "Puissance 
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="vitesse" type="Label" parent="menu_amélio/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1401.89
+offset_top = 189.004
+offset_right = 1460.89
+offset_bottom = 212.004
+text = "Vitesse "
+metadata/_edit_use_anchors_ = true
+
+[node name="bar" type="ProgressBar" parent="menu_amélio/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1397.0
+offset_top = 160.004
+offset_right = 1722.0
+offset_bottom = 187.004
+scale = Vector2(1.705, 1)
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bar2" type="ProgressBar" parent="menu_amélio/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1397.0
+offset_top = 212.004
+offset_right = 1722.0
+offset_bottom = 239.004
+scale = Vector2(1.705, 1)
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bar3" type="ProgressBar" parent="menu_amélio/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1397.0
+offset_top = 263.004
+offset_right = 1722.0
+offset_bottom = 290.004
+scale = Vector2(1.705, 1)
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bar4" type="ProgressBar" parent="menu_amélio/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1397.0
+offset_top = 160.004
+offset_right = 1722.0
+offset_bottom = 187.004
+scale = Vector2(1.705, 1)
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bar5" type="ProgressBar" parent="menu_amélio/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1397.0
+offset_top = 212.004
+offset_right = 1722.0
+offset_bottom = 239.004
+scale = Vector2(1.705, 1)
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bar6" type="ProgressBar" parent="menu_amélio/Statistiques"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1397.0
+offset_top = 263.004
+offset_right = 1722.0
+offset_bottom = 290.004
+scale = Vector2(1.705, 1)
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bars_texts" type="Node2D" parent="menu_amélio/Statistiques"]
+z_index = 10
+
+[node name="Tower_name" type="Label" parent="menu_amélio/Statistiques/bars_texts"]
+offset_left = 1495.0
+offset_top = 83.0
+offset_right = 1816.0
+offset_bottom = 119.0
+text = "Boulet
+"
+label_settings = SubResource("LabelSettings_4c36g")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="puissance" type="ProgressBar" parent="menu_amélio/Statistiques/bars_texts"]
+offset_left = 1397.0
+offset_top = 160.004
+offset_right = 1722.0
+offset_bottom = 187.004
+scale = Vector2(1.705, 1)
+mouse_filter = 2
+max_value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="vitesse" type="ProgressBar" parent="menu_amélio/Statistiques/bars_texts"]
+offset_left = 1397.0
+offset_top = 212.004
+offset_right = 1722.0
+offset_bottom = 239.004
+scale = Vector2(1.705, 1)
+mouse_filter = 2
+max_value = 10.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="zone" type="ProgressBar" parent="menu_amélio/Statistiques/bars_texts"]
+offset_left = 1397.0
+offset_top = 263.004
+offset_right = 1722.0
+offset_bottom = 290.004
+scale = Vector2(1.705, 1)
+mouse_filter = 2
+max_value = 1000.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Button1" type="Button" parent="menu_amélio"]
+offset_left = 681.0
+offset_top = 82.0
+offset_right = 1108.0
+offset_bottom = 150.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="menu_amélio"]
+offset_left = 681.0
+offset_top = 174.0
+offset_right = 1108.0
+offset_bottom = 242.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="menu_amélio"]
+offset_left = 681.0
+offset_top = 265.0
+offset_right = 1108.0
+offset_bottom = 333.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="menu_amélio"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(574.288, 373.75)
+rotation = 1.5708
+scale = Vector2(6.5, 1173.33)
+mesh = SubResource("BoxMesh_c2qtb")
+
+[node name="argent_" type="Label" parent="menu_amélio"]
+z_index = 6
+offset_left = 671.0
+offset_top = 400.0
+offset_right = 801.0
+offset_bottom = 449.0
+text = "prix : 
+"
+label_settings = SubResource("LabelSettings_b87nx")
+metadata/_edit_use_anchors_ = true
+
+[node name="argent" type="Label" parent="menu_amélio"]
+z_index = 6
+offset_left = 755.0
+offset_top = 396.0
+offset_right = 815.0
+offset_bottom = 445.0
+text = "111"
+label_settings = SubResource("LabelSettings_7r4uv")
+metadata/_edit_use_anchors_ = true
+
+[node name="amélio_name_" type="Label" parent="menu_amélio"]
+z_index = 6
+offset_left = 673.0
+offset_top = 432.0
+offset_right = 1128.0
+offset_bottom = 522.0
+label_settings = SubResource("LabelSettings_b87nx")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="activé_desactivé" type="Label" parent="menu_amélio"]
+z_index = 6
+offset_left = 658.0
+offset_top = 516.0
+offset_right = 835.0
+offset_bottom = 564.0
+label_settings = SubResource("LabelSettings_b87nx")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="argent_t_" type="Label" parent="menu_amélio"]
+z_index = 6
+offset_left = 919.0
+offset_top = 598.0
+offset_right = 1057.0
+offset_bottom = 646.0
+text = "argent :"
+label_settings = SubResource("LabelSettings_b87nx")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="argent_t" type="Label" parent="menu_amélio"]
+z_index = 6
+offset_left = 1030.0
+offset_top = 581.0
+offset_right = 1125.0
+offset_bottom = 629.0
+scale = Vector2(1.5, 1.5)
+text = "12000"
+label_settings = SubResource("LabelSettings_b87nx")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="insuffisants" type="Label" parent="menu_amélio"]
+z_index = 7
+offset_left = 753.0
+offset_top = -7.99996
+offset_right = 1454.0
+offset_bottom = 69.0
+rotation = 1.0472
+text = "ressources insufisanantes"
+label_settings = SubResource("LabelSettings_jp64h")
+metadata/_edit_use_anchors_ = true
+
+[node name="inutile" type="Node2D" parent="."]
+visible = false
+
+[node name="explosion" parent="inutile" instance=ExtResource("20_r0jsv")]
+script = null
+
+[node name="statistiques fin" type="Node2D" parent="."]
+visible = false
+z_index = 10
+
+[node name="titre" type="Label" parent="statistiques fin"]
+offset_left = 441.0
+offset_top = 55.0
+offset_right = 725.0
+offset_bottom = 124.0
+text = "Statistiques
+"
+label_settings = SubResource("LabelSettings_jd4yl")
+
+[node name="Background" type="MeshInstance2D" parent="statistiques fin"]
+modulate = Color(1, 0.45098, 0.286275, 1)
+z_index = -1
+position = Vector2(582.5, 323)
+scale = Vector2(1181, 678)
+mesh = SubResource("BoxMesh_xuo1a")
+texture = ExtResource("2_r6xbc")
+
+[node name="tableau" type="Node2D" parent="statistiques fin"]
+position = Vector2(148, -74)
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="statistiques fin/tableau"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(136, 390.669)
+rotation = 3.14159
+scale = Vector2(18.9053, 363)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="statistiques fin/tableau"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(455, 209)
+rotation = -1.5708
+scale = Vector2(18.9053, 650)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="MeshInstance2D6" type="MeshInstance2D" parent="statistiques fin/tableau"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(455, 566)
+rotation = -1.5708
+scale = Vector2(18.9053, 650)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="MeshInstance2D7" type="MeshInstance2D" parent="statistiques fin/tableau"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(441, 390.669)
+rotation = 3.14159
+scale = Vector2(18.9053, 363)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="MeshInstance2D8" type="MeshInstance2D" parent="statistiques fin/tableau"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(455, 283)
+rotation = -1.5708
+scale = Vector2(18.9053, 650)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="MeshInstance2D9" type="MeshInstance2D" parent="statistiques fin/tableau"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(455, 359)
+rotation = -1.5708
+scale = Vector2(18.9053, 650)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="MeshInstance2D10" type="MeshInstance2D" parent="statistiques fin/tableau"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(455, 427)
+rotation = -1.5708
+scale = Vector2(18.9053, 650)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="MeshInstance2D11" type="MeshInstance2D" parent="statistiques fin/tableau"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(455, 495)
+rotation = -1.5708
+scale = Vector2(18.9053, 650)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="MeshInstance2D13" type="MeshInstance2D" parent="statistiques fin/tableau"]
+modulate = Color(0.0392157, 0.156863, 0.219608, 1)
+z_index = 5
+position = Vector2(781, 386.669)
+rotation = 3.14159
+scale = Vector2(18.919, 371.17)
+mesh = SubResource("BoxMesh_fy5f6")
+
+[node name="lignes" type="Node2D" parent="statistiques fin"]
+position = Vector2(148, -74)
+
+[node name="Label" type="Label" parent="statistiques fin/lignes"]
+offset_left = 168.0
+offset_top = 226.0
+offset_right = 403.0
+offset_bottom = 275.0
+text = "difficulté map
+"
+label_settings = SubResource("LabelSettings_fn7qt")
+
+[node name="Label2" type="Label" parent="statistiques fin/lignes"]
+offset_left = 156.0
+offset_top = 297.0
+offset_right = 428.0
+offset_bottom = 346.0
+text = "difficulté niveau
+"
+label_settings = SubResource("LabelSettings_fn7qt")
+
+[node name="Label3" type="Label" parent="statistiques fin/lignes"]
+offset_left = 165.0
+offset_top = 367.0
+offset_right = 437.0
+offset_bottom = 416.0
+text = "vies perdues
+"
+label_settings = SubResource("LabelSettings_fn7qt")
+
+[node name="Label4" type="Label" parent="statistiques fin/lignes"]
+offset_left = 159.0
+offset_top = 438.0
+offset_right = 431.0
+offset_bottom = 499.0
+text = "vague atteinte"
+label_settings = SubResource("LabelSettings_fn7qt")
+
+[node name="Label6" type="Label" parent="statistiques fin/lignes"]
+offset_left = 219.0
+offset_top = 508.0
+offset_right = 367.0
+offset_bottom = 557.0
+text = "score"
+label_settings = SubResource("LabelSettings_fn7qt")
+
+[node name="a remplir" type="Node2D" parent="statistiques fin"]
+position = Vector2(148, -74)
+
+[node name="score" type="Label" parent="statistiques fin/a remplir"]
+offset_left = 471.0
+offset_top = 511.0
+offset_right = 666.0
+offset_bottom = 560.0
+text = "1650 points"
+label_settings = SubResource("LabelSettings_fn7qt")
+
+[node name="map_level" type="Label" parent="statistiques fin/a remplir"]
+offset_left = 461.0
+offset_top = 224.0
+offset_right = 696.0
+offset_bottom = 273.0
+text = "impossible
+"
+label_settings = SubResource("LabelSettings_fn7qt")
+
+[node name="niveau_level" type="Label" parent="statistiques fin/a remplir"]
+offset_left = 464.0
+offset_top = 297.0
+offset_right = 736.0
+offset_bottom = 346.0
+text = "impossible
+"
+label_settings = SubResource("LabelSettings_fn7qt")
+
+[node name="vies_perdues" type="Label" parent="statistiques fin/a remplir"]
+offset_left = 534.0
+offset_top = 367.0
+offset_right = 609.0
+offset_bottom = 416.0
+text = "99 
+"
+label_settings = SubResource("LabelSettings_fn7qt")
+
+[node name="vague" type="Label" parent="statistiques fin/a remplir"]
+offset_left = 534.0
+offset_top = 438.0
+offset_right = 663.0
+offset_bottom = 499.0
+text = "45"
+label_settings = SubResource("LabelSettings_fn7qt")
+
+[node name="troumif_studio" type="Node2D" parent="."]
+z_index = 10
+position = Vector2(0, -70)
+
+[node name="logo" type="MeshInstance2D" parent="troumif_studio"]
+z_index = 2
+position = Vector2(576.5, 326)
+scale = Vector2(1.35, 1)
+mesh = SubResource("QuadMesh_ixd5n")
+texture = ExtResource("38_0eav2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="troumif_studio"]
+volume_db = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="troumif_studio"]
+libraries = {
+"": SubResource("AnimationLibrary_3eacd")
+}
+
+[node name="fond" type="MeshInstance2D" parent="troumif_studio"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(572, 343)
+mesh = SubResource("QuadMesh_7v7tx")
+
+[node name="image_jeu" type="MeshInstance2D" parent="troumif_studio"]
+z_index = -1
+position = Vector2(576, 394)
+scale = Vector2(1, -1)
+mesh = SubResource("QuadMesh_6l6qn")
+texture = ExtResource("42_jh22v")
+
+[connection signal="pressed" from="scene/menus/new_wave" to="." method="_on_new_wave_pressed"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_boulets/boulet" to="." method="_on_boulet_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_boulets/boulets_explosifs" to="." method="_on_boulets_explosifs_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_boulets/mitrailleuse" to="." method="_on_mitrailleuse_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_lazers/lazer_1" to="." method="_on_lazer_1_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_lazers/lazer_2" to="." method="_on_lazer_2_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_lazers/lazer_3" to="." method="_on_lazer_3_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_haches/hache" to="." method="_on_hache_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_haches/griffes" to="." method="_on_griffes_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_haches/dieu_tournoyant" to="." method="_on_dieu_tournoyant_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/mines/mine_explosive" to="." method="_on_mine_explosive_mouse_entered"]
+[connection signal="pressed" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/mines/mine_explosive" to="." method="_on_mine_explosive_pressed"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/mines/mine_trou_noir" to="." method="_on_mine_trou_noir_mouse_entered"]
+[connection signal="pressed" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/mines/mine_trou_noir" to="." method="_on_mine_trou_noir_pressed"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_spéciales/neige" to="." method="_on_neige_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_spéciales/ecrabouillator" to="." method="_on_ecrabouillator_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_spéciales/pierre" to="." method="_on_pierre_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_spéciales/flammes" to="." method="_on_flammes_mouse_entered"]
+[connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_spéciales/lazer_constant" to="." method="lazer_progressif"]
+[connection signal="pressed" from="scene/hide_button/hide_button" to="." method="_hide_button"]
+[connection signal="pressed" from="scene/button_parametre" to="." method="parametre"]
+[connection signal="pressed" from="scene/parametre/load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="scene/parametre/save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="scene/parametre/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="scene/parametre/quitter_parametres" to="." method="quitter_parametres"]
+[connection signal="text_submitted" from="scene/parametre/ecran noir pour titre s/save_name" to="." method="_on_save_name_text_submitted"]
+[connection signal="pressed" from="menu_amélio/close" to="." method="_on_close_pressed"]
+[connection signal="mouse_entered" from="menu_amélio/Button1" to="." method="_on_button_1_mouse_entered"]
+[connection signal="mouse_exited" from="menu_amélio/Button1" to="." method="_on_button_1_mouse_exited"]
+[connection signal="pressed" from="menu_amélio/Button1" to="." method="upgrade_button_1_1"]
+[connection signal="mouse_entered" from="menu_amélio/Button2" to="." method="_on_button_2_mouse_entered"]
+[connection signal="pressed" from="menu_amélio/Button2" to="." method="upgrade_button_2_1"]
+[connection signal="mouse_entered" from="menu_amélio/Button3" to="." method="_on_button_3_mouse_entered"]
+[connection signal="pressed" from="menu_amélio/Button3" to="." method="upgrade_button_3_1"]

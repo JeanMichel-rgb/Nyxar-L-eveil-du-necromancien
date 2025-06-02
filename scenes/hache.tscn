@@ -1,0 +1,156 @@
+[gd_scene load_steps=16 format=3 uid="uid://b0f4povfrbnk8"]
+
+[ext_resource type="Script" path="res://scripts/hache.gd" id="1_4nh2x"]
+[ext_resource type="Texture2D" uid="uid://8vv3hooremkg" path="res://td images/tours/hache/poser pas possible.svg" id="2_ctb1f"]
+[ext_resource type="Texture2D" uid="uid://dxho30wxqh2pb" path="res://td images/tours/hache/poser possible.svg" id="4_18u1j"]
+[ext_resource type="Texture2D" uid="uid://ci138xlgsuooh" path="res://td images/tours/hache/hache 1.svg" id="5_4tqdi"]
+[ext_resource type="Texture2D" uid="uid://ck4hh6bsx0nbb" path="res://td images/tours/hache/hache 2.svg" id="5_n06do"]
+[ext_resource type="Texture2D" uid="uid://df7q4p4nx3cbw" path="res://td images/tours/chepa/hache poison 2.svg" id="6_hrinv"]
+[ext_resource type="Texture2D" uid="uid://b0arwbetjxhx4" path="res://td images/tours/chepa/hache poison 1.svg" id="7_q3meg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_an6qh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ctb1f")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_18u1j")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4tqdi")
+}],
+"loop": true,
+"name": &"tour_base",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_n06do")
+}],
+"loop": true,
+"name": &"tour_double",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hrinv")
+}],
+"loop": true,
+"name": &"tour_double_poison",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_q3meg")
+}],
+"loop": true,
+"name": &"tour_poison",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvtfj"]
+size = Vector2(42.8572, 14.1071)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kj00"]
+size = Vector2(30, 9.99997)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aohis"]
+size = Vector2(30, 8.57144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10qc6"]
+size = Vector2(45.7142, 10.7143)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6877o"]
+size = Vector2(41.4285, 8.57144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4o0p6"]
+size = Vector2(44.2857, 9.2857)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qh63a"]
+radius = 20.0
+
+[node name="hache" type="Node2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_4nh2x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-100.5, -26)
+scale = Vector2(0.315789, 0.331126)
+sprite_frames = SubResource("SpriteFrames_an6qh")
+animation = &"tour_double"
+centered = false
+
+[node name="dégats" type="Node2D" parent="."]
+
+[node name="dégats_base" type="Area2D" parent="dégats"]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dégats/dégats_base"]
+position = Vector2(78.1845, 18.4821)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_qvtfj")
+
+[node name="dégats_double" type="Area2D" parent="dégats"]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dégats/dégats_double"]
+position = Vector2(67.8571, 23.5714)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_5kj00")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="dégats/dégats_double"]
+position = Vector2(-69.2857, -20)
+scale = Vector2(1, 0.999999)
+shape = SubResource("RectangleShape2D_aohis")
+
+[node name="dégats_double_poison" type="Area2D" parent="dégats"]
+position = Vector2(0, -1.42857)
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dégats/dégats_double_poison"]
+position = Vector2(75.7142, 26.7857)
+scale = Vector2(0.999998, 0.999998)
+shape = SubResource("RectangleShape2D_10qc6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="dégats/dégats_double_poison"]
+position = Vector2(-75, -24.2857)
+scale = Vector2(1, 0.999999)
+shape = SubResource("RectangleShape2D_6877o")
+
+[node name="dégats_poison" type="Area2D" parent="dégats"]
+position = Vector2(0, -1.42857)
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dégats/dégats_poison"]
+position = Vector2(74.9999, 27.5)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_4o0p6")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_qh63a")
+
+[connection signal="body_entered" from="dégats/dégats_base" to="." method="damages"]
+[connection signal="body_entered" from="dégats/dégats_double" to="." method="damages"]
+[connection signal="body_entered" from="dégats/dégats_double_poison" to="." method="damages"]
+[connection signal="body_entered" from="dégats/dégats_poison" to="." method="damages"]
+[connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]

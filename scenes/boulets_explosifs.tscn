@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=3 uid="uid://kxeg25r34xwc"]
+
+[ext_resource type="Script" path="res://scripts/boulets_explosifs.gd" id="1_dg718"]
+[ext_resource type="Texture2D" uid="uid://c0r82mhnbyla1" path="res://td images/tours/boulets_explosifs/poser pas possible.svg" id="2_cd02r"]
+[ext_resource type="Texture2D" uid="uid://daiuwbxm4711l" path="res://td images/tours/boulets_explosifs/poser possible.svg" id="3_nvhbv"]
+[ext_resource type="Texture2D" uid="uid://byl2xpmg4jr18" path="res://td images/tours/boulets_explosifs/1.svg" id="4_07loy"]
+[ext_resource type="Texture2D" uid="uid://blwtjwvl62aio" path="res://td images/tours/boulets_explosifs/2.svg" id="5_vov1r"]
+[ext_resource type="Texture2D" uid="uid://bm2dl83n4e76v" path="res://td images/tours/boulets_explosifs/4.svg" id="6_b66wb"]
+[ext_resource type="Texture2D" uid="uid://pxo0bfsbdrh7" path="res://td images/tours/boulets_explosifs/5.svg" id="7_vlhvv"]
+[ext_resource type="Texture2D" uid="uid://b2d0nc8h3nuco" path="res://td images/tours/boulets_explosifs/6.svg" id="8_xa2nh"]
+[ext_resource type="Texture2D" uid="uid://dt2hbqd0d3q1h" path="res://td images/tours/boulets_explosifs/7.svg" id="9_isn75"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_urnu4"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cd02r")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nvhbv")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_07loy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vov1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b66wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vlhvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xa2nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_isn75")
+}],
+"loop": true,
+"name": &"tir",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_07loy")
+}],
+"loop": true,
+"name": &"tour",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_poefc"]
+radius = 83.4
+
+[node name="boulets_explosifs" type="Node2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_dg718")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-85, -73)
+sprite_frames = SubResource("SpriteFrames_urnu4")
+animation = &"tir"
+centered = false
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = 6.28319
+scale = Vector2(20, 50)
+target_position = Vector2(504.7, 0)
+collision_mask = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3.33333, 6.66667)
+shape = SubResource("CircleShape2D_poefc")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]

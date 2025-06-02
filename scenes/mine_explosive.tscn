@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://cu5076xir7bk5"]
+
+[ext_resource type="Script" path="res://scripts/mine.gd" id="1_2lhth"]
+[ext_resource type="Texture2D" uid="uid://exhuorexot0k" path="res://td images/tours/mine/mine 1.svg" id="2_hd06l"]
+[ext_resource type="Texture2D" uid="uid://bjbepl3av7isl" path="res://td images/tours/mine/mine 2.svg" id="3_iolle"]
+[ext_resource type="Texture2D" uid="uid://bn8dydcp14pe" path="res://td images/tours/mine/poser pas possible.svg" id="4_esxu5"]
+[ext_resource type="Texture2D" uid="uid://b7dpdlsn5bs8y" path="res://td images/tours/mine/poser possible.svg" id="5_npc7o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ljnr"]
+radius = 34.2053
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lubwb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hd06l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iolle")
+}],
+"loop": true,
+"name": &"mine",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_esxu5")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_npc7o")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}]
+
+[node name="mine_explosive" type="Node2D"]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_2lhth")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5ljnr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lubwb")
+animation = &"poser possible"
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("CircleShape2D_5ljnr")

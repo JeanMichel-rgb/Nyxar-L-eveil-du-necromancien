@@ -1,0 +1,323 @@
+[gd_scene load_steps=17 format=3 uid="uid://pq0aa4on6wn6"]
+
+[ext_resource type="Script" path="res://scripts/ecrabouillator.gd" id="1_8n6bu"]
+[ext_resource type="Texture2D" uid="uid://svyu7xur1rg0" path="res://td images/tours/ecrabouillator/poser pas possible.svg" id="2_msysj"]
+[ext_resource type="Texture2D" uid="uid://msblen6tcgr1" path="res://td images/tours/ecrabouillator/poser possible.svg" id="3_dxbwr"]
+[ext_resource type="Texture2D" uid="uid://bv05brn437fb0" path="res://td images/tours/ecrabouillator/ecrabouillator.svg" id="4_kbaju"]
+[ext_resource type="Texture2D" uid="uid://ci6rpstsysjl0" path="res://td images/tours/ecrabouillator/écrabouillator_trou_noir.svg" id="5_gfyo6"]
+[ext_resource type="Texture2D" uid="uid://dt0xg7m4csylq" path="res://trou_noir.png" id="6_nrp18"]
+
+[sub_resource type="Animation" id="Animation_8fmvb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.180392)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("trou_noir:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4003.21, 4003.21)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("trou_noir:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-5.58345e-12]
+}
+
+[sub_resource type="Animation" id="Animation_l5oge"]
+resource_name = "recharge"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [12.5664, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.7, 0.7), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mrdo0"]
+resource_name = "tir"
+length = 1.5
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0184697, 0.975902),
+"transitions": PackedFloat32Array(2.37841, 4),
+"update": 0,
+"values": [0.0, 12.5664]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(5000, 5000)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.647059), Color(1, 1, 1, 0.313726), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0126677, 0.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.7, 0.7)]
+}
+
+[sub_resource type="Animation" id="Animation_gvows"]
+resource_name = "tir_trou_noir"
+length = 2.0
+step = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0184697, 0.975902),
+"transitions": PackedFloat32Array(2.37841, 4),
+"update": 0,
+"values": [0.0, 12.5664]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0126677, 0.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.7, 0.7)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("trou_noir:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 1.2, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(5000, 5000), Vector2(5000, 5000), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("trou_noir:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-5.58345e-12, 10.472]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ao3qx"]
+_data = {
+"RESET": SubResource("Animation_8fmvb"),
+"recharge": SubResource("Animation_l5oge"),
+"tir": SubResource("Animation_mrdo0"),
+"tir_trou_noir": SubResource("Animation_gvows")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w4vh3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_msysj")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dxbwr")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kbaju")
+}],
+"loop": true,
+"name": &"tour",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_gfyo6")
+}],
+"loop": true,
+"name": &"trou_noir",
+"speed": 5.0
+}]
+
+[sub_resource type="SphereMesh" id="SphereMesh_b4rbg"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_r7g1c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrq00"]
+size = Vector2(195, 187)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tw0wb"]
+radius = 2523.69
+
+[node name="ecrabouillator" type="Node2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_8n6bu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ao3qx")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 2
+position = Vector2(1.635, -0.77)
+sprite_frames = SubResource("SpriteFrames_w4vh3")
+animation = &"trou_noir"
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(1, 1, 1, 0.180392)
+z_index = 1
+mesh = SubResource("SphereMesh_b4rbg")
+
+[node name="trou_noir" type="MeshInstance2D" parent="."]
+z_index = 1
+scale = Vector2(4003.21, 4003.21)
+mesh = SubResource("QuadMesh_r7g1c")
+texture = ExtResource("6_nrp18")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_jrq00")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = 6.28319
+scale = Vector2(20, 50)
+target_position = Vector2(504.7, 0)
+collision_mask = 2
+
+[node name="zone dégats" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zone dégats"]
+shape = SubResource("CircleShape2D_tw0wb")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

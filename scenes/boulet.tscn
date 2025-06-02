@@ -1,0 +1,97 @@
+[gd_scene load_steps=12 format=3 uid="uid://bx5dt7t4mthlk"]
+
+[ext_resource type="Script" path="res://scripts/boulet.gd" id="1_n60w8"]
+[ext_resource type="Texture2D" uid="uid://4grvyt6x0v8h" path="res://td images/tours/boulet/poser pas possible.svg" id="2_7ngnj"]
+[ext_resource type="Texture2D" uid="uid://dpqff8xea2odm" path="res://td images/tours/boulet/1.svg" id="2_yghfx"]
+[ext_resource type="Texture2D" uid="uid://jwcqccbriwov" path="res://td images/tours/boulet/poser possible.svg" id="3_p0w2k"]
+[ext_resource type="Texture2D" uid="uid://bmdh2dq5h7uyg" path="res://td images/tours/boulet/2.svg" id="3_x5g7s"]
+[ext_resource type="Texture2D" uid="uid://oprvep3obnmi" path="res://td images/tours/boulet/3.svg" id="4_obyac"]
+[ext_resource type="Texture2D" uid="uid://xvbo0nyyvho4" path="res://td images/tours/boulet/4.svg" id="5_c02mm"]
+[ext_resource type="Texture2D" uid="uid://c3v7tgqjs7pcs" path="res://td images/tours/boulet/5.svg" id="6_plpty"]
+[ext_resource type="Texture2D" uid="uid://c1m6udqwvp2mn" path="res://td images/tours/boulet/6.svg" id="7_61bnp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8sxbs"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7ngnj")
+}],
+"loop": true,
+"name": &"poser pas possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_p0w2k")
+}],
+"loop": true,
+"name": &"poser possible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yghfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x5g7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_obyac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c02mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_plpty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_61bnp")
+}],
+"loop": true,
+"name": &"tir",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yghfx")
+}],
+"loop": true,
+"name": &"tour",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xshg8"]
+radius = 97.5819
+
+[node name="boulet" type="Node2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_n60w8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-85, -73)
+sprite_frames = SubResource("SpriteFrames_8sxbs")
+animation = &"tir"
+centered = false
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = 6.28319
+scale = Vector2(20, 50)
+target_position = Vector2(504.7, 0)
+collision_mask = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+light_mask = 4
+visibility_layer = 4
+shape = SubResource("CircleShape2D_xshg8")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]

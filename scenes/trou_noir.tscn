@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5ocgaijp7rcx"]
+
+[ext_resource type="Script" path="res://scripts/trou_noir.gd" id="1_d1rdq"]
+[ext_resource type="Texture2D" uid="uid://dt0xg7m4csylq" path="res://trou_noir.png" id="2_2gji6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m0mye"]
+radius = 212.632
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e0wdn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2gji6")
+}],
+"loop": true,
+"name": &"explosion",
+"speed": 30.0
+}]
+
+[node name="trou_noir" type="Node2D"]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_d1rdq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_m0mye")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.89, 0.89)
+sprite_frames = SubResource("SpriteFrames_e0wdn")
+animation = &"explosion"
+frame_progress = 0.866507

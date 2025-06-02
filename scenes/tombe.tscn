@@ -1,0 +1,70 @@
+[gd_scene load_steps=14 format=3 uid="uid://bj8ct7rmbyltm"]
+
+[ext_resource type="Script" path="res://scripts/tombe.gd" id="1_f6ak0"]
+[ext_resource type="Texture2D" uid="uid://cw6b7ho8ti75l" path="res://td images/monstres/tombe/a.svg" id="2_28f86"]
+[ext_resource type="Texture2D" uid="uid://dcn4u84wdyu5q" path="res://td images/monstres/tombe/b.svg" id="3_oobxp"]
+[ext_resource type="Texture2D" uid="uid://clmspimu8tiht" path="res://td images/monstres/tombe/c.svg" id="4_e063b"]
+[ext_resource type="Texture2D" uid="uid://u3gln2dsu5ox" path="res://td images/monstres/tombe/d.svg" id="5_2wri8"]
+[ext_resource type="Texture2D" uid="uid://bwln4r0m58726" path="res://td images/monstres/tombe/e.svg" id="6_3myqq"]
+[ext_resource type="Texture2D" uid="uid://ckn3w3j5ba8di" path="res://td images/monstres/tombe/f.svg" id="7_awbw2"]
+[ext_resource type="Texture2D" uid="uid://lgjtvsc88337" path="res://td images/monstres/tombe/g.svg" id="8_yak83"]
+[ext_resource type="Texture2D" uid="uid://c3lj2vp406to8" path="res://td images/monstres/tombe/h.svg" id="9_4s355"]
+[ext_resource type="Texture2D" uid="uid://chhfvko88np2n" path="res://td images/monstres/tombe/i.svg" id="10_la6ku"]
+[ext_resource type="Texture2D" uid="uid://v5ewabg0fg3l" path="res://td images/monstres/tombe/j.svg" id="11_trawg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dnab8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_28f86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oobxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e063b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2wri8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3myqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_awbw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yak83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4s355")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_la6ku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_trawg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyw2s"]
+size = Vector2(63, 68)
+
+[node name="tombe" type="Node2D"]
+script = ExtResource("1_f6ak0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.13, 0.13)
+sprite_frames = SubResource("SpriteFrames_dnab8")
+frame_progress = 0.9002
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_xyw2s")

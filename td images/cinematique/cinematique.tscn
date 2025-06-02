@@ -1,0 +1,2562 @@
+[gd_scene load_steps=16 format=3 uid="uid://bkrjp3uxajrmw"]
+
+[ext_resource type="Script" path="res://cinematique.gd" id="1_0qvn0"]
+[ext_resource type="Texture2D" uid="uid://b5j48pbiiu2iv" path="res://td images/cinematique/dessous_tombe.svg" id="1_8laod"]
+[ext_resource type="Texture2D" uid="uid://c6q2kit48gofv" path="res://td images/cinematique/yeux_cinematique.svg" id="3_jsb56"]
+[ext_resource type="Texture2D" uid="uid://c3deaf3l4xca3" path="res://td images/cinematique/dessus_tombe(1).svg" id="3_n6ja7"]
+[ext_resource type="Texture2D" uid="uid://kfuylnj2sqyg" path="res://td images/cinematique/marque.svg" id="4_rj7qp"]
+[ext_resource type="AudioStream" uid="uid://7we6ukoutft1" path="res://assets/sounds/stone-sliding.mp3" id="5_jj25g"]
+[ext_resource type="Texture2D" uid="uid://4olwqtc0cf3y" path="res://td images/cinematique/tombe.PNG" id="7_at1wr"]
+
+[sub_resource type="Animation" id="Animation_f7a2o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dessus_tombe:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("dessus_tombe:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/PointLight2D2:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/PointLight2D:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("dessous_tombe:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("yeux:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("fond noir:z_index")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-2]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Camera2D:zoom")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_382qi"]
+resource_name = "tombe"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dessous_tombe:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("dessus_tombe:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6, 9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(352, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("yeux:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 10, 10.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(5, 5, 5, 1)]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_jj25g")
+}],
+"times": PackedFloat32Array(2)
+}
+tracks/3/use_blend = true
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("dessus_tombe:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2, 2.2, 2.26667, 2.5, 3.5, 3.7, 3.93333, 4.7, 4.9),
+"transitions": PackedFloat32Array(1, 2.54912, 2.54912, 1, 1, 2.54912, 1, 1, 2.54912),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0.259292, 0.259294, 0.259294, 1), Color(0.259292, 0.259294, 0.259294, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0.359067, 0.35907, 0.359069, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/PointLight2D2:energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4.7, 4.9, 10.9, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 3.0, 0.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/PointLight2D:energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4.7, 4.9, 10.9, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 3.0, 8.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("fond noir:z_index")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 11.0333, 14.05),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [-2, -2, 5]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Camera2D:zoom")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(11.1, 14),
+"transitions": PackedFloat32Array(2.07053, 0.965936),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.07, 0.07)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tek7x"]
+_data = {
+"RESET": SubResource("Animation_f7a2o"),
+"tombe": SubResource("Animation_382qi")
+}
+
+[sub_resource type="QuadMesh" id="QuadMesh_36ghp"]
+size = Vector2(10, 10)
+
+[sub_resource type="Gradient" id="Gradient_yk0gq"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.821429)
+colors = PackedColorArray(0, 0, 0, 0, 0.862947, 0.862947, 0.862947, 0.862947)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0duch"]
+gradient = SubResource("Gradient_yk0gq")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_awk1x"]
+polygon = PackedVector2Array(488, -22, 457, -274, 227, -95, 214, -70, 93, 304, -102, 302, -207, -81, -82, -308, 86, -310, 214, -70, 445, -279, 248, -565, -349, -653, -564, -152, -403, 657, 604, 597)
+
+[sub_resource type="QuadMesh" id="QuadMesh_6mt70"]
+
+[node name="cinematique" type="Node2D"]
+z_index = 100
+position = Vector2(506, 325)
+script = ExtResource("1_0qvn0")
+
+[node name="dessous_tombe" type="Sprite2D" parent="."]
+texture = ExtResource("1_8laod")
+
+[node name="yeux" type="Sprite2D" parent="."]
+position = Vector2(0, -167)
+texture = ExtResource("3_jsb56")
+
+[node name="dessus_tombe" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = 2
+texture = ExtResource("3_n6ja7")
+
+[node name="Marque" type="Sprite2D" parent="dessus_tombe"]
+position = Vector2(5.99999, -155)
+rotation = -0.503405
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("4_rj7qp")
+
+[node name="Marque2" type="Sprite2D" parent="dessus_tombe"]
+position = Vector2(-5, 151)
+rotation = 2.56103
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("4_rj7qp")
+
+[node name="Marque3" type="Sprite2D" parent="dessus_tombe"]
+position = Vector2(-9, -15)
+rotation = 3.05723
+scale = Vector2(0.635, 0.635)
+texture = ExtResource("4_rj7qp")
+
+[node name="Marque4" type="Sprite2D" parent="dessus_tombe"]
+position = Vector2(5.99999, -155)
+rotation = -0.503405
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("4_rj7qp")
+
+[node name="Marque5" type="Sprite2D" parent="dessus_tombe"]
+position = Vector2(-5, 151)
+rotation = 2.56103
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("4_rj7qp")
+
+[node name="Marque6" type="Sprite2D" parent="dessus_tombe"]
+position = Vector2(-9, -15)
+rotation = 3.05723
+scale = Vector2(0.635, 0.635)
+texture = ExtResource("4_rj7qp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tek7x")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="fond noir" type="MeshInstance2D" parent="."]
+modulate = Color(0.0383972, 0.0383972, 0.0383972, 1)
+light_mask = 6
+visibility_layer = 6
+z_index = -2
+position = Vector2(512, -2474)
+scale = Vector2(3250, 2613)
+mesh = SubResource("QuadMesh_36ghp")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="Node2D"]
+z_index = -1
+position = Vector2(9, 321)
+rotation = -1.5708
+scale = Vector2(252.829, 48280)
+color = Color(0.953, 0.016, 0.875, 1)
+energy = 0.0
+range_item_cull_mask = 2
+texture = SubResource("GradientTexture1D_0duch")
+texture_scale = 0.01
+
+[node name="PointLight2D2" type="PointLight2D" parent="Node2D"]
+z_index = -1
+position = Vector2(8, -324)
+rotation = 1.5708
+scale = Vector2(252.829, -48280)
+color = Color(0.952941, 0.0156863, 0.87451, 1)
+energy = 4.0
+range_item_cull_mask = 4
+texture = SubResource("GradientTexture1D_0duch")
+texture_scale = 0.01
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D"]
+position = Vector2(0, -1)
+occluder = SubResource("OccluderPolygon2D_awk1x")
+
+[node name="all others graves" type="Node2D" parent="."]
+position = Vector2(-79, 0)
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1705, 14)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2477, 14)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1712, 623)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D6" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2484, 623)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D7" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3263, 25)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D8" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4031, 24)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D9" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4803, 24)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D10" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3270, 634)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D11" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4038, 633)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D12" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4810, 633)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D13" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(925, -1281)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D14" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1693, -1282)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D15" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2465, -1282)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D17" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1700, -673)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D18" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2472, -673)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D19" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3251, -1271)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D20" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4019, -1272)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D21" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4791, -1272)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D22" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3258, -662)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D23" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4026, -663)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D24" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4798, -663)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D25" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(986, 2570)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D26" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1754, 2569)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D27" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2526, 2569)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D28" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(993, 3179)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D29" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1761, 3178)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D30" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2533, 3178)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D31" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3312, 2580)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D32" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4080, 2579)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D33" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4852, 2579)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D34" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3319, 3189)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D35" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4087, 3188)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D36" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4859, 3188)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D37" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(974, 1274)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D38" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1742, 1273)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D39" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2514, 1273)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D40" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(981, 1883)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D41" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1749, 1882)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D42" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2521, 1882)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D43" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3300, 1284)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D44" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4068, 1283)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D45" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4840, 1283)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D46" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3307, 1893)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D47" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4075, 1892)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D48" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4847, 1892)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D49" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3605, 2589)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D50" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2837, 2588)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D51" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2065, 2588)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D52" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3598, 3198)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D53" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2830, 3197)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D54" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2058, 3197)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D55" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1279, 2599)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D56" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-511, 2598)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D57" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(261.001, 2598)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D58" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1272, 3208)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D59" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-504, 3207)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D60" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(268.001, 3207)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D61" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3617, 1293)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D62" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2849, 1292)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D63" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2077, 1292)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D64" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3610, 1902)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D65" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2842, 1901)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D66" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2070, 1901)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D67" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1291, 1303)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D68" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-523, 1302)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D69" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(249.001, 1302)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D70" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1284, 1912)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D71" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-516, 1911)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D72" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(256.001, 1911)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D73" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5159, 35)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D74" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4391, 34)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D75" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3619, 34)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D76" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5152, 644)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D77" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4384, 643)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D78" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3612, 643)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D79" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2833, 45)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D80" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2065, 44)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D82" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2826, 654)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D83" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2058, 653)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D85" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5171, -1261)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D86" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4403, -1262)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D87" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3631, -1262)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D88" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5164, -652)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D89" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4396, -653)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D90" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3624, -653)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D91" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2845, -1251)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D92" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2077, -1252)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D93" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1305, -1252)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D94" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2838, -642)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D95" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2070, -643)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D104" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5140, 2586)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D105" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4368, 2586)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D107" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5133, 3195)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D108" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4361, 3195)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D116" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5152, 1290)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D117" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4380, 1290)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D119" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5145, 1899)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D120" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4373, 1899)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D101" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-622, -1232)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D102" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(150.001, -1232)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D81" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1300, 733)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D84" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1312, -563)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D96" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1305, 46)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D97" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(933, -2581)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D98" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1701, -2582)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D99" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2473, -2582)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D100" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(940, -1972)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D103" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1708, -1973)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D106" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2480, -1973)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D109" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3259, -2571)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D110" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4027, -2572)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D111" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4799, -2572)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D112" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3266, -1962)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D113" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4034, -1963)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D114" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4806, -1963)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D115" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(921, -3877)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D118" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1689, -3878)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D121" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2461, -3878)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D122" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(928, -3268)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D123" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1696, -3269)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D124" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2468, -3269)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D125" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3247, -3867)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D126" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4015, -3868)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D127" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4787, -3868)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D128" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3254, -3258)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D129" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4022, -3259)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D130" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4794, -3259)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D131" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3658, -2562)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D132" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2890, -2563)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D133" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2118, -2563)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D134" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3651, -1953)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D135" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2883, -1954)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D136" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2111, -1954)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D137" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1332, -2552)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D138" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-564, -2553)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D139" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(208.001, -2553)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D140" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1325, -1943)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D141" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-557, -1944)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D142" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(215.001, -1944)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D143" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3670, -3858)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D144" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2902, -3859)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D145" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2130, -3859)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D146" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3663, -3249)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D147" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2895, -3250)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D148" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2123, -3250)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D149" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1344, -3848)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D150" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-576, -3849)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D151" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(196.001, -3849)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D152" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1337, -3239)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D153" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-569, -3240)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D154" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(203.001, -3240)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D155" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5193, -2565)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D156" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4421, -2565)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D157" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5186, -1956)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D158" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4414, -1956)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D159" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5205, -3861)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D160" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4433, -3861)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D161" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5198, -3252)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D162" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4426, -3252)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D163" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1013, 5126)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D164" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1781, 5125)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D165" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2553, 5125)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D166" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1020, 5735)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D167" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1788, 5734)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D168" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2560, 5734)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D169" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3339, 5136)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D170" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4107, 5135)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D171" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4879, 5135)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D172" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3346, 5745)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D173" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4114, 5744)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D174" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4886, 5744)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D175" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1001, 3830)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D176" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1769, 3829)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D177" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2541, 3829)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D178" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1008, 4439)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D179" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1776, 4438)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D180" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2548, 4438)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D181" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3327, 3840)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D182" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4095, 3839)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D183" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4867, 3839)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D184" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3334, 4449)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D185" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4102, 4448)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D186" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4874, 4448)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D187" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3578, 5145)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D188" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2810, 5144)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D189" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2038, 5144)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D190" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3571, 5754)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D191" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2803, 5753)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D192" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2031, 5753)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D193" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1252, 5155)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D194" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-484, 5154)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D195" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(288.001, 5154)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D196" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1245, 5764)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D197" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-477, 5763)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D198" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(295.001, 5763)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D199" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3590, 3849)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D200" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2822, 3848)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D201" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2050, 3848)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D202" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3583, 4458)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D203" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2815, 4457)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D204" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2043, 4457)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D205" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1264, 3859)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D206" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-496, 3858)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D207" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(276.001, 3858)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D208" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1257, 4468)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D209" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-489, 4467)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D210" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(283.001, 4467)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D211" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5113, 5142)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D212" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4341, 5142)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D213" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5106, 5751)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D214" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4334, 5751)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D215" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5125, 3846)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D216" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4353, 3846)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D217" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5118, 4455)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D218" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4346, 4455)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D219" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(858, -4489)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D220" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1626, -4490)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D221" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2398, -4490)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D222" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3184, -4479)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D223" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3952, -4480)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D224" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4724, -4480)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D225" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3733, -4470)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D226" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2965, -4471)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D227" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2193, -4471)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D228" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1407, -4460)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D229" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-639, -4461)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D230" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(133.001, -4461)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D231" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5268, -4473)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D232" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4496, -4473)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D233" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(845, -5099)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D234" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(1613, -5100)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D235" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(2385, -5100)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D236" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3171, -5089)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D237" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(3939, -5090)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D238" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(4711, -5090)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D239" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-3746, -5080)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D240" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2978, -5081)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D241" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-2206, -5081)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D242" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-1420, -5070)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D243" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-652, -5071)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D244" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(120.001, -5071)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D245" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5281, -5083)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D246" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-4509, -5083)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5684, -27)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D16" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5691, 582)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D247" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6470, -16)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D248" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7238, -17)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D249" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8010, -17)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D250" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6477, 593)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D251" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7245, 592)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D252" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8017, 592)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D253" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5672, -1323)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D254" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5679, -714)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D255" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6458, -1312)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D256" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7226, -1313)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D257" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7998, -1313)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D258" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6465, -703)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D259" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7233, -704)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D260" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8005, -704)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D261" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5733, 2528)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D262" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5740, 3137)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D263" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6519, 2539)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D264" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7287, 2538)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D265" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8059, 2538)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D266" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6526, 3148)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D267" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7294, 3147)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D268" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8066, 3147)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D269" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5721, 1232)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D270" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5728, 1841)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D271" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6507, 1243)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D272" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7275, 1242)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D273" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8047, 1242)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D274" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6514, 1852)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D275" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7282, 1851)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D276" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8054, 1851)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D277" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5680, -2623)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D278" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5687, -2014)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D279" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6466, -2612)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D280" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7234, -2613)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D281" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8006, -2613)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D282" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6473, -2003)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D283" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7241, -2004)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D284" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8013, -2004)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D285" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5668, -3919)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D286" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5675, -3310)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D287" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6454, -3908)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D288" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7222, -3909)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D289" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7994, -3909)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D290" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6461, -3299)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D291" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7229, -3300)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D292" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8001, -3300)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D293" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5760, 5084)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D294" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5767, 5693)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D295" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6546, 5095)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D296" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7314, 5094)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D297" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8086, 5094)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D298" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6553, 5704)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D299" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7321, 5703)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D300" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8093, 5703)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D301" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5748, 3788)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D302" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5755, 4397)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D303" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6534, 3799)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D304" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7302, 3798)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D305" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8074, 3798)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D306" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6541, 4408)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D307" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7309, 4407)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D308" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(8081, 4407)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D309" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5605, -4531)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D310" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6391, -4520)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D311" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7159, -4521)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D312" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7931, -4521)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D313" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(5592, -5141)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D314" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(6378, -5130)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D315" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7146, -5131)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D316" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(7918, -5131)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D317" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7590, 64)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D318" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6822, 63)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D319" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6050, 64)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D320" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7583, 673)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D321" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6815, 672)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D322" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6043, 673)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D323" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7602, -1232)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D324" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6834, -1233)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D325" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6062, -1232)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D326" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7595, -623)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D327" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6827, -624)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D328" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6055, -623)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D329" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7541, 2619)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D330" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6773, 2618)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D331" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6001, 2619)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D332" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7534, 3228)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D333" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6766, 3227)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D334" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5994, 3228)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D335" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7553, 1323)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D336" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6785, 1322)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D337" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6013, 1323)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D338" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7546, 1932)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D339" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6778, 1931)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D340" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6006, 1932)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D341" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7594, -2532)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D342" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6826, -2533)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D343" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6054, -2532)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D344" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7587, -1923)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D345" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6819, -1924)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D346" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6047, -1923)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D347" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7606, -3828)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D348" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6838, -3829)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D349" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6066, -3828)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D350" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7599, -3219)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D351" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6831, -3220)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D352" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6059, -3219)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D353" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7514, 5175)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D354" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6746, 5174)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D355" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5974, 5175)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D356" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7507, 5784)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D357" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6739, 5783)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D358" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5967, 5784)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D359" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7526, 3879)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D360" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6758, 3878)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D361" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5986, 3879)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D362" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7519, 4488)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D363" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6751, 4487)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D364" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-5979, 4488)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D365" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7669, -4440)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D366" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6901, -4441)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D367" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6129, -4440)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D368" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-7682, -5050)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D369" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6914, -5051)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="MeshInstance2D370" type="MeshInstance2D" parent="all others graves"]
+position = Vector2(-6142, -5050)
+scale = Vector2(760, -570)
+mesh = SubResource("QuadMesh_6mt70")
+texture = ExtResource("7_at1wr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(68, 8)
