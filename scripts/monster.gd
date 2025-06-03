@@ -286,13 +286,14 @@ func _ready() -> void:
 	$effets/feu.hide()
 	$"effets/vulnérable".hide()
 	$effets/poison.hide()
-	if my_name == "dragon_1" or my_name == "dragon_2" or my_name == "dragon_3" : 
+	if my_name == "dragon_1" or my_name == "dragon_2" or my_name == "dragon_3" or my_name == "type3": 
 		$Monster/costume/AnimatedSprite2D.rotation = deg_to_rad(280)
-	
+	print(bases_statistics)
 	costume_qui_change_trop_beaucoup_parceque_ils_sont_trop_jouli()
 
 func costume_qui_change_trop_beaucoup_parceque_ils_sont_trop_jouli():
 	if Global.automatic_evolution:
+		scale *= 1.5
 		if my_name == "type1":
 			#region arme_pouvoir
 			if resistance["lazer"] < 0.8:
@@ -361,22 +362,18 @@ func costume_qui_change_trop_beaucoup_parceque_ils_sont_trop_jouli():
 				$"Monster/costume/améliorations/arme_pouvoir".show()
 				
 				if resistance["lazer"] > 0.6:
-					$"Monster/costume/améliorations/arme_pouvoir".scale = Vector2(2,1.3)
 					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,118.075)
 					$"Monster/costume/améliorations/arme_pouvoir".animation = "2_1"
 				
 				elif resistance["lazer"] > 0.4:
-					$"Monster/costume/améliorations/arme_pouvoir".scale = Vector2(2,1.3)
 					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,118.075)
 					$"Monster/costume/améliorations/arme_pouvoir".animation = "2_2"
 				
 				elif resistance["lazer"] > 0.2:
-					$"Monster/costume/améliorations/arme_pouvoir".scale = Vector2(2,1.3)
 					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,118.075)
 					$"Monster/costume/améliorations/arme_pouvoir".animation = "2_3"
 				
 				else :
-					$"Monster/costume/améliorations/arme_pouvoir".scale = Vector2(2,1.3)
 					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,118.075)
 					$"Monster/costume/améliorations/arme_pouvoir".animation = "2_4"
 			#endregion
@@ -562,9 +559,13 @@ func reward():
 			Global.metaux +=2.75
 		elif parent.actual_sequence == 1 :
 			Global.metaux +=3
-		if parent.actual_sequence == 2 : 
+		elif parent.actual_sequence == 2 : 
 			Global.metaux +=2
 		elif parent.actual_sequence == 3 :
+			Global.metaux +=2
+		elif parent.actual_sequence == 4 :
+			Global.metaux +=2
+		elif parent.actual_sequence == 5 :
 			Global.metaux +=2
 	else :
 		Global.metaux += 1

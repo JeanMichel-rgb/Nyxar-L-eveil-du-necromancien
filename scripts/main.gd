@@ -129,7 +129,7 @@ func start_game():
 	scene.get_node("map/"+map).modulate = Color(1,1,1)
 	if Global.automatic_evolution:
 		if niveau == "facile":
-			Global.metaux = 500
+			Global.metaux = 50000
 			Global.pv = 100
 			Global.vitesse_ratio = 0.8
 		if niveau == "normal":
@@ -577,6 +577,7 @@ func death_player():
 	while not Input.is_action_just_pressed("clique gauche"):
 		await sleep()
 	end_game()
+
 
 
 
@@ -1035,7 +1036,7 @@ func _on_new_wave_pressed() -> void:
 			date()
 			
 			#region test
-			actual_wave += 1
+			
 			if actual_wave == sequence_infini_longueur :
 				actual_wave = -1
 				actual_sequence += 1
@@ -1071,26 +1072,26 @@ func _on_new_wave_pressed() -> void:
 				
 				#region upgrade
 				
-				if randf() > .5:
+				if randf() > .5 or (dégat1 == "explosion" and Global.damages_this_sequence["type1"]["explosion"] == 0):
 					#pv
 					Global.monsters_evolutions["type1"]["health"] += randf_range(2,7)
 				else :
 					#resistance
-					Global.monsters_evolutions["type1"]["resistance"][dégat1] -= randf()/10
+					Global.monsters_evolutions["type1"]["resistance"][dégat1] -= randf()/4
 					Global.monsters_evolutions["type1"]["resistance"][dégat1] = clamp(Global.monsters_evolutions["type1"]["resistance"][dégat1],0.05,1)
-				if randf() > .5:
+				if randf() > .5 or (dégat2 == "explosion" and Global.damages_this_sequence["type2"]["explosion"] == 0):
 					#pv
 					Global.monsters_evolutions["type2"]["health"] += randf_range(2,5)
 				else :
 					#resistance
-					Global.monsters_evolutions["type2"]["resistance"][dégat2] -= randf()/10
+					Global.monsters_evolutions["type2"]["resistance"][dégat2] -= randf()/4
 					Global.monsters_evolutions["type2"]["resistance"][dégat2] = clamp(Global.monsters_evolutions["type2"]["resistance"][dégat2],0.05,1)
-				if randf() > .5:
+				if randf() > .5 or (dégat3 == "explosion" and Global.damages_this_sequence["type3"]["explosion"] == 0):
 					#pv
 					Global.monsters_evolutions["type3"]["health"] += randf_range(4,8)
 				else :
 					#resistance
-					Global.monsters_evolutions["type3"]["resistance"][dégat3] -= randf()/10
+					Global.monsters_evolutions["type3"]["resistance"][dégat3] -= randf()/4
 					Global.monsters_evolutions["type3"]["resistance"][dégat3] = clamp(Global.monsters_evolutions["type3"]["resistance"][dégat3],0.05,1)
 				
 				Global.damages_this_sequence = {
@@ -1119,7 +1120,7 @@ func _on_new_wave_pressed() -> void:
 						"explosion" = 0   #explosion
 						}
 					}
-				
+			actual_wave += 1
 				#endregion
 			#endregion
 			
@@ -1152,6 +1153,7 @@ func _on_new_wave_pressed() -> void:
 				await new_monster("type3", .8)
 			
 			elif wave_index == 2:
+				await new_monster("type2")#
 				for i in 2 :
 					await new_monster("type3")
 				await sleep(1)
@@ -1159,6 +1161,7 @@ func _on_new_wave_pressed() -> void:
 					await new_monster("type1")
 			
 			elif wave_index == 3:
+				await new_monster("type2")#
 				for i in 12:
 						await new_monster("type1", (1-(float(i)/12.0)))
 			
@@ -1167,6 +1170,7 @@ func _on_new_wave_pressed() -> void:
 						await new_monster("type2", (1-(float(i)/12.0)))
 			
 			elif wave_index == 5:
+				await new_monster("type2")#
 				for i in 12:
 						await new_monster("type3", (1-(float(i)/12.0)))
 			
@@ -1211,6 +1215,7 @@ func _on_new_wave_pressed() -> void:
 					await new_monster("type3", .8)
 			
 			elif wave_index == 10:
+				await new_monster("type2")#
 				for j in 2:
 					for i in 2 :
 						await new_monster("type3")
@@ -1219,6 +1224,7 @@ func _on_new_wave_pressed() -> void:
 						await new_monster("type1")
 			
 			elif wave_index == 11:
+				await new_monster("type2")#
 				for j in 2:
 					for i in 12:
 							await new_monster("type1", (1-(float(i)/12.0)))
@@ -1229,6 +1235,7 @@ func _on_new_wave_pressed() -> void:
 							await new_monster("type2", (1-(float(i)/12.0)))
 			
 			elif wave_index == 13:
+				await new_monster("type2")#
 				for j in 2:
 					for i in 12:
 							await new_monster("type3", (1-(float(i)/12.0)))
@@ -1250,6 +1257,7 @@ func _on_new_wave_pressed() -> void:
 						await new_monster("type2", .5)
 			
 			elif wave_index == 16:
+				await new_monster("type2")#
 				for i in 12:
 					await new_monster("type1")
 			
@@ -1258,10 +1266,12 @@ func _on_new_wave_pressed() -> void:
 					await new_monster("type2")
 			
 			elif wave_index == 18:
+				await new_monster("type2")#
 				for i in 12:
 					await new_monster("type3")
 			
 			elif wave_index == 19:
+				await new_monster("type2")#
 				for j in 2:
 					for i in 12:
 						await new_monster("type1")
@@ -1272,6 +1282,7 @@ func _on_new_wave_pressed() -> void:
 						await new_monster("type2")
 			
 			elif wave_index == 21:
+				await new_monster("type2")#
 				for j in 2:
 					for i in 12:
 						await new_monster("type3")

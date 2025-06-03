@@ -700,9 +700,8 @@ scale = Vector2(0.1, 0.1)
 
 [node name="arme_pouvoir" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
 position = Vector2(-1, 118.075)
-scale = Vector2(1.09285, 1.25281)
 sprite_frames = SubResource("SpriteFrames_cc0ft")
-animation = &"2_1"
+animation = &"2_4"
 
 [node name="armure_epauliere" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
 position = Vector2(-0.000549316, 110)
