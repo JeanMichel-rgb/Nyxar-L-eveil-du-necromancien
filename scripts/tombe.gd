@@ -33,20 +33,21 @@ func respawn_boss():
 		await get_tree().create_timer(1).timeout
 	var touch
 	var necromancien : bool = false
+	var necromancien_id : Node2D = null
 	while not necromancien :
 		touch = $Area2D.get_overlapping_bodies()
 		if touch != []:
-			var t : bool = true
 			for i in touch:
-				if i.get_parent().bases_statistics["name"] == "dragon_1" or i.get_parent().bases_statistics["name"] == "dragon_2" or i.get_parent().bases_statistics["name"] == "dragon_3":
-					t = false
-			necromancien = t
+				if i.get_parent().bases_statistics["name"] == "necromancien":
+					necromancien = true
+					necromancien_id = i
 		await get_tree().create_timer(0.1).timeout
-	while necromancien :
+	while necromancien and not necromancien_id == null:
 		for i in ["squelette_boss","s2_boss","insecte_boss","soldat_boss","bot_boss"].find(grave_type)+1:
 			await get_tree().create_timer(0.016).timeout
 		touch = $Area2D.get_overlapping_bodies()
 		if touch == []:
 			necromancien = false
-	parent.new_monster(grave_type+"_revive", 1, advance)
+	if not necromancien_id == null:
+		parent.new_monster(grave_type+"_revive", 1, advance)
 	queue_free()

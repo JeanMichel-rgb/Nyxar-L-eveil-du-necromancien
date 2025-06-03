@@ -342,7 +342,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("31_v2h71")
 }],
-"loop": true,
+"loop": false,
 "name": &"2_4",
 "speed": 5.0
 }, {
@@ -692,32 +692,33 @@ script = ExtResource("1_g518u")
 position = Vector2(2, 0)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_a7w1o")
-animation = &"type2"
+animation = &"type3"
 
 [node name="améliorations" type="Node2D" parent="Monster/costume"]
 rotation = -1.5708
 scale = Vector2(0.1, 0.1)
 
 [node name="arme_pouvoir" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
-position = Vector2(-1, 118.075)
-scale = Vector2(1.09285, 1.25281)
+position = Vector2(-20, 140)
 sprite_frames = SubResource("SpriteFrames_cc0ft")
-animation = &"2_1"
+animation = &"3_1"
 
 [node name="armure_epauliere" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
-position = Vector2(-0.000549316, 110)
+position = Vector2(0, 20)
 sprite_frames = SubResource("SpriteFrames_kal8g")
-animation = &"2_4"
+animation = &"3_1"
 
 [node name="casque" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
-visible = false
+position = Vector2(12.9999, -80)
 sprite_frames = SubResource("SpriteFrames_dbkmk")
-animation = &"2_1"
+animation = &"3_1"
 
 [node name="zone_ailes" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
-visible = false
+z_index = -1
+position = Vector2(19.9999, -60)
+scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_hr1iy")
-animation = &"3_4"
+animation = &"3_1"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["monsters"]]
 collision_layer = 131

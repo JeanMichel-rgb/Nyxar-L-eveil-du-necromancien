@@ -7,7 +7,7 @@ var mouse : bool = false
 var caracteristiques : Dictionary = {
 	"position" = Vector2.ZERO,
 	"type" = "flammes",
-	"damage" = 1,
+	"damage" = 1.85,
 	"vitesse" = 10,
 	"zone" = 150,
 	"améliorations" = {"1" = {"name" = "augmenter les dégats du lance flamme",

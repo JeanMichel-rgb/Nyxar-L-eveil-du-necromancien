@@ -98,7 +98,6 @@ func _ready() -> void:
 					get_node("menu/load/"+str(i+1)).text = "emplacement vide"
 	date()
 	setting_menu_state = "load"
-	
 
 func logo():
 	$troumif_studio/AnimationPlayer.play("logo")
@@ -186,7 +185,6 @@ func start_game():
 	for collision in scene.get_node("map/"+map+"/path_collisions").get_children():
 		collision.disabled = false
 	collision_en_bas.reparent(scene.get_node("map/"+map+"/path_collisions"))
-	
 
 func end_game():
 	kill_game()
@@ -365,6 +363,7 @@ func _process(delta: float) -> void:
 func son():
 	scene.get_node("parametre/son/barre_son").value = scene.get_node("parametre/son/HScrollBar").value
 	scene.get_node("parametre/son/musique").volume_db = scene.get_node("parametre/son/barre_son").value-50
+
 func trash_():
 	if trash:
 		scene.get_node("map/trash").show()
@@ -578,8 +577,6 @@ func death_player():
 		await sleep()
 	end_game()
 
-
-
 func _on_new_wave_pressed() -> void:
 	if not Global.in_wave:
 		scene.get_node("button_parametre").hide()
@@ -597,27 +594,6 @@ func _on_new_wave_pressed() -> void:
 			#update date
 			
 			#region launching
-			#start launching
-			
-			if actual_sequence == -1:
-				if actual_wave == 0:
-					for i in 75:
-						scene.get_node("map/"+map+"/chemin").modulate -= Color(0.01,0.01,0.01,0)
-						scene.get_node("map/Towers").modulate -= Color(0.01,0.01,0.01,0)
-						await sleep()
-					await new_monster("squelette_boss")
-				if actual_wave == 1:
-					await new_monster("s2_boss")
-				if actual_wave == 2:
-					await new_monster("insecte_boss")
-				if actual_wave == 3:
-					await new_monster("soldat_boss")
-				if actual_wave == 4:
-					await new_monster("bot_boss")
-				if actual_wave == 5:
-
-					await new_monster("necromancien")
-			
 			#region sequence_1
 			if actual_sequence == 0:
 				if actual_wave == 0:
@@ -1020,10 +996,6 @@ func _on_new_wave_pressed() -> void:
 						await new_monster("dragon_2",.2)
 					await sleep(10)
 					await new_monster("necromancien")
-					
-					#change sequence
-					actual_sequence += 1
-					actual_wave = -1
 			
 			#endregion
 			#endregion
@@ -1047,7 +1019,6 @@ func _on_new_wave_pressed() -> void:
 				for first_damage_type in Global.damages_this_sequence["type1"]:
 					var t = 0
 					for test_damage_type in Global.damages_this_sequence["type1"]:
-						#print(Global.damages_this_sequence) ; print(first_damage_type) ; print(test_damage_type) ; print(Global.damages_this_sequence[first_damage_type]) ; print(Global.damages_this_sequence[test_damage_type])
 						if Global.damages_this_sequence["type1"][first_damage_type] >= Global.damages_this_sequence["type1"][test_damage_type]:
 							t += 1
 					if t == 6:
@@ -1285,11 +1256,15 @@ func _on_new_wave_pressed() -> void:
 			await sleep()
 			if Global.pv <= 0:
 				death_player()
+				return
 		if actual_sequence == 5 and actual_wave == 6:
 			for i in 75:
 				scene.get_node("map/"+map+"/chemin").modulate += Color(0.01,0.01,0.01,0)
 				scene.get_node("map/Towers").modulate += Color(0.01,0.01,0.01,0)
 				await sleep()
+			await sleep(1)
+			death_player()
+			return
 		#endregion
 
 		#finish the wave
@@ -1321,7 +1296,7 @@ func _on_new_wave_pressed() -> void:
 		
 		Global.in_wave = false
 		Global.feu = []
-		scene.get_node("menus/livre_histoire").vague = actual_wave
+		scene.get_node("menus/livre_histoire").vague = actual_sequence*7+actual_wave+1
 		scene.get_node("button_parametre").show()
 
 func reward(quantitie : int):
@@ -1494,7 +1469,6 @@ func _on_mine_trou_noir_mouse_entered() -> void:
 #endregion
 
 func zone_tour(tour_position : Vector2, taille : float):
-	print("pouet")
 	scene.get_node("map/zone_tour").position = tour_position
 	scene.get_node("map/zone_tour").scale = Vector2(1,1) * taille * 2
 	scene.get_node("map/zone_tour").show()
@@ -1677,8 +1651,7 @@ func saves(button_name : String):
 				"metaux" = Global.metaux,
 				"pv" = Global.pv,
 				"monsters_evolutions" = Global.monsters_evolutions,
-				"damages_this_sequence" = Global.damages_this_sequence,
-				"livre_vague" = $scene/menus/livre_histoire.vague
+				"damages_this_sequence" = Global.damages_this_sequence
 			}
 			
 			for tower in scene.get_node("map/Towers").get_children():
@@ -1785,7 +1758,6 @@ func saves(button_name : String):
 						Global.pv = save["variables"]["pv"]
 						Global.monsters_evolutions = save["variables"]["monsters_evolutions"]
 						Global.damages_this_sequence = save["variables"]["damages_this_sequence"]
-						$scene/menus/livre_histoire.vague = save["variables"]["livre_vague"]
 						
 						#set towers
 						for tower in save["tower"]:
@@ -1818,6 +1790,9 @@ func saves(button_name : String):
 							collision.disabled = false
 						collision_en_bas.reparent(scene.get_node("map/"+map+"/path_collisions"))
 						date()
+						scene.get_node("menus/livre_histoire").vague = actual_sequence*7+actual_wave+1
+						scene.get_node("map/"+map+"/chemin").modulate = Color.WHITE
+						scene.get_node("map/Towers").modulate = Color.WHITE
 						
 						Global.loading_game = false
 

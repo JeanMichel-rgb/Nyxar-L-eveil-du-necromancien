@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://df54dgn8y3xj5"]
+[gd_scene load_steps=112 format=3 uid="uid://df54dgn8y3xj5"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_4h6pl"]
 [ext_resource type="Texture2D" uid="uid://duyiica5n1auu" path="res://TEXTURES/bois.jpg" id="2_r6xbc"]
@@ -333,6 +333,12 @@ outline_color = Color(0.6093, 0, 0.0956014, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_jd4yl"]
 font_size = 50
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4rqwo"]
+font_size = 36
 font_color = Color(0, 0, 0, 1)
 outline_size = 8
 outline_color = Color(0.0306495, 0.156516, 0.223421, 1)
@@ -842,7 +848,6 @@ mesh = SubResource("BoxMesh_xuo1a")
 texture = ExtResource("2_r6xbc")
 
 [node name="scene" type="Node2D" parent="."]
-visible = false
 
 [node name="map" type="Node2D" parent="scene"]
 
@@ -1925,7 +1930,7 @@ offset_top = 374.0
 offset_right = 564.0
 offset_bottom = 441.0
 theme_override_font_sizes/font_size = 31
-text = "recommencer la partie"
+text = "menu principal"
 
 [node name="quitter_parametres" type="Button" parent="scene/parametre"]
 modulate = Color(100, 1, 1, 1)
@@ -2066,7 +2071,6 @@ mesh = SubResource("BoxMesh_ly3ef")
 texture = ExtResource("2_r6xbc")
 
 [node name="menu_amélio" type="Node2D" parent="."]
-visible = false
 
 [node name="close2" type="Button" parent="menu_amélio"]
 modulate = Color(100, 1, 1, 1)
@@ -2364,12 +2368,6 @@ text = "ressources insufisanantes"
 label_settings = SubResource("LabelSettings_jp64h")
 metadata/_edit_use_anchors_ = true
 
-[node name="inutile" type="Node2D" parent="."]
-visible = false
-
-[node name="explosion" parent="inutile" instance=ExtResource("20_r0jsv")]
-script = null
-
 [node name="statistiques fin" type="Node2D" parent="."]
 visible = false
 z_index = 10
@@ -2382,6 +2380,17 @@ offset_bottom = 124.0
 text = "Statistiques
 "
 label_settings = SubResource("LabelSettings_jd4yl")
+
+[node name="info" type="Label" parent="statistiques fin"]
+offset_left = 104.0
+offset_top = 504.0
+offset_right = 1098.0
+offset_bottom = 573.0
+text = "cliquer pour retourner au menu principal
+"
+label_settings = SubResource("LabelSettings_4rqwo")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Background" type="MeshInstance2D" parent="statistiques fin"]
 modulate = Color(1, 0.45098, 0.286275, 1)
@@ -2588,6 +2597,12 @@ position = Vector2(576, 394)
 scale = Vector2(1, -1)
 mesh = SubResource("QuadMesh_6l6qn")
 texture = ExtResource("42_jh22v")
+
+[node name="inutile" type="Node2D" parent="."]
+visible = false
+
+[node name="explosion" parent="inutile" instance=ExtResource("20_r0jsv")]
+script = null
 
 [connection signal="pressed" from="scene/menus/new_wave" to="." method="_on_new_wave_pressed"]
 [connection signal="mouse_entered" from="scene/menus/menu_tour_Path/PathFollow/menu_tour/boutons/tours_boulets/boulet" to="." method="_on_boulet_mouse_entered"]

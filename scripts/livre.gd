@@ -263,7 +263,7 @@ var pages : Array = [
 		Seulement, cette fois, ce ne fut
 		pas des squelettes, et ils ne
 		semblaient pas venir de la
-		Terre. Bizarre...",
+		cette Terre. Bizarre...",
 		
 		"right" = ""
 	},
