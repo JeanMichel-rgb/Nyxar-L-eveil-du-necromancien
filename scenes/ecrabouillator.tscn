@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://msblen6tcgr1" path="res://td images/tours/ecrabouillator/poser possible.svg" id="3_dxbwr"]
 [ext_resource type="Texture2D" uid="uid://bv05brn437fb0" path="res://td images/tours/ecrabouillator/ecrabouillator.svg" id="4_kbaju"]
 [ext_resource type="Texture2D" uid="uid://ci6rpstsysjl0" path="res://td images/tours/ecrabouillator/écrabouillator_trou_noir.svg" id="5_gfyo6"]
-[ext_resource type="Texture2D" uid="uid://dt0xg7m4csylq" path="res://td images/images_menu/trou_noir.png" id="6_nrp18"]
+[ext_resource type="Texture2D" uid="uid://dt0xg7m4csylq" path="res://trou_noir.png" id="6_nrp18"]
 
 [sub_resource type="Animation" id="Animation_8fmvb"]
 length = 0.001
