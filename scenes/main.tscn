@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cgmrqy1qdq6wh" path="res://td images/tours/mitraillette/1.svg" id="5_w1iwq"]
 [ext_resource type="Texture2D" uid="uid://crmlewq8a5mrd" path="res://td images/tours/Lazer 1/5.svg" id="6_5e1ax"]
 [ext_resource type="Texture2D" uid="uid://pbrk8n3akks2" path="res://td images/map/demon.png" id="6_lj0aa"]
-[ext_resource type="Texture2D" uid="uid://dm00qxlueqgpr" path="res://progress_wave.png" id="6_mhoyh"]
+[ext_resource type="Texture2D" uid="uid://dm00qxlueqgpr" path="res://td images/images_menu/progress_wave.png" id="6_mhoyh"]
 [ext_resource type="Texture2D" uid="uid://ddmm6ywoqhitf" path="res://td images/map/demon2.png" id="6_vxeyv"]
 [ext_resource type="Texture2D" uid="uid://c7g7mfvrxxxcm" path="res://td images/map/impossible2.png" id="7_em5x6"]
 [ext_resource type="Texture2D" uid="uid://b8eumisrnshry" path="res://td images/tours/Lazer 2/5.svg" id="7_jnj24"]

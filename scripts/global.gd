@@ -32,8 +32,8 @@ var monsters_evolutions : Dictionary = {
 		},
 	"type2" = {
 		"name" = "type2",
-		"speed" = 2,
 		"health" = 1,
+		"speed" = 2,
 		"damages" = 5,
 		"scale" = 1,
 		"resistance" = {
@@ -47,8 +47,8 @@ var monsters_evolutions : Dictionary = {
 		},
 	"type3" = {
 		"name" = "type3",
-		"speed" = .7,
 		"health" = 10,
+		"speed" = .7,
 		"damages" = 5,
 		"scale" = 1.2,
 		"resistance" = {
