@@ -692,35 +692,35 @@ script = ExtResource("1_g518u")
 position = Vector2(2, 0)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_a7w1o")
-animation = &"type3"
+animation = &"type2"
 
 [node name="améliorations" type="Node2D" parent="Monster/costume"]
 rotation = -1.5708
 scale = Vector2(0.1, 0.1)
 
 [node name="arme_pouvoir" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
-position = Vector2(-20, 140)
+position = Vector2(-1, 120)
 sprite_frames = SubResource("SpriteFrames_cc0ft")
-animation = &"3_1"
+animation = &"2_4"
 
 [node name="armure_epauliere" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
-position = Vector2(0, 20)
+position = Vector2(0, 110)
 sprite_frames = SubResource("SpriteFrames_kal8g")
-animation = &"3_1"
+animation = &"2_4"
 
 [node name="casque" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
-position = Vector2(12.9999, -80)
+position = Vector2(1, -110)
 sprite_frames = SubResource("SpriteFrames_dbkmk")
-animation = &"3_1"
+animation = &"2_4"
 
 [node name="zone_ailes" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
 z_index = -1
-position = Vector2(19.9999, -60)
-scale = Vector2(1, 1)
+position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_hr1iy")
-animation = &"3_1"
+animation = &"2_4"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["monsters"]]
+visible = false
 collision_layer = 131
 collision_mask = 131
 script = ExtResource("3_ci1pi")
@@ -730,6 +730,7 @@ scale = Vector2(1.35, 1.35)
 shape = SubResource("RectangleShape2D_xxiaj")
 
 [node name="health" type="Node2D" parent="."]
+visible = false
 
 [node name="health_bar" type="ProgressBar" parent="health"]
 offset_left = -16.0
@@ -741,6 +742,7 @@ value = 47.55
 show_percentage = false
 
 [node name="effets" type="Node2D" parent="."]
+visible = false
 position = Vector2(5.475, -4.445)
 scale = Vector2(0.15, 0.15)
 
@@ -760,6 +762,7 @@ sprite_frames = SubResource("SpriteFrames_qdolg")
 animation = &"poison"
 
 [node name="touche_neige" type="Area2D" parent="."]
+visible = false
 collision_layer = 16
 collision_mask = 16
 

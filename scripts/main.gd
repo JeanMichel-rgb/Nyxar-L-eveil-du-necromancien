@@ -32,7 +32,7 @@ var prixtours : Dictionary = {
 	"pierre" = 750,
 	"flammes" = 900} 
 var tower_caracteristiques : Dictionary = {}
-const sequence_infini_longueur : int = 0
+const sequence_infini_longueur : int = 4
 var setting_menu_state : String = "base"
 var save_name_submit : bool = false
 var save_name : String = ""
@@ -99,30 +99,30 @@ func _ready() -> void:
 	date()
 	setting_menu_state = "load"
 
-func logo():
+func logo() -> void:
 	$troumif_studio/AnimationPlayer.play("logo")
 	await sleep(4)
 	scene.get_node("parametre/son/musique").play()
 
-func trash_pressed():
+func trash_pressed() -> void:
 	trash = true
 	Global.hide_gui = true
 
-func set_menu_tour_state(is_open : bool):
+func set_menu_tour_state(is_open : bool) -> void:
 	menu_tour_open = is_open
 
-func choose_map(button_id):
+func choose_map(button_id) -> void:
 	map = button_id.get_parent().name+"/"+button_id.name
 	$menu/map.hide()
 	$menu/levels.show()
 
-func choose_level(button_id):
+func choose_level(button_id) -> void:
 	niveau = button_id.name
 	$menu.hide()
 	Global.game_start = true
 	start_game()
 
-func start_game():
+func start_game() -> void:
 	scene.show()
 	path_monster = get_node("scene/map/"+map+"/Path2D")
 	scene.get_node("map/"+map).modulate = Color(1,1,1)
@@ -186,11 +186,11 @@ func start_game():
 		collision.disabled = false
 	collision_en_bas.reparent(scene.get_node("map/"+map+"/path_collisions"))
 
-func end_game():
+func end_game () -> void:
 	kill_game()
 	restart_game()
 
-func restart_game():
+func restart_game () -> void:
 	kill_game()
 	#reset visibility
 	$"statistiques fin".hide()
@@ -220,7 +220,7 @@ func restart_game():
 				else :
 					get_node("menu/load/"+str(i+1)).text = "emplacement vide"
 
-func kill_game():
+func kill_game () -> void:
 	scene.reparent(self, false)
 	tower_caracteristiques = {}
 	$"menu_amélio/argent".text = ""
@@ -360,11 +360,11 @@ func _process(delta: float) -> void:
 		scene.get_node("menus/new_wave").icon = load("res://td images/images_menu/await_wave.png")
 	trash_()
 
-func son():
+func son () -> void:
 	scene.get_node("parametre/son/barre_son").value = scene.get_node("parametre/son/HScrollBar").value
 	scene.get_node("parametre/son/musique").volume_db = scene.get_node("parametre/son/barre_son").value-50
 
-func trash_():
+func trash_ () -> void:
 	if trash:
 		scene.get_node("map/trash").show()
 		scene.get_node("map/trash").global_position = scene.get_global_mouse_position()
@@ -403,12 +403,12 @@ func trash_():
 				Global.hide_gui = false
 	else : scene.get_node("map/trash").hide()
 
-func set_pv_argent_values():
+func set_pv_argent_values () -> void:
 	scene.get_node("menus/bande/argent").text = str(int(Global.metaux))
 	scene.get_node("menus/bande/pv").text = str(Global.pv)
 	$"menu_amélio/argent_t".text = str(int(Global.metaux))
 
-func set_menus():
+func set_menus () -> void:
 	#base menu
 	$menu/histoire.scale = Vector2(1,1) * (float(window.size.x) / float(1152))
 	$menu/histoire.position = get_viewport().size/2
@@ -473,7 +473,7 @@ func set_menus():
 	$menu/Background.position = window.size/2
 	$menu/Background.scale = window.size
 
-func play():
+func play () -> void:
 	var cinematique = (load("res://scenes/cinematique.tscn")as PackedScene).instantiate()
 	add_child(cinematique)
 	cinematique.get_node("AnimationPlayer").play("tombe")
@@ -489,7 +489,7 @@ func play():
 		await sleep(.1)
 	cinematique.queue_free()
 
-func play_evolution():
+func play_evolution () -> void:
 	Global.automatic_evolution = true
 	setting_menu_state = "load"
 	$menu/histoire.hide()
@@ -499,7 +499,7 @@ func play_evolution():
 	$scene/menus/livre_histoire.hide()
 	$scene/button_parametre.show()
 
-func next_map_level():
+func next_map_level () -> void:
 	if actual_map_level <= 3:
 		actual_map_level += 1
 		var m = actual_map_level
@@ -510,7 +510,7 @@ func next_map_level():
 		if m == actual_map_level:
 			$menu/map/map_level.position.x = e
 
-func previous_map_level():
+func previous_map_level () -> void:
 	if actual_map_level >= 1:
 		actual_map_level -= 1
 		var m = actual_map_level
@@ -521,10 +521,10 @@ func previous_map_level():
 		if m == actual_map_level:
 			$menu/map/map_level.position.x = e
 
-func sleep(delta : float = 0.001):
+func sleep(delta : float = 0.001) -> void:
 	await get_tree().create_timer(delta).timeout
 
-func date():
+func date () -> void:
 	if Global.automatic_evolution:
 		const mois : Array = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre",]
 		const durée_mois : Array = [31,28,31,30,31,30,31,31,30,31,30,31]
@@ -549,7 +549,7 @@ func date():
 		scene.get_node("menus/bande/date").text = str(date)+" "+str(mois[moi_index])+" 2484"
 
 #monster code 
-func new_monster(his_name, await_time : float = 1, progress : float = 0):
+func new_monster(his_name, await_time : float = 1, progress : float = 0 ) -> void:
 	if Global.pv > 0 :
 		num_monster += 1
 		Global.nb_monster_in_life +=1
@@ -561,7 +561,7 @@ func new_monster(his_name, await_time : float = 1, progress : float = 0):
 		monster.progress = progress
 		await sleep(await_time)
 
-func death_player():
+func death_player () -> void:
 	if Global.hide_gui : 
 		Global.hide_gui = false
 		scene.reparent(self, false)	
@@ -585,8 +585,8 @@ func _on_new_wave_pressed() -> void:
 		num_monster = -1
 		Global.in_wave = true
 		
+		#region waves
 		if not Global.automatic_evolution:
-			#region waves
 			
 			#initialise
 			actual_wave += 1
@@ -1000,14 +1000,12 @@ func _on_new_wave_pressed() -> void:
 			#endregion
 			#endregion
 		
-		
 		#automatic evolution
 		else :
 			
 			date()
 			
 			#region test
-			actual_wave += 1
 			if actual_wave == sequence_infini_longueur :
 				actual_wave = -1
 				actual_sequence += 1
@@ -1042,21 +1040,21 @@ func _on_new_wave_pressed() -> void:
 				
 				#region upgrade
 				
-				if randf() > .5:
+				if randf() > .5 or (dégat1 == "explosion" and Global.damages_this_sequence["type1"]["explosion"] == 0):
 					#pv
 					Global.monsters_evolutions["type1"]["health"] += randf_range(2,7)
 				else :
 					#resistance
 					Global.monsters_evolutions["type1"]["resistance"][dégat1] -= randf()/10
 					Global.monsters_evolutions["type1"]["resistance"][dégat1] = clamp(Global.monsters_evolutions["type1"]["resistance"][dégat1],0.05,1)
-				if randf() > .5:
+				if randf() > .5 or (dégat2 == "explosion" and Global.damages_this_sequence["type2"]["explosion"] == 0):
 					#pv
 					Global.monsters_evolutions["type2"]["health"] += randf_range(2,5)
 				else :
 					#resistance
 					Global.monsters_evolutions["type2"]["resistance"][dégat2] -= randf()/10
 					Global.monsters_evolutions["type2"]["resistance"][dégat2] = clamp(Global.monsters_evolutions["type2"]["resistance"][dégat2],0.05,1)
-				if randf() > .5:
+				if randf() > .5 or (dégat3 == "explosion" and Global.damages_this_sequence["type3"]["explosion"] == 0):
 					#pv
 					Global.monsters_evolutions["type3"]["health"] += randf_range(4,8)
 				else :
@@ -1090,7 +1088,7 @@ func _on_new_wave_pressed() -> void:
 						"explosion" = 0   #explosion
 						}
 					}
-				
+			actual_wave += 1
 				#endregion
 			#endregion
 			
@@ -1299,7 +1297,7 @@ func _on_new_wave_pressed() -> void:
 		scene.get_node("menus/livre_histoire").vague = actual_sequence*7+actual_wave+1
 		scene.get_node("button_parametre").show()
 
-func reward(quantitie : int):
+func reward(quantitie : int ) -> void:
 	for i in quantitie:
 		await sleep()
 		Global.metaux += 1
@@ -1313,7 +1311,7 @@ func create_tower(tower_name : String) -> void:
 	else : 
 		metaux_insuffisants()
 
-func metaux_insuffisants():
+func metaux_insuffisants () -> void:
 	scene.get_node("menus/menu_tour_Path/PathFollow/menu_tour/insuffisants").show()
 	await sleep(0.5)
 	scene.get_node("menus/menu_tour_Path/PathFollow/menu_tour/insuffisants").hide()
@@ -1468,7 +1466,7 @@ func _on_mine_trou_noir_mouse_entered() -> void:
 	image_tour.icon = load("res://td images/tours/mine/mine 2.svg")
 #endregion
 
-func zone_tour(tour_position : Vector2, taille : float):
+func zone_tour(tour_position : Vector2, taille : float ) -> void:
 	scene.get_node("map/zone_tour").position = tour_position
 	scene.get_node("map/zone_tour").scale = Vector2(1,1) * taille * 2
 	scene.get_node("map/zone_tour").show()
@@ -1478,7 +1476,7 @@ func _hide_button() -> void:
 
 #region code menu amélio
 
-func open_amélio(id_tour_amélio : Node2D):
+func open_amélio(id_tour_amélio : Node2D ) -> void:
 	
 	if not (menu_tour_open or scene.get_node("menus/livre_histoire").mouse):
 		Global.hide_gui = true
@@ -1529,12 +1527,12 @@ func _on_close_pressed() -> void:
 	$"menu_amélio/activé_desactivé".text = ""
 	$"menu_amélio".hide()
 
-func amélio_métaux_insuffisants():
+func amélio_métaux_insuffisants () -> void:
 	$"menu_amélio/insuffisants".show()
 	await sleep(0.5)
 	$"menu_amélio/insuffisants".hide()
 
-func update():
+func update () -> void:
 	tour_amélio.caracteristiques = tower_caracteristiques
 	await sleep()
 	$"menu_amélio/Statistiques/bars_texts/puissance".value = tour_amélio.caracteristiques["damage"]
@@ -1574,8 +1572,6 @@ func _on_button_3_mouse_entered() -> void:
 	else :
 		$"menu_amélio/activé_desactivé".text = "désactivé"
 	$"menu_amélio/amélio_name_".text = tower_caracteristiques["améliorations"]["3"]["name"]
-
-	
 #endregion
 
 #region parametres
@@ -1616,6 +1612,7 @@ func _on_save_pressed() -> void:
 		$scene/parametre/emplacements.show()
 		$scene/parametre/nom.show()
 		$scene/parametre/nom.text = "SAUVEGARDER"
+
 func _on_load_pressed() -> void:
 	if not save_name_submit:
 		setting_menu_state = "load"
@@ -1627,7 +1624,7 @@ func _on_load_pressed() -> void:
 func _on_restart_pressed() -> void:
 	restart_game()
 
-func saves(button_name : String):
+func saves(button_name : String ) -> void:
 	if not save_name_submit:
 		if setting_menu_state == "save":
 			
@@ -1800,10 +1797,9 @@ func _on_save_name_text_submitted(new_text: String) -> void:
 	save_name = new_text
 	save_name_submit = true
 	$"scene/parametre/ecran noir pour titre s/save_name".text = ""
-
 #endregion 
 
-func statistiques():
+func statistiques () -> void:
 	if Global.pv < 0 :
 		Global.pv = 0
 	var multiplicateur

@@ -279,7 +279,7 @@ func _ready() -> void:
 	pv = float(bases_statistics["health"])
 	dégats = bases_statistics["damages"]
 	scale = Vector2(1,1) * bases_statistics["scale"]
-	$Monster/costume/AnimatedSprite2D.animation = my_name
+	$Monster/costume/AnimatedSprite2D.animation = bases_statistics["name"]
 	$StaticBody2D.pv = pv
 	$health/health_bar.max_value = float(bases_statistics["health"])
 	poison()
@@ -366,23 +366,19 @@ func costume_qui_change_trop_beaucoup_parceque_ils_sont_trop_jouli():
 				$"Monster/costume/améliorations/arme_pouvoir".show()
 				
 				if resistance["lazer"] > 0.6:
-					$"Monster/costume/améliorations/arme_pouvoir".scale = Vector2(2,1.3)
-					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,118.075)
+					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,120)
 					$"Monster/costume/améliorations/arme_pouvoir".animation = "2_1"
 				
 				elif resistance["lazer"] > 0.4:
-					$"Monster/costume/améliorations/arme_pouvoir".scale = Vector2(2,1.3)
-					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,118.075)
+					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,120)
 					$"Monster/costume/améliorations/arme_pouvoir".animation = "2_2"
 				
 				elif resistance["lazer"] > 0.2:
-					$"Monster/costume/améliorations/arme_pouvoir".scale = Vector2(2,1.3)
-					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,118.075)
+					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,120)
 					$"Monster/costume/améliorations/arme_pouvoir".animation = "2_3"
 				
 				else :
-					$"Monster/costume/améliorations/arme_pouvoir".scale = Vector2(2,1.3)
-					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,118.075)
+					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(-1,120)
 					$"Monster/costume/améliorations/arme_pouvoir".animation = "2_4"
 			#endregion
 			#region armure_epauliere
@@ -408,19 +404,19 @@ func costume_qui_change_trop_beaucoup_parceque_ils_sont_trop_jouli():
 			if resistance["shock"] < 0.8:
 				$"Monster/costume/améliorations/casque".show()
 				if resistance["shock"] > 0.6:
-					$"Monster/costume/améliorations/casque".position = Vector2(1.2,-70)
+					$"Monster/costume/améliorations/casque".position = Vector2(1,-70)
 					$"Monster/costume/améliorations/casque".animation = "2_1"
 				
 				elif resistance["shock"] > 0.4:
-					$"Monster/costume/améliorations/casque".position = Vector2(1.2,-70)
+					$"Monster/costume/améliorations/casque".position = Vector2(1,-70)
 					$"Monster/costume/améliorations/casque".animation = "2_2"
 				
 				elif resistance["shock"] > 0.2:
-					$"Monster/costume/améliorations/casque".position = Vector2(1.2,-90)
+					$"Monster/costume/améliorations/casque".position = Vector2(1,-90)
 					$"Monster/costume/améliorations/casque".animation = "2_3"
 				
 				else :
-					$"Monster/costume/améliorations/casque".position = Vector2(1.2,-110)
+					$"Monster/costume/améliorations/casque".position = Vector2(1,-110)
 					$"Monster/costume/améliorations/casque".animation = "2_4"
 			#endregion
 			#region zone_ailes
@@ -435,11 +431,11 @@ func costume_qui_change_trop_beaucoup_parceque_ils_sont_trop_jouli():
 					$"Monster/costume/améliorations/zone_ailes".animation = "2_2"
 				
 				elif resistance["explosion"] > 0.2:
-					$"Monster/costume/améliorations/zone_ailes".position = Vector2(0,-10)
+					$"Monster/costume/améliorations/zone_ailes".position = Vector2(0,-15)
 					$"Monster/costume/améliorations/zone_ailes".animation = "2_3"
 				
 				else :
-					$"Monster/costume/améliorations/zone_ailes".position = Vector2(0,25)
+					$"Monster/costume/améliorations/zone_ailes".position = Vector2(0,-5)
 					$"Monster/costume/améliorations/zone_ailes".animation = "2_4"
 			#endregion
 		
