@@ -1,0 +1,770 @@
+[gd_scene load_steps=80 format=3 uid="uid://ddioylgiwl7q6"]
+
+[ext_resource type="Script" path="res://scripts/livre_monstres_evolutifs.gd" id="1_yy0yc"]
+[ext_resource type="Texture2D" uid="uid://duyiica5n1auu" path="res://TEXTURES/bois.jpg" id="2_2ml8t"]
+[ext_resource type="Texture2D" uid="uid://c6u5nkxvwkcyu" path="res://td images/livre/4e_couverture.png" id="3_tqdye"]
+[ext_resource type="Texture2D" uid="uid://b7iar2didmydd" path="res://td images/livre/couverture.png" id="4_m5q75"]
+[ext_resource type="Texture2D" uid="uid://b5p05uyrg72yt" path="res://td images/livre/livre_ouvert.png" id="5_os7co"]
+[ext_resource type="Texture2D" uid="uid://bfiv6nuwr4acq" path="res://td images/monstres/monstres améliorés/1/type 1.svg" id="6_r2ga7"]
+[ext_resource type="Texture2D" uid="uid://dd7238fjmup26" path="res://td images/monstres/monstres améliorés/1/arme/arme 1.svg" id="7_dy4uc"]
+[ext_resource type="Texture2D" uid="uid://c1wmpjuf4dvm" path="res://td images/monstres/monstres améliorés/1/arme/arme 2.svg" id="8_gqfhw"]
+[ext_resource type="Texture2D" uid="uid://brpdpgl3dykf1" path="res://td images/monstres/monstres améliorés/1/arme/arme 3.svg" id="9_olkxr"]
+[ext_resource type="Texture2D" uid="uid://bgp4k3di0q1u" path="res://td images/monstres/monstres améliorés/1/arme/arme 4.svg" id="10_so1v2"]
+[ext_resource type="Texture2D" uid="uid://bcpro6ec1bjqt" path="res://td images/monstres/monstres améliorés/1/epauliere/epauliere 1.svg" id="11_dsla1"]
+[ext_resource type="Texture2D" uid="uid://b0if7mexmaawr" path="res://td images/monstres/monstres améliorés/1/epauliere/epauliere 2.svg" id="12_7sml8"]
+[ext_resource type="Texture2D" uid="uid://d33mjnghyqrq3" path="res://td images/monstres/monstres améliorés/1/epauliere/epauliere 3.svg" id="13_ijurg"]
+[ext_resource type="Texture2D" uid="uid://djhwxgujy2v7l" path="res://td images/monstres/monstres améliorés/1/epauliere/epauliere 4.svg" id="14_8i0qa"]
+[ext_resource type="Texture2D" uid="uid://bubreabnebfon" path="res://td images/monstres/monstres améliorés/1/casque/casque 1.svg" id="15_814er"]
+[ext_resource type="Texture2D" uid="uid://bjpgsycy7frad" path="res://td images/monstres/monstres améliorés/1/casque/casque 2.svg" id="16_ab5ow"]
+[ext_resource type="Texture2D" uid="uid://dtvvsoyyrcnah" path="res://td images/monstres/monstres améliorés/1/casque/casque 3.svg" id="17_gbxfn"]
+[ext_resource type="Texture2D" uid="uid://cbmmq2induyxs" path="res://td images/monstres/monstres améliorés/1/casque/casque 4.svg" id="18_7gr52"]
+[ext_resource type="Texture2D" uid="uid://cjpesv2we3gdg" path="res://td images/monstres/monstres améliorés/1/zone/zone 1.svg" id="19_n5ioc"]
+[ext_resource type="Texture2D" uid="uid://bf3hqi73ntufb" path="res://td images/monstres/monstres améliorés/1/zone/zone 2.svg" id="20_tnlvf"]
+[ext_resource type="Texture2D" uid="uid://dunybo4smplxp" path="res://td images/monstres/monstres améliorés/1/zone/zone 3.svg" id="21_pibx6"]
+[ext_resource type="Texture2D" uid="uid://boq8du21328nw" path="res://td images/monstres/monstres améliorés/1/zone/zone 4.svg" id="22_fbjc0"]
+[ext_resource type="Texture2D" uid="uid://cs6i3sckvlojj" path="res://td images/monstres/monstres améliorés/2/squelette dragon 2.svg" id="23_f62j4"]
+[ext_resource type="Texture2D" uid="uid://ky7w3b22andw" path="res://td images/monstres/monstres améliorés/2/zone pouvoir/pouvoir 1.svg" id="24_mdi4b"]
+[ext_resource type="Texture2D" uid="uid://dwqf48nsp83t6" path="res://td images/monstres/monstres améliorés/2/zone pouvoir/pouvoir 2.svg" id="25_1331g"]
+[ext_resource type="Texture2D" uid="uid://ci03kkbrd4mgt" path="res://td images/monstres/monstres améliorés/2/zone pouvoir/pouvoir 3.svg" id="26_hqcje"]
+[ext_resource type="Texture2D" uid="uid://dfwmosxvhc2pq" path="res://td images/monstres/monstres améliorés/2/zone pouvoir/pouvoir 4.svg" id="27_sjhno"]
+[ext_resource type="Texture2D" uid="uid://cpxhblbuljvge" path="res://td images/monstres/monstres améliorés/2/epauliere/epauliere 1 .svg" id="28_nkreo"]
+[ext_resource type="Texture2D" uid="uid://i2skqoneqjjs" path="res://td images/monstres/monstres améliorés/2/epauliere/epauliere 2 .svg" id="29_qlnkg"]
+[ext_resource type="Texture2D" uid="uid://mmiy1kn420ma" path="res://td images/monstres/monstres améliorés/2/epauliere/epauliere 3.svg" id="30_brisw"]
+[ext_resource type="Texture2D" uid="uid://dlamgtkeo4v3b" path="res://td images/monstres/monstres améliorés/2/epauliere/epauliere 4.svg" id="31_cix0h"]
+[ext_resource type="Texture2D" uid="uid://djj1wulyeat44" path="res://td images/monstres/monstres améliorés/2/casque/casque 1.svg" id="32_jeqll"]
+[ext_resource type="Texture2D" uid="uid://cdelwpvtg8lo" path="res://td images/monstres/monstres améliorés/2/casque/casque 2.svg" id="33_gcia6"]
+[ext_resource type="Texture2D" uid="uid://6dw4wxoeduuy" path="res://td images/monstres/monstres améliorés/2/casque/casque 3.svg" id="34_lqw5p"]
+[ext_resource type="Texture2D" uid="uid://dsxvmcs6q4i5t" path="res://td images/monstres/monstres améliorés/2/casque/casque 4.svg" id="35_m7s2k"]
+[ext_resource type="Texture2D" uid="uid://dh18whojfiidy" path="res://td images/monstres/monstres améliorés/2/zone/zone 1.svg" id="36_thhft"]
+[ext_resource type="Texture2D" uid="uid://dvqtafdsuxxgh" path="res://td images/monstres/monstres améliorés/2/zone/zone 2.svg" id="37_78pir"]
+[ext_resource type="Texture2D" uid="uid://cx8su4hgtpvf6" path="res://td images/monstres/monstres améliorés/2/zone/zone 3.svg" id="38_5wx5f"]
+[ext_resource type="Texture2D" uid="uid://chytq7c3exyk8" path="res://td images/monstres/monstres améliorés/2/zone/zone 4.svg" id="39_wxreu"]
+[ext_resource type="Texture2D" uid="uid://cymb4v82p6auh" path="res://td images/monstres/monstres améliorés/3/squelette sans armure.svg" id="40_hw4k7"]
+[ext_resource type="Texture2D" uid="uid://b28jvn4qoi6ud" path="res://td images/monstres/monstres améliorés/3/arme/arme 1.svg" id="41_uiy0w"]
+[ext_resource type="Texture2D" uid="uid://cp0rknp5wpqup" path="res://td images/monstres/monstres améliorés/3/arme/arme 2.svg" id="42_8atxt"]
+[ext_resource type="Texture2D" uid="uid://csxpj00xl0r3u" path="res://td images/monstres/monstres améliorés/3/arme/arme 3.svg" id="43_4ny0s"]
+[ext_resource type="Texture2D" uid="uid://2ilvi77wbfo0" path="res://td images/monstres/monstres améliorés/3/arme/arme 4.svg" id="44_34lln"]
+[ext_resource type="Texture2D" uid="uid://bd47f1w54yrnx" path="res://td images/monstres/monstres améliorés/3/armure/armure 1 .svg" id="45_tsdyq"]
+[ext_resource type="Texture2D" uid="uid://3fcipqu0w1gj" path="res://td images/monstres/monstres améliorés/3/armure/armure 2.svg" id="46_jfc4i"]
+[ext_resource type="Texture2D" uid="uid://b7osq6lxahm36" path="res://td images/monstres/monstres améliorés/3/armure/armure 3.svg" id="47_6yuqc"]
+[ext_resource type="Texture2D" uid="uid://dbl2jx7j6lxs" path="res://td images/monstres/monstres améliorés/3/armure/armure 4.svg" id="48_pdfee"]
+[ext_resource type="Texture2D" uid="uid://cjfk8bpx2a7y6" path="res://td images/monstres/monstres améliorés/3/casque/casque 1.svg" id="49_svhnn"]
+[ext_resource type="Texture2D" uid="uid://dg28l5sx8rpba" path="res://td images/monstres/monstres améliorés/3/casque/casque 2.svg" id="50_tyhpv"]
+[ext_resource type="Texture2D" uid="uid://17477awsbjbi" path="res://td images/monstres/monstres améliorés/3/casque/casque 3.svg" id="51_faoir"]
+[ext_resource type="Texture2D" uid="uid://b5xd7gdhtueqh" path="res://td images/monstres/monstres améliorés/3/casque/casque 4.svg" id="52_3fb12"]
+[ext_resource type="Texture2D" uid="uid://dtbd1vlqlunuk" path="res://td images/monstres/monstres améliorés/3/ailes/ailes 1.svg" id="53_rm7xd"]
+[ext_resource type="Texture2D" uid="uid://hwbyhblh4jdw" path="res://td images/monstres/monstres améliorés/3/ailes/ailes 2.svg" id="54_x68yf"]
+[ext_resource type="Texture2D" uid="uid://e2wgu32rl0sx" path="res://td images/monstres/monstres améliorés/3/ailes/ailes 3.svg" id="55_vtbuu"]
+[ext_resource type="Texture2D" uid="uid://cook7g2nrwt06" path="res://td images/monstres/monstres améliorés/3/ailes/ailes 4.svg" id="56_ltcs1"]
+[ext_resource type="Texture2D" uid="uid://cdua3ro51mkuu" path="res://td images/livre/pages ouvertes 2.svg" id="57_yfxe6"]
+[ext_resource type="Texture2D" uid="uid://dsa1xwtdq7ui7" path="res://td images/livre/pages.png" id="58_ykbec"]
+
+[sub_resource type="Curve2D" id="Curve2D_oc1y6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -315, 324, 0, 0, 0, 0, 350, 324)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_cvnxe"]
+size = Vector3(20, 20, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4ku3x"]
+size = Vector3(20, 20, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5y6j5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tqdye")
+}],
+"loop": true,
+"name": &"4e_couverture",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_m5q75")
+}],
+"loop": true,
+"name": &"couverture",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_os7co")
+}],
+"loop": true,
+"name": &"livre_ouvert",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pa6yo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_dy4uc")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_gqfhw")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_olkxr")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_so1v2")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_if20g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_dsla1")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_7sml8")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_ijurg")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_8i0qa")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7kvjf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_814er")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ab5ow")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_gbxfn")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_7gr52")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cdp3u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_n5ioc")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_tnlvf")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_pibx6")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_fbjc0")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s3sfu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_mdi4b")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_1331g")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_hqcje")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_sjhno")
+}],
+"loop": false,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6uvqa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_nkreo")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_qlnkg")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_brisw")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_cix0h")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jleb3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_jeqll")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_gcia6")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_lqw5p")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_m7s2k")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ovcpn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_thhft")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_78pir")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_5wx5f")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_wxreu")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qgkd2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_uiy0w")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_8atxt")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_4ny0s")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_34lln")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e8cut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_tsdyq")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_jfc4i")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_6yuqc")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_pdfee")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vdo5a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_svhnn")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50_tyhpv")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_faoir")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("52_3fb12")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_td4vj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_rm7xd")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_x68yf")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_vtbuu")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_ltcs1")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jnngg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_yfxe6")
+}],
+"loop": true,
+"name": &"double_page",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("58_ykbec")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a55ax"]
+size = Vector2(381.936, 460.645)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwu4a"]
+size = Vector2(380.645, 460.645)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn42m"]
+size = Vector2(741, 431)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl1bq"]
+size = Vector2(51, 97)
+
+[node name="livre_monstres_evolutifs" type="Node2D"]
+z_index = 5
+script = ExtResource("1_yy0yc")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_oc1y6")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-315, 324)
+loop = false
+
+[node name="menu" type="Node2D" parent="Path2D/PathFollow2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Path2D/PathFollow2D/menu"]
+modulate = Color(0.992157, 0.443137, 0, 1)
+z_index = 1
+scale = Vector2(36.7597, 21.3026)
+mesh = SubResource("BoxMesh_cvnxe")
+texture = ExtResource("2_2ml8t")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Path2D/PathFollow2D/menu"]
+modulate = Color(0.992157, 0.443137, 0, 1)
+position = Vector2(209, -167.328)
+scale = Vector2(20.1978, 4.56862)
+mesh = SubResource("BoxMesh_4ku3x")
+texture = ExtResource("2_2ml8t")
+
+[node name="livre" type="Node2D" parent="Path2D/PathFollow2D"]
+z_index = 1
+scale = Vector2(0.775, 0.775)
+
+[node name="couverture" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre"]
+position = Vector2(0, 5)
+sprite_frames = SubResource("SpriteFrames_5y6j5")
+animation = &"livre_ouvert"
+
+[node name="monstres" type="Node2D" parent="Path2D/PathFollow2D/livre"]
+z_index = 2
+scale = Vector2(1, 1)
+
+[node name="type1" type="Node2D" parent="Path2D/PathFollow2D/livre/monstres"]
+position = Vector2(-161.29, -30.9677)
+scale = Vector2(5.98, 5.98)
+
+[node name="Type1" type="Sprite2D" parent="Path2D/PathFollow2D/livre/monstres/type1"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_r2ga7")
+
+[node name="ameliorations" type="Node2D" parent="Path2D/PathFollow2D/livre/monstres/type1"]
+
+[node name="arme_pouvoir" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type1/ameliorations"]
+position = Vector2(12, 0)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_pa6yo")
+animation = &"4"
+
+[node name="armure_epauliere" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type1/ameliorations"]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_if20g")
+animation = &"1"
+
+[node name="casque" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type1/ameliorations"]
+position = Vector2(-13, 0.4)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_7kvjf")
+animation = &"4"
+
+[node name="zone_ailes" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type1/ameliorations"]
+z_index = -1
+position = Vector2(-5, 0)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_cdp3u")
+animation = &"4"
+
+[node name="type2" type="Node2D" parent="Path2D/PathFollow2D/livre/monstres"]
+position = Vector2(-162.581, -30.9677)
+scale = Vector2(5.98, 5.98)
+
+[node name="Type2" type="Sprite2D" parent="Path2D/PathFollow2D/livre/monstres/type2"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("23_f62j4")
+
+[node name="ameliorations" type="Node2D" parent="Path2D/PathFollow2D/livre/monstres/type2"]
+
+[node name="arme_pouvoir" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type2/ameliorations"]
+position = Vector2(11, 0)
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_s3sfu")
+animation = &"4"
+
+[node name="armure_epauliere" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type2/ameliorations"]
+position = Vector2(9.1, 0)
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_6uvqa")
+animation = &"4"
+
+[node name="casque" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type2/ameliorations"]
+position = Vector2(-11.5, 0)
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_jleb3")
+animation = &"3"
+
+[node name="zone_ailes" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type2/ameliorations"]
+z_index = -1
+position = Vector2(-0.7, -1)
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_ovcpn")
+animation = &"4"
+
+[node name="type3" type="Node2D" parent="Path2D/PathFollow2D/livre/monstres"]
+position = Vector2(-161.29, -29.6774)
+scale = Vector2(5.98, 5.98)
+
+[node name="Type3" type="Sprite2D" parent="Path2D/PathFollow2D/livre/monstres/type3"]
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("40_hw4k7")
+
+[node name="ameliorations" type="Node2D" parent="Path2D/PathFollow2D/livre/monstres/type3"]
+
+[node name="arme_pouvoir" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type3/ameliorations"]
+position = Vector2(16, 1.5)
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_qgkd2")
+animation = &"4"
+
+[node name="armure_epauliere" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type3/ameliorations"]
+position = Vector2(4, 0)
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_e8cut")
+animation = &"1"
+
+[node name="casque" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type3/ameliorations"]
+position = Vector2(-10.5, -1.17)
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_vdo5a")
+animation = &"4"
+
+[node name="zone_ailes" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type3/ameliorations"]
+z_index = -1
+position = Vector2(-9.5, 0)
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_td4vj")
+animation = &"4"
+
+[node name="pages" type="Node2D" parent="Path2D/PathFollow2D/livre"]
+
+[node name="pages" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/pages"]
+position = Vector2(0, -23.387)
+scale = Vector2(1.975, 1.975)
+sprite_frames = SubResource("SpriteFrames_jnngg")
+animation = &"double_page"
+
+[node name="right" type="Label" parent="Path2D/PathFollow2D/livre/pages"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 18.0
+offset_top = -219.0
+offset_right = 346.0
+offset_bottom = 172.0
+theme_override_font_sizes/font_size = 19
+text = "points de vie : 10000000
+
+dégats bruts : 100%
+
+dégats lazers : 100%
+
+dégats de coupures : 100%
+
+dégats d'explosions : 100%
+
+dégats de brûlure : 100%
+
+dégats d'empoisonnement : 100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="touch_mouse_p_l" type="Area2D" parent="Path2D/PathFollow2D/livre"]
+position = Vector2(-320, -171.613)
+
+[node name="Collision" type="CollisionShape2D" parent="Path2D/PathFollow2D/livre/touch_mouse_p_l"]
+z_index = 2
+position = Vector2(129.032, 147.742)
+shape = SubResource("RectangleShape2D_a55ax")
+
+[node name="touch_mouse_p_r" type="Area2D" parent="Path2D/PathFollow2D/livre"]
+position = Vector2(45.1614, -171.613)
+
+[node name="Collision" type="CollisionShape2D" parent="Path2D/PathFollow2D/livre/touch_mouse_p_r"]
+z_index = 2
+position = Vector2(145.339, 147.742)
+shape = SubResource("RectangleShape2D_dwu4a")
+
+[node name="touch_mouse" type="Area2D" parent="Path2D/PathFollow2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/touch_mouse"]
+z_index = 2
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_fn42m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Path2D/PathFollow2D/touch_mouse"]
+z_index = 2
+position = Vector2(389.5, -166.5)
+shape = SubResource("RectangleShape2D_sl1bq")
+
+[connection signal="mouse_entered" from="Path2D/PathFollow2D/livre/touch_mouse_p_l" to="." method="mouse_entered_p_l"]
+[connection signal="mouse_exited" from="Path2D/PathFollow2D/livre/touch_mouse_p_l" to="." method="mouse_exited_p_l"]
+[connection signal="mouse_entered" from="Path2D/PathFollow2D/livre/touch_mouse_p_r" to="." method="mouse_entered_p_r"]
+[connection signal="mouse_exited" from="Path2D/PathFollow2D/livre/touch_mouse_p_r" to="." method="mouse_exited_p_r"]
+[connection signal="mouse_entered" from="Path2D/PathFollow2D/touch_mouse" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Path2D/PathFollow2D/touch_mouse" to="." method="mouse_exited"]

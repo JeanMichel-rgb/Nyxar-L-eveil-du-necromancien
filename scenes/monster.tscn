@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://bavyrs64jp0hs"]
+[gd_scene load_steps=92 format=3 uid="uid://bavyrs64jp0hs"]
 
 [ext_resource type="Script" path="res://scripts/monster.gd" id="1_g518u"]
 [ext_resource type="Texture2D" uid="uid://bchcf8m87cspg" path="res://td images/monstres/robots/robot 1.svg" id="2_5cn8s"]
@@ -30,13 +30,18 @@
 [ext_resource type="Texture2D" uid="uid://c4csv5vdqskbn" path="res://td images/monstres/soldats/boss soldats.svg" id="17_caxyk"]
 [ext_resource type="Texture2D" uid="uid://c1mp7dtj3cyny" path="res://td images/tours/zone poison.svg" id="24_akhww"]
 [ext_resource type="Texture2D" uid="uid://cs6i3sckvlojj" path="res://td images/monstres/monstres améliorés/2/squelette dragon 2.svg" id="27_43gj8"]
+[ext_resource type="Texture2D" uid="uid://bfiv6nuwr4acq" path="res://td images/monstres/monstres améliorés/1/type 1.svg" id="27_fbyrt"]
 [ext_resource type="Texture2D" uid="uid://cymb4v82p6auh" path="res://td images/monstres/monstres améliorés/3/squelette sans armure.svg" id="27_k158o"]
 [ext_resource type="Texture2D" uid="uid://ky7w3b22andw" path="res://td images/monstres/monstres améliorés/2/zone pouvoir/pouvoir 1.svg" id="28_6i4x7"]
 [ext_resource type="Texture2D" uid="uid://dwqf48nsp83t6" path="res://td images/monstres/monstres améliorés/2/zone pouvoir/pouvoir 2.svg" id="29_fmijl"]
 [ext_resource type="Texture2D" uid="uid://ci03kkbrd4mgt" path="res://td images/monstres/monstres améliorés/2/zone pouvoir/pouvoir 3.svg" id="30_1wfcu"]
+[ext_resource type="Texture2D" uid="uid://dd7238fjmup26" path="res://td images/monstres/monstres améliorés/1/arme/arme 1.svg" id="30_hiktn"]
 [ext_resource type="Texture2D" uid="uid://bjcpoys5ronef" path="res://td images/tours/zone vulnérable.svg" id="30_l4prp"]
 [ext_resource type="Texture2D" uid="uid://dfwmosxvhc2pq" path="res://td images/monstres/monstres améliorés/2/zone pouvoir/pouvoir 4.svg" id="31_v2h71"]
+[ext_resource type="Texture2D" uid="uid://c1wmpjuf4dvm" path="res://td images/monstres/monstres améliorés/1/arme/arme 2.svg" id="31_wlrcg"]
+[ext_resource type="Texture2D" uid="uid://brpdpgl3dykf1" path="res://td images/monstres/monstres améliorés/1/arme/arme 3.svg" id="32_m37h5"]
 [ext_resource type="Texture2D" uid="uid://b28jvn4qoi6ud" path="res://td images/monstres/monstres améliorés/3/arme/arme 1.svg" id="32_nt6aj"]
+[ext_resource type="Texture2D" uid="uid://bgp4k3di0q1u" path="res://td images/monstres/monstres améliorés/1/arme/arme 4.svg" id="33_8w3p3"]
 [ext_resource type="Texture2D" uid="uid://cp0rknp5wpqup" path="res://td images/monstres/monstres améliorés/3/arme/arme 2.svg" id="33_srm54"]
 [ext_resource type="Texture2D" uid="uid://csxpj00xl0r3u" path="res://td images/monstres/monstres améliorés/3/arme/arme 3.svg" id="34_wdo0y"]
 [ext_resource type="Texture2D" uid="uid://2ilvi77wbfo0" path="res://td images/monstres/monstres améliorés/3/arme/arme 4.svg" id="35_seymw"]
@@ -46,9 +51,13 @@
 [ext_resource type="Texture2D" uid="uid://dlamgtkeo4v3b" path="res://td images/monstres/monstres améliorés/2/epauliere/epauliere 4.svg" id="39_e741e"]
 [ext_resource type="Texture2D" uid="uid://bd47f1w54yrnx" path="res://td images/monstres/monstres améliorés/3/armure/armure 1 .svg" id="40_neail"]
 [ext_resource type="Texture2D" uid="uid://3fcipqu0w1gj" path="res://td images/monstres/monstres améliorés/3/armure/armure 2.svg" id="41_bfavu"]
+[ext_resource type="Texture2D" uid="uid://bcpro6ec1bjqt" path="res://td images/monstres/monstres améliorés/1/epauliere/epauliere 1.svg" id="42_eh8r0"]
 [ext_resource type="Texture2D" uid="uid://b7osq6lxahm36" path="res://td images/monstres/monstres améliorés/3/armure/armure 3.svg" id="42_xvq4q"]
+[ext_resource type="Texture2D" uid="uid://b0if7mexmaawr" path="res://td images/monstres/monstres améliorés/1/epauliere/epauliere 2.svg" id="43_1nuwj"]
 [ext_resource type="Texture2D" uid="uid://dbl2jx7j6lxs" path="res://td images/monstres/monstres améliorés/3/armure/armure 4.svg" id="43_x2lvm"]
 [ext_resource type="Texture2D" uid="uid://djj1wulyeat44" path="res://td images/monstres/monstres améliorés/2/casque/casque 1.svg" id="44_kvhk7"]
+[ext_resource type="Texture2D" uid="uid://d33mjnghyqrq3" path="res://td images/monstres/monstres améliorés/1/epauliere/epauliere 3.svg" id="44_m1512"]
+[ext_resource type="Texture2D" uid="uid://djhwxgujy2v7l" path="res://td images/monstres/monstres améliorés/1/epauliere/epauliere 4.svg" id="45_i8aek"]
 [ext_resource type="Texture2D" uid="uid://cdelwpvtg8lo" path="res://td images/monstres/monstres améliorés/2/casque/casque 2.svg" id="45_wh4tx"]
 [ext_resource type="Texture2D" uid="uid://6dw4wxoeduuy" path="res://td images/monstres/monstres améliorés/2/casque/casque 3.svg" id="46_a4mjw"]
 [ext_resource type="Texture2D" uid="uid://dsxvmcs6q4i5t" path="res://td images/monstres/monstres améliorés/2/casque/casque 4.svg" id="47_xo3x1"]
@@ -58,12 +67,20 @@
 [ext_resource type="Texture2D" uid="uid://b5xd7gdhtueqh" path="res://td images/monstres/monstres améliorés/3/casque/casque 4.svg" id="51_s4jmc"]
 [ext_resource type="Texture2D" uid="uid://dh18whojfiidy" path="res://td images/monstres/monstres améliorés/2/zone/zone 1.svg" id="52_y4qql"]
 [ext_resource type="Texture2D" uid="uid://dvqtafdsuxxgh" path="res://td images/monstres/monstres améliorés/2/zone/zone 2.svg" id="53_5ufvy"]
+[ext_resource type="Texture2D" uid="uid://bubreabnebfon" path="res://td images/monstres/monstres améliorés/1/casque/casque 1.svg" id="54_b1nam"]
 [ext_resource type="Texture2D" uid="uid://cx8su4hgtpvf6" path="res://td images/monstres/monstres améliorés/2/zone/zone 3.svg" id="54_t70sl"]
+[ext_resource type="Texture2D" uid="uid://bjpgsycy7frad" path="res://td images/monstres/monstres améliorés/1/casque/casque 2.svg" id="55_f7lx8"]
 [ext_resource type="Texture2D" uid="uid://chytq7c3exyk8" path="res://td images/monstres/monstres améliorés/2/zone/zone 4.svg" id="55_h2pyx"]
+[ext_resource type="Texture2D" uid="uid://dtvvsoyyrcnah" path="res://td images/monstres/monstres améliorés/1/casque/casque 3.svg" id="56_62m3u"]
 [ext_resource type="Texture2D" uid="uid://dtbd1vlqlunuk" path="res://td images/monstres/monstres améliorés/3/ailes/ailes 1.svg" id="56_xwr5n"]
 [ext_resource type="Texture2D" uid="uid://hwbyhblh4jdw" path="res://td images/monstres/monstres améliorés/3/ailes/ailes 2.svg" id="57_3uueg"]
+[ext_resource type="Texture2D" uid="uid://cbmmq2induyxs" path="res://td images/monstres/monstres améliorés/1/casque/casque 4.svg" id="57_75p6d"]
 [ext_resource type="Texture2D" uid="uid://e2wgu32rl0sx" path="res://td images/monstres/monstres améliorés/3/ailes/ailes 3.svg" id="58_56v2l"]
 [ext_resource type="Texture2D" uid="uid://cook7g2nrwt06" path="res://td images/monstres/monstres améliorés/3/ailes/ailes 4.svg" id="59_11i01"]
+[ext_resource type="Texture2D" uid="uid://cjpesv2we3gdg" path="res://td images/monstres/monstres améliorés/1/zone/zone 1.svg" id="66_eulrp"]
+[ext_resource type="Texture2D" uid="uid://bf3hqi73ntufb" path="res://td images/monstres/monstres améliorés/1/zone/zone 2.svg" id="67_0iusn"]
+[ext_resource type="Texture2D" uid="uid://dunybo4smplxp" path="res://td images/monstres/monstres améliorés/1/zone/zone 3.svg" id="68_vaa3b"]
+[ext_resource type="Texture2D" uid="uid://boq8du21328nw" path="res://td images/monstres/monstres améliorés/1/zone/zone 4.svg" id="69_v0qlr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a7w1o"]
 animations = [{
@@ -269,7 +286,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_o5fyv")
+"texture": ExtResource("27_fbyrt")
 }],
 "loop": true,
 "name": &"type1",
@@ -294,22 +311,34 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cc0ft"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_hiktn")
+}],
 "loop": true,
 "name": &"1_1",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_wlrcg")
+}],
 "loop": true,
 "name": &"1_2",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_m37h5")
+}],
 "loop": true,
 "name": &"1_3",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_8w3p3")
+}],
 "loop": true,
 "name": &"1_4",
 "speed": 5.0
@@ -381,22 +410,34 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kal8g"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_eh8r0")
+}],
 "loop": true,
 "name": &"1_1",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_1nuwj")
+}],
 "loop": true,
 "name": &"1_2",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_m1512")
+}],
 "loop": true,
 "name": &"1_3",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_i8aek")
+}],
 "loop": true,
 "name": &"1_4",
 "speed": 5.0
@@ -468,22 +509,34 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dbkmk"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_b1nam")
+}],
 "loop": true,
 "name": &"1_1",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_f7lx8")
+}],
 "loop": true,
 "name": &"1_2",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_62m3u")
+}],
 "loop": true,
 "name": &"1_3",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_75p6d")
+}],
 "loop": true,
 "name": &"1_4",
 "speed": 5.0
@@ -555,22 +608,34 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hr1iy"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_eulrp")
+}],
 "loop": true,
 "name": &"1_1",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("67_0iusn")
+}],
 "loop": true,
 "name": &"1_2",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("68_vaa3b")
+}],
 "loop": true,
 "name": &"1_3",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("69_v0qlr")
+}],
 "loop": true,
 "name": &"1_4",
 "speed": 5.0
@@ -692,35 +757,34 @@ script = ExtResource("1_g518u")
 position = Vector2(2, 0)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_a7w1o")
-animation = &"type2"
+animation = &"type1"
 
 [node name="améliorations" type="Node2D" parent="Monster/costume"]
 rotation = -1.5708
 scale = Vector2(0.1, 0.1)
 
 [node name="arme_pouvoir" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
-position = Vector2(-1, 120)
+position = Vector2(0, 140)
 sprite_frames = SubResource("SpriteFrames_cc0ft")
-animation = &"2_4"
+animation = &"1_4"
 
 [node name="armure_epauliere" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
-position = Vector2(0, 110)
+position = Vector2(-0.0001086, 30)
 sprite_frames = SubResource("SpriteFrames_kal8g")
-animation = &"2_4"
+animation = &"1_4"
 
 [node name="casque" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
-position = Vector2(1, -110)
+position = Vector2(0.000398199, -110)
 sprite_frames = SubResource("SpriteFrames_dbkmk")
-animation = &"2_4"
+animation = &"1_1"
 
 [node name="zone_ailes" type="AnimatedSprite2D" parent="Monster/costume/améliorations"]
 z_index = -1
-position = Vector2(0, -5)
+position = Vector2(0.0001086, -30)
 sprite_frames = SubResource("SpriteFrames_hr1iy")
-animation = &"2_4"
+animation = &"1_4"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["monsters"]]
-visible = false
 collision_layer = 131
 collision_mask = 131
 script = ExtResource("3_ci1pi")
@@ -730,7 +794,6 @@ scale = Vector2(1.35, 1.35)
 shape = SubResource("RectangleShape2D_xxiaj")
 
 [node name="health" type="Node2D" parent="."]
-visible = false
 
 [node name="health_bar" type="ProgressBar" parent="health"]
 offset_left = -16.0
@@ -742,7 +805,6 @@ value = 47.55
 show_percentage = false
 
 [node name="effets" type="Node2D" parent="."]
-visible = false
 position = Vector2(5.475, -4.445)
 scale = Vector2(0.15, 0.15)
 
@@ -762,7 +824,6 @@ sprite_frames = SubResource("SpriteFrames_qdolg")
 animation = &"poison"
 
 [node name="touche_neige" type="Area2D" parent="."]
-visible = false
 collision_layer = 16
 collision_mask = 16
 

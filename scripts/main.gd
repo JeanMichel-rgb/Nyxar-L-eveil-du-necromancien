@@ -32,7 +32,7 @@ var prixtours : Dictionary = {
 	"pierre" = 750,
 	"flammes" = 900} 
 var tower_caracteristiques : Dictionary = {}
-const sequence_infini_longueur : int = 4
+const sequence_infini_longueur : int = 0 #amélioration toutes les n+1 vagues
 var setting_menu_state : String = "base"
 var save_name_submit : bool = false
 var save_name : String = ""
@@ -136,11 +136,11 @@ func start_game() -> void:
 			Global.pv = 100
 			Global.vitesse_ratio = .9
 		if niveau == "expert":
-			Global.metaux = 350
+			Global.metaux = 375
 			Global.pv = 50
 			Global.vitesse_ratio = .9
 		if niveau == "demon":
-			Global.metaux = 300
+			Global.metaux = 350
 			Global.pv = 20
 			Global.vitesse_ratio = .95
 		if niveau == "impossible":
@@ -553,7 +553,8 @@ func new_monster(his_name, await_time : float = 1, progress : float = 0 ) -> voi
 	if Global.pv > 0 :
 		num_monster += 1
 		Global.nb_monster_in_life +=1
-		var monster = (load("res://scenes/monster.tscn")as PackedScene).instantiate()
+		var monster = preload("res://scenes/monster.tscn")
+		monster = monster.instantiate()
 		monster.my_name = his_name
 		monster.num = num_monster
 		Global.pos_monsters.append(0)
@@ -1039,27 +1040,28 @@ func _on_new_wave_pressed() -> void:
 						dégat3 = first_damage_type
 				
 				#region upgrade
-				
-				if randf() > .5 or (dégat1 == "explosion" and Global.damages_this_sequence["type1"]["explosion"] == 0):
+				var health_boost_probability : float = .2
+				var max_resistance_boost : float = .18
+				if randf() < health_boost_probability or (dégat1 == "explosion" and Global.damages_this_sequence["type1"]["explosion"] == 0):
 					#pv
 					Global.monsters_evolutions["type1"]["health"] += randf_range(2,7)
 				else :
 					#resistance
-					Global.monsters_evolutions["type1"]["resistance"][dégat1] -= randf()/10
+					Global.monsters_evolutions["type1"]["resistance"][dégat1] -= randf_range(0,max_resistance_boost)
 					Global.monsters_evolutions["type1"]["resistance"][dégat1] = clamp(Global.monsters_evolutions["type1"]["resistance"][dégat1],0.05,1)
-				if randf() > .5 or (dégat2 == "explosion" and Global.damages_this_sequence["type2"]["explosion"] == 0):
+				if randf() < health_boost_probability or (dégat2 == "explosion" and Global.damages_this_sequence["type2"]["explosion"] == 0):
 					#pv
-					Global.monsters_evolutions["type2"]["health"] += randf_range(2,5)
+					Global.monsters_evolutions["type2"]["health"] += randf_range(1,5)
 				else :
 					#resistance
-					Global.monsters_evolutions["type2"]["resistance"][dégat2] -= randf()/10
+					Global.monsters_evolutions["type2"]["resistance"][dégat2] -= randf_range(0,max_resistance_boost)
 					Global.monsters_evolutions["type2"]["resistance"][dégat2] = clamp(Global.monsters_evolutions["type2"]["resistance"][dégat2],0.05,1)
-				if randf() > .5 or (dégat3 == "explosion" and Global.damages_this_sequence["type3"]["explosion"] == 0):
+				if randf() < health_boost_probability or (dégat3 == "explosion" and Global.damages_this_sequence["type3"]["explosion"] == 0):
 					#pv
-					Global.monsters_evolutions["type3"]["health"] += randf_range(4,8)
+					Global.monsters_evolutions["type3"]["health"] += randf_range(4,9)
 				else :
 					#resistance
-					Global.monsters_evolutions["type3"]["resistance"][dégat3] -= randf()/10
+					Global.monsters_evolutions["type3"]["resistance"][dégat3] -= randf_range(0,max_resistance_boost)
 					Global.monsters_evolutions["type3"]["resistance"][dégat3] = clamp(Global.monsters_evolutions["type3"]["resistance"][dégat3],0.05,1)
 				
 				Global.damages_this_sequence = {
@@ -1094,7 +1096,7 @@ func _on_new_wave_pressed() -> void:
 			
 			#region waves
 			
-			var wave_index : int = randi_range(0,12)
+			var wave_index : int = randi_range(0,21)
 			
 			if wave_index == 0:
 					await new_monster("type1")
@@ -1288,7 +1290,7 @@ func _on_new_wave_pressed() -> void:
 			if actual_sequence == 5:
 				await reward(100)
 		else :
-			await reward(40)
+			await reward(90)
 		
 		#endregion
 		
@@ -1787,6 +1789,10 @@ func saves(button_name : String ) -> void:
 							collision.disabled = false
 						collision_en_bas.reparent(scene.get_node("map/"+map+"/path_collisions"))
 						date()
+						if Global.automatic_evolution:
+							scene.get_node("menus/livre_histoire").hide()
+						else:
+							scene.get_node("menus/livre_histoire").show()
 						scene.get_node("menus/livre_histoire").vague = actual_sequence*7+actual_wave+1
 						scene.get_node("map/"+map+"/chemin").modulate = Color.WHITE
 						scene.get_node("map/Towers").modulate = Color.WHITE
@@ -1840,4 +1846,4 @@ func statistiques () -> void:
 		multiplicateur_2 = 1.6
 	if map.find("impossible") != -1 :
 		multiplicateur_2 = 1.8
-	$"statistiques fin/a remplir/score".text = str((multiplicateur*multiplicateur_2*((actual_sequence+1)*7+actual_wave+1))-vies_perdues*3/((actual_sequence+1)*7)+actual_wave+1)
+	$"statistiques fin/a remplir/score".text = str(round(((multiplicateur*multiplicateur_2*((actual_sequence+1)*7+actual_wave+1))-vies_perdues*3/((actual_sequence+1)*7)+actual_wave+1)*10)/10)

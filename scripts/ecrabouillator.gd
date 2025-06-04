@@ -102,10 +102,11 @@ func shoot():
 				if monster != null:
 					if monster.is_in_group("monsters"):
 						await sleep()
-						if parent.actual_sequence != 5 or parent.actual_wave != 6:
-							monster.get_parent().progress = 0
-						if caracteristiques["améliorations"]["1"]["upgraded"]:
-							monster.get_parent().paralysis()
+						if monster != null:
+							if parent.actual_sequence != 5 or parent.actual_wave != 6:
+								monster.get_parent().progress = 0
+							if caracteristiques["améliorations"]["1"]["upgraded"]:
+								monster.get_parent().paralysis()
 			await sleep()
 		timer_timeout = false
 	else :

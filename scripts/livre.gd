@@ -555,9 +555,10 @@ func _ready() -> void:
 	notification_animation()
 
 func _process(delta: float) -> void:
-	move_menu()
-	update_variables()
-	update_menu()
+	if not Global.automatic_evolution:
+		move_menu()
+		update_variables()
+		update_menu()
 
 func move_menu():
 	if mouse:

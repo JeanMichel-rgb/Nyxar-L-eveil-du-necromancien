@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=3 uid="uid://df54dgn8y3xj5"]
+[gd_scene load_steps=113 format=3 uid="uid://df54dgn8y3xj5"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_4h6pl"]
 [ext_resource type="Texture2D" uid="uid://duyiica5n1auu" path="res://TEXTURES/bois.jpg" id="2_r6xbc"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://bu0l0l8gucb43" path="res://td images/tours/mine/mine trou noir.svg" id="26_qokg4"]
 [ext_resource type="Texture2D" uid="uid://03te8uitsd4w" path="res://td images/images_menu/poubelle.svg" id="32_dvqal"]
 [ext_resource type="Texture2D" uid="uid://4cvr1v42x7xp" path="res://td images/images_menu/parametre/parametre.svg" id="33_1ta83"]
+[ext_resource type="PackedScene" uid="uid://ddioylgiwl7q6" path="res://scenes/livre_monstres_evolutifs.tscn" id="34_gb1bm"]
 [ext_resource type="Texture2D" uid="uid://r77ehqlaq7p2" path="res://td images/images_menu/parametre/son.svg" id="36_yopcb"]
 [ext_resource type="AudioStream" uid="uid://d1wehjj6jojxa" path="res://assets/sounds/patriotic-history-orchestral-loop-313127.mp3" id="37_wp5g0"]
 [ext_resource type="Texture2D" uid="uid://d0v5rubp5a347" path="res://assets/logo/logo final.jpg" id="38_0eav2"]
@@ -1863,6 +1864,9 @@ mesh = SubResource("BoxMesh_fy5f6")
 
 [node name="livre_histoire" parent="scene/menus" instance=ExtResource("24_po348")]
 z_index = 31
+position = Vector2(0, -38)
+
+[node name="livre_monstres_evolutifs" parent="scene/menus" instance=ExtResource("34_gb1bm")]
 position = Vector2(0, -38)
 
 [node name="hide_button" type="Node2D" parent="scene"]

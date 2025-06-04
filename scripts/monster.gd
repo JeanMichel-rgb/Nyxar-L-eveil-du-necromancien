@@ -286,7 +286,7 @@ func _ready() -> void:
 	$effets/feu.hide()
 	$"effets/vulnérable".hide()
 	$effets/poison.hide()
-	if my_name == "dragon_1" or my_name == "dragon_2" or my_name == "dragon_3":
+	if my_name == "dragon_1" or my_name == "dragon_2" or my_name == "dragon_3" or my_name == "type3":
 		$Monster/costume/AnimatedSprite2D.rotation = deg_to_rad(270)
 	
 	
@@ -301,63 +301,83 @@ func costume_qui_change_trop_beaucoup_parceque_ils_sont_trop_jouli():
 		if my_name == "type1":
 			#region arme_pouvoir
 			if resistance["lazer"] < 0.8:
+				$"Monster/costume/améliorations/arme_pouvoir".rotation = PI/2
+				$"Monster/costume/améliorations/arme_pouvoir".show()
 				
 				if resistance["lazer"] > 0.6:
-					pass
+					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(80,140)
+					$"Monster/costume/améliorations/arme_pouvoir".animation = "1_1"
 				
 				elif resistance["lazer"] > 0.4:
-					pass
+					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(0,140)
+					$"Monster/costume/améliorations/arme_pouvoir".animation = "1_2"
 				
 				elif resistance["lazer"] > 0.2:
-					pass
+					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(0,140)
+					$"Monster/costume/améliorations/arme_pouvoir".animation = "1_3"
 				
 				else :
-					pass
+					$"Monster/costume/améliorations/arme_pouvoir".position = Vector2(0,140)
+					$"Monster/costume/améliorations/arme_pouvoir".animation = "1_4"
 			#endregion
 			#region armure_epauliere
 			if resistance["notch"] < 0.8:
-				
+				$"Monster/costume/améliorations/armure_epauliere".rotation = PI/2
+				$"Monster/costume/améliorations/armure_epauliere".show()
 				if resistance["notch"] > 0.6:
-					pass
+					$"Monster/costume/améliorations/armure_epauliere".position = Vector2(0,30)
+					$"Monster/costume/améliorations/armure_epauliere".animation = "1_1"
 				
 				elif resistance["notch"] > 0.4:
-					pass
+					$"Monster/costume/améliorations/armure_epauliere".position = Vector2(0,30)
+					$"Monster/costume/améliorations/armure_epauliere".animation = "1_2"
 				
 				elif resistance["notch"] > 0.2:
-					pass
+					$"Monster/costume/améliorations/armure_epauliere".position = Vector2(0,30)
+					$"Monster/costume/améliorations/armure_epauliere".animation = "1_3"
 				
 				else :
-					pass
+					$"Monster/costume/améliorations/armure_epauliere".position = Vector2(0,30)
+					$"Monster/costume/améliorations/armure_epauliere".animation = "1_4"
 			#endregion
 			#region casque
 			if resistance["shock"] < 0.8:
-				
+				$"Monster/costume/améliorations/casque".rotation = PI/2
+				$"Monster/costume/améliorations/casque".show()
 				if resistance["shock"] > 0.6:
-					pass
+					$"Monster/costume/améliorations/casque".position = Vector2(0,-60)
+					$"Monster/costume/améliorations/casque".animation = "1_1"
 				
 				elif resistance["shock"] > 0.4:
-					pass
+					$"Monster/costume/améliorations/casque".position = Vector2(0,-80)
+					$"Monster/costume/améliorations/casque".animation = "1_2"
 				
 				elif resistance["shock"] > 0.2:
-					pass
+					$"Monster/costume/améliorations/casque".position = Vector2(0,-100)
+					$"Monster/costume/améliorations/casque".animation = "1_3"
 				
 				else :
-					pass
+					$"Monster/costume/améliorations/casque".position = Vector2(0,-110)
+					$"Monster/costume/améliorations/casque".animation = "1_4"
 			#endregion
 			#region zone_ailes
 			if resistance["explosion"] < 0.8:
-				
+				$"Monster/costume/améliorations/zone_ailes".show()
 				if resistance["explosion"] > 0.6:
-					pass
+					$"Monster/costume/améliorations/zone_ailes".position = Vector2(0,-30)
+					$"Monster/costume/améliorations/zone_ailes".animation = "1_1"
 				
 				elif resistance["explosion"] > 0.4:
-					pass
+					$"Monster/costume/améliorations/zone_ailes".position = Vector2(0,-30)
+					$"Monster/costume/améliorations/zone_ailes".animation = "1_2"
 				
 				elif resistance["explosion"] > 0.2:
-					pass
+					$"Monster/costume/améliorations/zone_ailes".position = Vector2(0,-30)
+					$"Monster/costume/améliorations/zone_ailes".animation = "1_3"
 				
 				else :
-					pass
+					$"Monster/costume/améliorations/zone_ailes".position = Vector2(0,-30)
+					$"Monster/costume/améliorations/zone_ailes".animation = "1_4"
 			#endregion
 		
 		if my_name == "type2":
@@ -526,12 +546,15 @@ func _process(delta: float) -> void:
 	vulnerable()
 	vulnérable_time -= delta
 	var s : float = 1
+	var v : int = 1
 	for i in $touche_neige.get_overlapping_areas():
 		if i.is_in_group("neige"): s /= 2
-		if i.is_in_group("vulnérable") : vulnérable_time = 1
+		if i.is_in_group("vulnérable") :
+			vulnérable_time = 1
+			v *= 2
 		
 	if vulnérable_time > 0 and pv != null:
-		var damages = (pv - $StaticBody2D.pv)*2
+		var damages = (pv - $StaticBody2D.pv)*v
 		pv -= damages
 		$StaticBody2D.pv = pv
 		vulnerable_ = true
@@ -597,7 +620,7 @@ func reward():
 		elif parent.actual_sequence == 3 :
 			Global.metaux +=2
 	else :
-		Global.metaux += 1
+		Global.metaux += 1.25
 
 func sleep(delta : float = 0.001):
 	await get_tree().create_timer(delta).timeout
