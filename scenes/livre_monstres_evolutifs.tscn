@@ -587,7 +587,6 @@ animation = &"livre_ouvert"
 
 [node name="monstres" type="Node2D" parent="Path2D/PathFollow2D/livre"]
 z_index = 2
-scale = Vector2(1, 1)
 
 [node name="type1" type="Node2D" parent="Path2D/PathFollow2D/livre/monstres"]
 position = Vector2(-161.29, -30.9677)
@@ -608,7 +607,7 @@ animation = &"4"
 [node name="armure_epauliere" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type1/ameliorations"]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_if20g")
-animation = &"1"
+animation = &"4"
 
 [node name="casque" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/livre/monstres/type1/ameliorations"]
 position = Vector2(-13, 0.4)
