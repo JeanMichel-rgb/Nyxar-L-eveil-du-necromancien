@@ -1321,7 +1321,9 @@ func metaux_insuffisants () -> void:
 #region code tour menu
 func _on_boulet_mouse_entered() -> void:
 	tower_name.text = "Boulet"
-	tower_description.text = ""
+	tower_description.text = "Ses dégats sont minimes et sa portée est faible, mais
+sa simplicité la rend peu coûteuse.
+Elle est donc parfaite lorsque les ressources se font rares"
 	tower_puissance.value = 1
 	tower_vitesse.value = 7
 	tower_zone.value = 2
@@ -1330,7 +1332,8 @@ func _on_boulet_mouse_entered() -> void:
 
 func _on_boulets_explosifs_mouse_entered() -> void:
 	tower_name.text = "Boulet explosifs"
-	tower_description.text = ""
+	tower_description.text = "Elle inflige peu de dégats à l'impact et sa portée est faible,
+mais l'impact crée une explosion."
 	tower_puissance.value = 2
 	tower_vitesse.value = 7
 	tower_zone.value = 2
@@ -1339,7 +1342,8 @@ func _on_boulets_explosifs_mouse_entered() -> void:
 
 func _on_mitrailleuse_mouse_entered() -> void:
 	tower_name.text = "Mitrailleuse"
-	tower_description.text = ""
+	tower_description.text = "Elle inflige peu de dégats  et sa portée est faible, mais sa
+cadence de tir fait d'elle la plus forte des tours boulet"
 	tower_puissance.value = 1
 	tower_vitesse.value = 9
 	tower_zone.value = 3
@@ -1348,7 +1352,9 @@ func _on_mitrailleuse_mouse_entered() -> void:
 
 func _on_lazer_1_mouse_entered() -> void:
 	tower_name.text = "Lazer 1 "
-	tower_description.text = ""
+	tower_description.text = "Elle génère un lazer qui traverse le terrain et inflige des dégats
+moyen à tous ceux qui sont sur sa trajectoire. Elle a un temps
+de recharge élevé"
 	tower_puissance.value = 4
 	tower_vitesse.value = 4
 	tower_zone.value = 7
@@ -1357,7 +1363,9 @@ func _on_lazer_1_mouse_entered() -> void:
 
 func _on_lazer_2_mouse_entered() -> void:
 	tower_name.text = "Lazer 2"
-	tower_description.text = ""
+	tower_description.text = "Elle génère un lazer qui traverse le terrain et inflige des
+dégats moyen à tous ceux qui sont sur sa trajectoire. Elle a un
+temps de recharge élevé"
 	tower_puissance.value = 12
 	tower_vitesse.value = 5
 	tower_zone.value = 7
@@ -1366,7 +1374,9 @@ func _on_lazer_2_mouse_entered() -> void:
 
 func _on_lazer_3_mouse_entered() -> void:
 	tower_name.text = "Lazer 3"
-	tower_description.text = ""
+	tower_description.text = "Elle génère un lazer qui traverse le terrain et inflige des
+dégats élevé à tous ceux qui sont sur sa trajectoire. Elle a un
+temps de recharge élevé"
 	tower_puissance.value = 25
 	tower_vitesse.value = 6
 	tower_zone.value = 7

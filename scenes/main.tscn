@@ -1655,12 +1655,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="descriptions" type="Label" parent="scene/menus/menu_tour_Path/PathFollow/menu_tour/Statistiques/bars_texts"]
 offset_left = 1398.89
-offset_top = 318.004
-offset_right = 1622.89
-offset_bottom = 367.004
-text = "Génère un lazer qui cible un ennemi jusqu'à la mort.
-Ses dégats sont exponnentiels, et le temps de recharge est
-en fonction d'eux"
+offset_top = 330.004
+offset_right = 1783.89
+offset_bottom = 390.004
+text = "Elle génère un lazer qui traverse le terrain et inflige des
+dégats moyen à tous ceux qui sont sur sa trajectoire. Elle a un
+temps de recharge élevé"
 label_settings = SubResource("LabelSettings_avuna")
 metadata/_edit_use_anchors_ = true
 

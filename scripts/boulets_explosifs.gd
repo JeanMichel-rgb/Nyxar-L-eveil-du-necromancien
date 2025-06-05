@@ -12,7 +12,7 @@ var caracteristiques : Dictionary = {
 	"await_time" = 2,
 	"vitesse" = 7,
 	
-	"zone" = 200,
+	"zone" = 220,
 	"améliorations" = {"1" = {"name" = "augmentation de la zone",
 							"upgraded" = false,
 							"price" = 75},
