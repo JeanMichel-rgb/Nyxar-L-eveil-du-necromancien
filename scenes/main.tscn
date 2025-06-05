@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://crmlewq8a5mrd" path="res://td images/tours/Lazer 1/5.svg" id="6_5e1ax"]
 [ext_resource type="Texture2D" uid="uid://pbrk8n3akks2" path="res://td images/map/demon.png" id="6_lj0aa"]
 [ext_resource type="Texture2D" uid="uid://dm00qxlueqgpr" path="res://progress_wave.png" id="6_mhoyh"]
-[ext_resource type="Texture2D" uid="uid://ddmm6ywoqhitf" path="res://td images/map/demon2.png" id="6_vxeyv"]
+[ext_resource type="Texture2D" uid="uid://ddmm6ywoqhitf" path="res://td images/map/expert3.png" id="6_vxeyv"]
 [ext_resource type="Texture2D" uid="uid://c7g7mfvrxxxcm" path="res://td images/map/impossible2.png" id="7_em5x6"]
 [ext_resource type="Texture2D" uid="uid://b8eumisrnshry" path="res://td images/tours/Lazer 2/5.svg" id="7_jnj24"]
 [ext_resource type="Texture2D" uid="uid://cvd3dpe8dxkkd" path="res://td images/tours/Lazer 3/5.svg" id="8_0jwrt"]
@@ -130,17 +130,17 @@ _data = {
 }
 point_count = 6
 
-[sub_resource type="Curve2D" id="Curve2D_xh7a1"]
-_data = {
-"points": PackedVector2Array(-9.43874, -1.88775, 9.43874, 1.88775, 16, 457, -65.0834, 15.874, 65.0834, -15.874, 123, 432, -90.4816, 33.3354, 90.4816, -33.3354, 277, 169, -3.1748, -3.1748, 3.1748, 3.1748, 420, 203, -19.0488, -31.748, 19.0488, 31.748, 470, 289, -49.2094, -36.5102, 49.2094, 36.5102, 561, 401, -77.7826, 36.5102, 77.7826, -36.5102, 815, 360, -50.7968, 39.685, 50.7968, -39.685, 997, 177, 0, 0, 0, 0, 1064, 114, 0, 0, 14.9831, -53.9391, 1161, 79)
-}
-point_count = 10
-
 [sub_resource type="Curve2D" id="Curve2D_5j40k"]
 _data = {
 "points": PackedVector2Array(-9.43874, -1.88775, 9.43874, 1.88775, 14, 442, -94.3933, 2.99661, 94.3933, -2.99661, 222, 443, -86.9018, 24.7221, 86.9018, -24.7221, 601, 399, -2.99661, 74.9153, 2.99661, -74.9153, 865, 193, 43.4509, -0.749153, -43.4509, 0.749153, 589, 125, 4.49492, -71.1696, -4.49492, 71.1696, 314, 192, -70.4204, -26.9695, 70.4204, 26.9695, 589, 399, -44.9492, -1.49831, 44.9492, 1.49831, 906, 447, 0, 0, 14.9831, -53.9391, 1171, 432)
 }
 point_count = 9
+
+[sub_resource type="Curve2D" id="Curve2D_xh7a1"]
+_data = {
+"points": PackedVector2Array(-9.43874, -1.88775, 9.43874, 1.88775, 16, 457, -65.0834, 15.874, 65.0834, -15.874, 123, 432, -90.4816, 33.3354, 90.4816, -33.3354, 277, 169, -3.1748, -3.1748, 3.1748, 3.1748, 420, 203, -19.0488, -31.748, 19.0488, 31.748, 470, 289, -49.2094, -36.5102, 49.2094, 36.5102, 561, 401, -77.7826, 36.5102, 77.7826, -36.5102, 815, 360, -50.7968, 39.685, 50.7968, -39.685, 997, 177, 0, 0, 0, 0, 1064, 114, 0, 0, 14.9831, -53.9391, 1161, 79)
+}
+point_count = 10
 
 [sub_resource type="Curve2D" id="Curve2D_1gpdo"]
 _data = {
@@ -634,6 +634,7 @@ offset_left = 640.0
 offset_top = 174.0
 offset_right = 912.0
 offset_bottom = 374.0
+disabled = true
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -644,6 +645,7 @@ offset_left = 176.0
 offset_top = 164.0
 offset_right = 448.0
 offset_bottom = 364.0
+disabled = true
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -654,6 +656,7 @@ offset_left = 638.0
 offset_top = 402.0
 offset_right = 910.0
 offset_bottom = 602.0
+disabled = true
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -688,6 +691,7 @@ offset_left = 176.0
 offset_top = 164.0
 offset_right = 448.0
 offset_bottom = 364.0
+icon = ExtResource("6_vxeyv")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -698,6 +702,7 @@ offset_left = 638.0
 offset_top = 402.0
 offset_right = 910.0
 offset_bottom = 602.0
+disabled = true
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -721,7 +726,7 @@ offset_left = 640.0
 offset_top = 174.0
 offset_right = 912.0
 offset_bottom = 374.0
-icon = ExtResource("6_vxeyv")
+disabled = true
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -732,6 +737,7 @@ offset_left = 176.0
 offset_top = 164.0
 offset_right = 448.0
 offset_bottom = 364.0
+disabled = true
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -742,6 +748,7 @@ offset_left = 638.0
 offset_top = 402.0
 offset_right = 910.0
 offset_bottom = 602.0
+disabled = true
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -787,6 +794,7 @@ offset_left = 638.0
 offset_top = 402.0
 offset_right = 910.0
 offset_bottom = 602.0
+disabled = true
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -1092,10 +1100,33 @@ collision_mask = 0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/expert/m2/path_collisions"]
 polygon = PackedVector2Array(1, 321, 173, 321, 174, 184, 1159, 183, 1158, 245, 966, 243, 964, 379, 1, 382)
 
+[node name="m3" type="Node2D" parent="scene/map/expert"]
+
+[node name="Path2D" type="Path2D" parent="scene/map/expert/m3"]
+position = Vector2(-16, -2)
+curve = SubResource("Curve2D_5j40k")
+
+[node name="chemin" type="MeshInstance2D" parent="scene/map/expert/m3"]
+z_index = -10
+position = Vector2(574, 255)
+rotation = 3.14159
+scale = Vector2(-1156.75, 548.25)
+mesh = SubResource("QuadMesh_mqs5a")
+texture = ExtResource("6_vxeyv")
+
+[node name="path_collisions" type="Area2D" parent="scene/map/expert/m3"]
+collision_layer = 12
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/expert/m3/path_collisions"]
+polygon = PackedVector2Array(-6, 407, 103, 408, 228, 406, 376, 398, 472, 387, 511, 329, 580, 361, 642, 331, 675, 392, 725, 401, 780, 406, 878, 410, 970, 409, 1074, 403, 1153, 395, 1152, 456, 1023, 467, 916, 471, 811, 469, 700, 460, 627, 446, 577, 430, 523, 441, 449, 451, 326, 461, 213, 467, 117, 468, -6, 469)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="scene/map/expert/m3/path_collisions"]
+polygon = PackedVector2Array(639, 333, 675, 392, 749, 353, 789, 329, 828, 302, 851, 283, 868, 268, 882, 251, 891, 238, 899, 223, 903, 209, 903, 195, 898, 176, 888, 161, 866, 143, 850, 134, 833, 127, 807, 118, 782, 112, 734, 104, 665, 97, 592, 94, 512, 94, 452, 96, 422, 98, 391, 102, 361, 107, 327, 116, 298, 128, 275, 141, 265, 150, 259, 158, 253, 167, 249, 180, 247, 194, 249, 208, 254, 221, 262, 236, 280, 258, 305, 282, 344, 311, 385, 337, 420, 358, 472, 386, 514, 330, 452, 295, 397, 258, 371, 236, 351, 213, 345, 200, 343, 189, 348, 180, 360, 174, 390, 165, 430, 159, 485, 154, 590, 154, 651, 157, 715, 162, 777, 175, 797, 185, 804, 191, 806, 198, 807, 206, 799, 221, 785, 237, 765, 256, 714, 291)
+
 [node name="demon" type="Node2D" parent="scene/map"]
 
 [node name="m1" type="Node2D" parent="scene/map/demon"]
-visible = false
 
 [node name="Path2D" type="Path2D" parent="scene/map/demon/m1"]
 position = Vector2(-16, -2)
@@ -1115,30 +1146,6 @@ collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/demon/m1/path_collisions"]
 polygon = PackedVector2Array(-5, 423, 52, 414, 85, 401, 97, 383, 113, 346, 140, 248, 152, 219, 166, 195, 187, 171, 211, 155, 254, 137, 307, 133, 370, 142, 421, 162, 449, 182, 470, 206, 490, 252, 507.258, 312.559, 516, 334, 531, 354, 547, 364, 573, 373, 654, 372, 736, 354, 800, 315, 855, 264, 969, 128, 1011, 87, 1055, 66, 1097, 55, 1153, 47, 1153, 108, 1111, 115, 1080, 130, 1029, 182, 914, 318, 852, 369, 777, 408, 723, 423, 657, 433, 582, 434, 535, 427, 498, 416, 470, 402, 441, 377, 422, 348, 393.233, 259.108, 385, 234, 369, 214, 345, 200, 320, 196, 293, 194, 280, 197, 270, 202, 253, 221, 238, 251, 223.299, 289.697, 200, 378, 189, 405, 170, 430, 151, 445, 126, 459, 71, 475, -4, 483)
-
-[node name="m2" type="Node2D" parent="scene/map/demon"]
-
-[node name="Path2D" type="Path2D" parent="scene/map/demon/m2"]
-position = Vector2(-16, -2)
-curve = SubResource("Curve2D_5j40k")
-
-[node name="chemin" type="MeshInstance2D" parent="scene/map/demon/m2"]
-z_index = -10
-position = Vector2(574, 255)
-rotation = 3.14159
-scale = Vector2(-1156.75, 548.25)
-mesh = SubResource("QuadMesh_mqs5a")
-texture = ExtResource("6_vxeyv")
-
-[node name="path_collisions" type="Area2D" parent="scene/map/demon/m2"]
-collision_layer = 12
-collision_mask = 0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="scene/map/demon/m2/path_collisions"]
-polygon = PackedVector2Array(-6, 407, 103, 408, 228, 406, 376, 398, 472, 387, 511, 329, 580, 361, 642, 331, 675, 392, 725, 401, 780, 406, 878, 410, 970, 409, 1074, 403, 1153, 395, 1152, 456, 1023, 467, 916, 471, 811, 469, 700, 460, 627, 446, 577, 430, 523, 441, 449, 451, 326, 461, 213, 467, 117, 468, -6, 469)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="scene/map/demon/m2/path_collisions"]
-polygon = PackedVector2Array(639, 333, 675, 392, 749, 353, 789, 329, 828, 302, 851, 283, 868, 268, 882, 251, 891, 238, 899, 223, 903, 209, 903, 195, 898, 176, 888, 161, 866, 143, 850, 134, 833, 127, 807, 118, 782, 112, 734, 104, 665, 97, 592, 94, 512, 94, 452, 96, 422, 98, 391, 102, 361, 107, 327, 116, 298, 128, 275, 141, 265, 150, 259, 158, 253, 167, 249, 180, 247, 194, 249, 208, 254, 221, 262, 236, 280, 258, 305, 282, 344, 311, 385, 337, 420, 358, 472, 386, 514, 330, 452, 295, 397, 258, 371, 236, 351, 213, 345, 200, 343, 189, 348, 180, 360, 174, 390, 165, 430, 159, 485, 154, 590, 154, 651, 157, 715, 162, 777, 175, 797, 185, 804, 191, 806, 198, 807, 206, 799, 221, 785, 237, 765, 256, 714, 291)
 
 [node name="impossible" type="Node2D" parent="scene/map"]
 
@@ -1658,9 +1665,9 @@ offset_left = 1398.89
 offset_top = 330.004
 offset_right = 1783.89
 offset_bottom = 390.004
-text = "Elle génère un lazer qui traverse le terrain et inflige des
-dégats moyen à tous ceux qui sont sur sa trajectoire. Elle a un
-temps de recharge élevé"
+text = "Elle génère des flammes qui inflige une grande quantitée de
+dégats immédiatement et brûle les ennemis. Sa courte portée
+l'oblige cependant à être placée proche du chemin"
 label_settings = SubResource("LabelSettings_avuna")
 metadata/_edit_use_anchors_ = true
 
@@ -1867,6 +1874,7 @@ z_index = 31
 position = Vector2(0, -38)
 
 [node name="livre_monstres_evolutifs" parent="scene/menus" instance=ExtResource("34_gb1bm")]
+z_index = 20
 position = Vector2(0, -38)
 
 [node name="hide_button" type="Node2D" parent="scene"]
@@ -1894,6 +1902,7 @@ icon = ExtResource("33_1ta83")
 flat = true
 
 [node name="parametre" type="Node2D" parent="scene"]
+visible = false
 z_index = 50
 position = Vector2(0, -2)
 
@@ -2404,7 +2413,6 @@ mesh = SubResource("QuadMesh_6l6qn")
 texture = ExtResource("42_jh22v")
 
 [node name="statistiques fin" type="Node2D" parent="."]
-visible = false
 z_index = 10
 
 [node name="titre" type="Label" parent="statistiques fin"]

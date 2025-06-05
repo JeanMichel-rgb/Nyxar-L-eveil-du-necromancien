@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://ddioylgiwl7q6"]
+[gd_scene load_steps=81 format=3 uid="uid://ddioylgiwl7q6"]
 
 [ext_resource type="Script" path="res://scripts/livre_monstres_evolutifs.gd" id="1_yy0yc"]
 [ext_resource type="Texture2D" uid="uid://duyiica5n1auu" path="res://TEXTURES/bois.jpg" id="2_2ml8t"]
@@ -537,6 +537,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_4rliv"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a55ax"]
 size = Vector2(381.936, 460.645)
 
@@ -712,11 +714,13 @@ animation = &"double_page"
 [node name="right" type="Label" parent="Path2D/PathFollow2D/livre/pages"]
 modulate = Color(0, 0, 0, 1)
 offset_left = 18.0
-offset_top = -219.0
+offset_top = -221.581
 offset_right = 346.0
-offset_bottom = 172.0
+offset_bottom = 170.419
 theme_override_font_sizes/font_size = 19
-text = "points de vie : 10000000
+text = "vitesse : 100.99
+
+points de vie : 10000000
 
 dégats bruts : 100%
 
@@ -729,6 +733,7 @@ dégats d'explosions : 100%
 dégats de brûlure : 100%
 
 dégats d'empoisonnement : 100%"
+label_settings = SubResource("LabelSettings_4rliv")
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true

@@ -29,10 +29,10 @@ var prixtours : Dictionary = {
 	"mine_trou_noir" = 100,
 	"neige" = 500,
 	"ecrabouillator" = 1000,
-	"pierre" = 750,
+	"pierre" = 350,
 	"flammes" = 900} 
 var tower_caracteristiques : Dictionary = {}
-const sequence_infini_longueur : int = 0 #amélioration toutes les n+1 vagues
+var sequence_infini_longueur : int = 0 #amélioration toutes les n+1 vagues
 var setting_menu_state : String = "base"
 var save_name_submit : bool = false
 var save_name : String = ""
@@ -129,27 +129,32 @@ func start_game() -> void:
 	if Global.automatic_evolution:
 		if niveau == "facile":
 			Global.metaux = 500
-			Global.pv = 100
+			Global.pv = 200
 			Global.vitesse_ratio = 0.8
+			sequence_infini_longueur = 2
 		if niveau == "normal":
 			Global.metaux = 400
 			Global.pv = 100
 			Global.vitesse_ratio = .9
+			sequence_infini_longueur = 1
 		if niveau == "expert":
 			Global.metaux = 375
-			Global.pv = 50
+			Global.pv = 80
 			Global.vitesse_ratio = .9
+			sequence_infini_longueur = 1
 		if niveau == "demon":
 			Global.metaux = 350
-			Global.pv = 20
+			Global.pv = 65
 			Global.vitesse_ratio = .95
+			sequence_infini_longueur = 0
 		if niveau == "impossible":
 			Global.metaux = 300
-			Global.pv = 1
+			Global.pv = 50
 			Global.vitesse_ratio = 1
+			sequence_infini_longueur = 0
 	else :
 		if niveau == "facile":
-			Global.metaux = 20000
+			Global.metaux = 200
 			Global.pv = 100
 			Global.vitesse_ratio = 0.8
 		if niveau == "normal":
@@ -1040,29 +1045,42 @@ func _on_new_wave_pressed() -> void:
 						dégat3 = first_damage_type
 				
 				#region upgrade
-				var health_boost_probability : float = .2
+				var HealthOrSpeed_boost_probability : float = .2
+				var health_boost_probability : float = .7
 				var max_resistance_boost : float = .18
-				if randf() < health_boost_probability or (dégat1 == "explosion" and Global.damages_this_sequence["type1"]["explosion"] == 0):
-					#pv
-					Global.monsters_evolutions["type1"]["health"] += randf_range(2,7)
+				if randf() < HealthOrSpeed_boost_probability or (dégat1 == "explosion" and Global.damages_this_sequence["type1"]["explosion"] == 0):
+					if randf() < health_boost_probability:
+						#pv
+						Global.monsters_evolutions["type1"]["health"] += randf_range(2,7)
+					else:
+						#vitesse
+						Global.monsters_evolutions["type1"]["speed"] += randf_range(0.05,0.2)
 				else :
 					#resistance
 					Global.monsters_evolutions["type1"]["resistance"][dégat1] -= randf_range(0,max_resistance_boost)
-					Global.monsters_evolutions["type1"]["resistance"][dégat1] = clamp(Global.monsters_evolutions["type1"]["resistance"][dégat1],0.05,1)
-				if randf() < health_boost_probability or (dégat2 == "explosion" and Global.damages_this_sequence["type2"]["explosion"] == 0):
-					#pv
-					Global.monsters_evolutions["type2"]["health"] += randf_range(1,5)
+					#Global.monsters_evolutions["type1"]["resistance"][dégat1] = clamp(Global.monsters_evolutions["type1"]["resistance"][dégat1],0,1)
+				if randf() < HealthOrSpeed_boost_probability or (dégat2 == "explosion" and Global.damages_this_sequence["type2"]["explosion"] == 0):
+					if randf() < health_boost_probability:
+						#pv
+						Global.monsters_evolutions["type2"]["health"] += randf_range(1,5)
+					else:
+						#vitesse
+						Global.monsters_evolutions["type2"]["speed"] += randf_range(0.1,0.2)
 				else :
 					#resistance
 					Global.monsters_evolutions["type2"]["resistance"][dégat2] -= randf_range(0,max_resistance_boost)
-					Global.monsters_evolutions["type2"]["resistance"][dégat2] = clamp(Global.monsters_evolutions["type2"]["resistance"][dégat2],0.05,1)
-				if randf() < health_boost_probability or (dégat3 == "explosion" and Global.damages_this_sequence["type3"]["explosion"] == 0):
-					#pv
-					Global.monsters_evolutions["type3"]["health"] += randf_range(4,9)
+					#Global.monsters_evolutions["type2"]["resistance"][dégat2] = clamp(Global.monsters_evolutions["type2"]["resistance"][dégat2],0.05,1)
+				if randf() < HealthOrSpeed_boost_probability or (dégat3 == "explosion" and Global.damages_this_sequence["type3"]["explosion"] == 0):
+					if randf() < health_boost_probability:
+						#pv
+						Global.monsters_evolutions["type3"]["health"] += randf_range(4,9)
+					else:
+						#vitesse
+						Global.monsters_evolutions["type3"]["speed"] += randf_range(0.025,0.1)
 				else :
 					#resistance
 					Global.monsters_evolutions["type3"]["resistance"][dégat3] -= randf_range(0,max_resistance_boost)
-					Global.monsters_evolutions["type3"]["resistance"][dégat3] = clamp(Global.monsters_evolutions["type3"]["resistance"][dégat3],0.05,1)
+					#Global.monsters_evolutions["type3"]["resistance"][dégat3] = clamp(Global.monsters_evolutions["type3"]["resistance"][dégat3],0,1)
 				
 				Global.damages_this_sequence = {
 					"type1" = {
@@ -1385,7 +1403,8 @@ temps de recharge élevé"
 
 func _on_hache_mouse_entered() -> void:
 	tower_name.text = "Hache"
-	tower_description.text = ""
+	tower_description.text = "C'est une hache liée sur un moteur. Sa courte portée
+l'oblige à être placée proche du chemin"
 	tower_puissance.value = 1
 	tower_vitesse.value = 9
 	tower_zone.value = 1
@@ -1394,7 +1413,8 @@ func _on_hache_mouse_entered() -> void:
 
 func _on_griffes_mouse_entered() -> void:
 	tower_name.text = "Griffes"
-	tower_description.text = ""
+	tower_description.text = "8 griffes ont été assemblées puis liées sur un moteur.
+Sa courte portée l'oblige à être proche du chemin."
 	tower_puissance.value = 1
 	tower_vitesse.value = 10
 	tower_zone.value = 1
@@ -1403,7 +1423,8 @@ func _on_griffes_mouse_entered() -> void:
 
 func _on_dieu_tournoyant_mouse_entered() -> void:
 	tower_name.text = "Dieu Tournoyant"
-	tower_description.text = ""
+	tower_description.text = "Fléau d'arme lié sur un moteur. Sa courte portée l'oblige à
+être posée proche du chemin."
 	tower_puissance.value = 10
 	tower_vitesse.value = 9
 	tower_zone.value = 1
@@ -1412,7 +1433,8 @@ func _on_dieu_tournoyant_mouse_entered() -> void:
 
 func _on_neige_mouse_entered() -> void:
 	tower_name.text = "Neige"
-	tower_description.text = ""
+	tower_description.text = "Cette tour, camouflée en bonhomme de neige, crée une
+tempête de neige ciblée qui ralentit les ennemis"
 	tower_puissance.value = 0
 	tower_vitesse.value = 10
 	tower_zone.value = 2
@@ -1421,7 +1443,10 @@ func _on_neige_mouse_entered() -> void:
 
 func _on_ecrabouillator_mouse_entered() -> void:
 	tower_name.text = "Ecrabouillator 3000"
-	tower_description.text = ""
+	tower_description.text = "C'est un ENORME boulon posé sur une visse géante. En entrant
+en contact avec le sol, il crée une onde de choc qui inflige des
+dégats titanesques. Elle se recharge lentement en dévissant
+le boulon"
 	tower_puissance.value = 75
 	tower_vitesse.value = 1
 	tower_zone.value = 6
@@ -1430,7 +1455,9 @@ func _on_ecrabouillator_mouse_entered() -> void:
 
 func _on_pierre_mouse_entered() -> void:
 	tower_name.text = "Pierre"
-	tower_description.text = ""
+	tower_description.text = "Elle génère un lazer qui traverse le terrain et pétrifie tous
+ceux qui sont sur sa trajectoire. Elle a cependant un
+temps de recharge élevé, et n'inflige aucun dégat"
 	tower_puissance.value = 0
 	tower_vitesse.value = 3
 	tower_zone.value = 7
@@ -1439,7 +1466,9 @@ func _on_pierre_mouse_entered() -> void:
 
 func _on_flammes_mouse_entered() -> void:
 	tower_name.text = "Lance Flammes"
-	tower_description.text = ""
+	tower_description.text = "Elle génère des flammes qui inflige une grande quantitée de
+dégats immédiatement et brûle les ennemis. Sa courte portée
+l'oblige cependant à être placée proche du chemin"
 	tower_puissance.value = 5
 	tower_vitesse.value = 10
 	tower_zone.value = 1

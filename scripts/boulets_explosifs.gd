@@ -16,7 +16,7 @@ var caracteristiques : Dictionary = {
 	"améliorations" = {"1" = {"name" = "augmentation de la zone",
 							"upgraded" = false,
 							"price" = 75},
-	"2" = {"name" = "1 chance sur 10 de créer un trou noir",
+	"2" = {"name" = "1 chance sur 20 de créer un trou noir",
 			"upgraded" = false,
 			"price" = 250},
 	"3" = {"name" = "augmentation des dégats d'explosion",
@@ -104,7 +104,7 @@ func shoot():
 				Global.damages_this_sequence[str(monster.get_parent().bases_statistics["name"])]["shock"] += caracteristiques["damage"] *monster.get_parent().resistance["shock"]
 		monster.pv -= caracteristiques["damage"] *monster.get_parent().resistance["shock"]
 		var bombe
-		if caracteristiques["améliorations"]["2"]["upgraded"] and randi_range(0,9) == 0:
+		if caracteristiques["améliorations"]["2"]["upgraded"] and randi_range(0,19) == 0:
 			bombe = (load("res://scenes/trou_noir.tscn")as PackedScene).instantiate()
 			bombe.parent = parent
 		else :

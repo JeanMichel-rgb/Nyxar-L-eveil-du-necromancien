@@ -67,13 +67,14 @@ func costume_qui_change_trop_beaucoup_parceque_ils_sont_trop_jouli():
 		if page_index == i+1:
 			var my_name : String = "type"+str(i+1)
 			var pv : float = Global.monsters_evolutions[my_name]["health"]
+			var vitesse : float = Global.monsters_evolutions[my_name]["speed"]
 			var resistance : Dictionary = Global.monsters_evolutions[my_name]["resistance"]
 			get_node("Path2D/PathFollow2D/livre/monstres/"+ my_name+"/ameliorations/arme_pouvoir").hide()
 			get_node("Path2D/PathFollow2D/livre/monstres/"+ my_name+"/ameliorations/armure_epauliere").hide()
 			get_node("Path2D/PathFollow2D/livre/monstres/"+ my_name+"/ameliorations/casque").hide()
 			get_node("Path2D/PathFollow2D/livre/monstres/"+ my_name+"/ameliorations/zone_ailes").hide()
 			get_node("Path2D/PathFollow2D/livre/monstres/type"+str(i+1)).show()
-			get_node("Path2D/PathFollow2D/livre/pages/right").text = "points de vie : "+str(round(pv))+"\n\ndégats bruts : "+str(round(resistance["shock"]*100))+"%\n\ndégats de coupures : "+str(round(resistance["notch"]*100))+"%\n\ndégats de lazers : "+str(round(resistance["lazer"]*100))+"%\n\ndégats d'explosions : "+str(round(resistance["explosion"]*100))+"%\n\ndégats de brûlure : "+str(round(resistance["fire"]*100))+"%\n\ndégats d'empoisonnement : "+str(round(resistance["poison"]*100))+"%"
+			get_node("Path2D/PathFollow2D/livre/pages/right").text = "vitesse : "+str(round(vitesse*100)/100)+"\n\npoints de vie : "+str(round(pv))+"\n\ndégats bruts : "+str(round(resistance["shock"]*100))+"%\n\ndégats de coupures : "+str(round(resistance["notch"]*100))+"%\n\ndégats de lazers : "+str(round(resistance["lazer"]*100))+"%\n\ndégats d'explosions : "+str(round(resistance["explosion"]*100))+"%\n\ndégats de brûlure : "+str(round(resistance["fire"]*100))+"%\n\ndégats d'empoisonnement : "+str(round(resistance["poison"]*100))+"%"
 			
 			if my_name == "type1":
 				#region arme_pouvoir

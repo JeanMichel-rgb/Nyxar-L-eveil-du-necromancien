@@ -7,7 +7,7 @@ var mouse : bool = false
 var caracteristiques : Dictionary = {
 	"position" = Vector2.ZERO,
 	"type" = "ecrabouillator",
-	"damage" = 50,
+	"damage" = 80,
 	"vitesse" = 1,
 	"zone" = 750,
 	"recharge" = 10,
@@ -92,7 +92,7 @@ func detect_tour():
 
 func shoot():
 	await sleep()
-	if caracteristiques["améliorations"]["2"]["upgraded"] and randi_range(0,4) == 0:
+	if caracteristiques["améliorations"]["2"]["upgraded"] and randi_range(0,9) == 0:
 		$AnimationPlayer.play("tir_trou_noir")
 		await sleep(1.2)
 		$Timer.start()
