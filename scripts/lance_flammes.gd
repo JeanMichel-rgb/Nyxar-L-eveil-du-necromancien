@@ -20,7 +20,7 @@ var caracteristiques : Dictionary = {
 func _process(delta: float) -> void:
 	caracteristiques["position"] = position
 	if caracteristiques["améliorations"]["1"]["upgraded"]:
-		caracteristiques["damage"] = 1.5
+		caracteristiques["damage"] = 2.5
 
 func _ready() -> void:
 	if Global.loading_game : fonctionne()
